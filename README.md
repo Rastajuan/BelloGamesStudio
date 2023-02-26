@@ -1,2 +1,2 @@
-# BelloGamesstudio
+# BelloGamesStudio
 Web para la asignatura de Diseño de Interfaces Web del grado superior de DAW
