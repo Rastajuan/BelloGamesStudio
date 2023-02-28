@@ -119,6 +119,7 @@ font-family: 'Roboto', sans-serif;
 	font-size: 3.5rem;
 	line-height: 100px;
 }
+
 .sub-titulo-secciones {
 	color: #d98508;
 	font-family: "Roboto", sans-serif;
@@ -135,9 +136,13 @@ font-family: 'Roboto', sans-serif;
 	height: 1520px;
 	width: 100%;
 }
+#juego{
+  width: 100%;
+
+}
 .texto-juego {
 	/* background: #530cd6; */
-	margin: 150px 0 0 210px;
+	margin: 180px 0 0 210px;
 	width: 650px;
 	float: left;
 }
@@ -176,6 +181,7 @@ font-family: 'Roboto', sans-serif;
 	text-align: center;
 }
 #imags-wallpaper {
+  /* Añadimos 100px a los 1500 para compensar el margin de las imagenes */
 	width: 1600px;
 	margin: 60px auto;
 	background-color: #123749;
@@ -190,4 +196,33 @@ font-family: 'Roboto', sans-serif;
 	margin: 50px;
 	text-align: center;
 	float: left;
+}
+
+/* ===========================================================================
+                                EQUIPO
+================================================================================*/
+#equipo{
+  background-color: #241410;
+	border: 2px solid #f8b700;
+	height: 1520px;
+	width: 100%;
+  text-align: center;
+}
+
+#containerEtiquetas {
+/*     border: greenyellow 1px solid;*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    overflow: hidden;
+    width: 675px;
+}
+.etiquetasEquipo {
+/*    border: 1px solid black;*/
+    color: whitesmoke;
+    display: block;
+    float: left;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 2rem;
+    width: 33.33%;
 }
