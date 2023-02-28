@@ -182,6 +182,7 @@ font-family: 'Roboto', sans-serif;
 }
 .img-wallpapers {
   background-color: #0c19d6 ;
+  border-radius: 15px;
 	width: calc(100% / 3 - 100px);
 	height: 225px;
   line-height: 225px;
