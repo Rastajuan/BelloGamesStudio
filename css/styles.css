@@ -235,9 +235,8 @@ font-family: 'Roboto', sans-serif;
   font-size: 2.2rem;
 }
 
-#containerEquipo {
+#containerProgramacion, #containerDiseno, #containerAnimacion {
     /* background-color: #fff;*/
-   
     height: 1025px;
     margin: 110px auto 0 auto;
     overflow: hidden;
@@ -246,7 +245,6 @@ font-family: 'Roboto', sans-serif;
 .empleado {
     /*    background-color: red;*/
     /*    border: 1px solid black;*/
-  
     float: left;
     height: calc(50% - 90px);/*Hacemos lo mismo para la separacion vertical de las imagenes*/
     margin: 45px;
@@ -262,6 +260,7 @@ font-family: 'Roboto', sans-serif;
     color: #EBDEC2;
     text-align: center;
     line-height: 324px;
+    text-transform: uppercase;
 }
 .empleado p:nth-child(2) {
      color: #F8B700;
