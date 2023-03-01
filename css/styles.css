@@ -274,3 +274,11 @@ font-family: 'Roboto', sans-serif;
     width: 400px;
     height: 350px;
 }
+
+.invisible{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
