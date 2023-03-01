@@ -202,8 +202,9 @@ font-family: 'Roboto', sans-serif;
                                 EQUIPO
 ================================================================================*/
 #equipo {
-    background-color: #365EBA;
-    height: 1500px;
+    background-color: #241410;
+	border: 2px solid #f8b700;
+    height: 1350px;
     overflow: hidden;
     width: 100%;
 }
