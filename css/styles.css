@@ -201,28 +201,76 @@ font-family: 'Roboto', sans-serif;
 /* ===========================================================================
                                 EQUIPO
 ================================================================================*/
-#equipo{
-  background-color: #241410;
-	border: 2px solid #f8b700;
-	height: 1520px;
-	width: 100%;
-  text-align: center;
+#equipo {
+    background-color: #365EBA;
+    height: 1500px;
+    overflow: hidden;
+    width: 100%;
 }
-
-#containerEtiquetas {
+#containerPestana {
 /*     border: greenyellow 1px solid;*/
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
     overflow: hidden;
-    width: 675px;
+    width: 800px;
+    text-align: center;
 }
-.etiquetasEquipo {
+.pestanaEquipo {
 /*    border: 1px solid black;*/
-    color: whitesmoke;
+    color: #D98508;
     display: block;
     float: left;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 2rem;
+    font-weight: bold;
     width: 33.33%;
+    text-decoration: none;
+}
+
+
+.seleccionado{
+  color:#8D1B0A;
+  font-size: 2.2rem;
+}
+
+#containerEquipo {
+    /* background-color: #fff;*/
+   
+    height: 1025px;
+    margin: 110px auto 0 auto;
+    overflow: hidden;
+    width: 1590px;/*Sumamos 90px para compensar la perdida de los divs .empleado.Seguirán habiendo 1400px de tamaño pero de los contenedores de fotos y no del container de las fotos*/
+}
+.empleado {
+    /*    background-color: red;*/
+    /*    border: 1px solid black;*/
+  
+    float: left;
+    height: calc(50% - 90px);/*Hacemos lo mismo para la separacion vertical de las imagenes*/
+    margin: 45px;
+    width: calc(33.33% - 90px);/* Al ser 3 columnas, le asignamos un 33.33% menos los margenes derecho e izquierdo que hemos añadido (45px por lado) */
+}
+.fotoEmpleado {
+    background-color: #0c19d6;
+    border-radius: 150px;
+    height: 324px;
+    width: 100%;
+}
+.fotoEmpleado>p {
+    color: #EBDEC2;
+    text-align: center;
+    line-height: 324px;
+}
+.empleado p:nth-child(2) {
+     color: #F8B700;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.imgEmpleado{
+    width: 400px;
+    height: 350px;
 }
