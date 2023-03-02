@@ -282,3 +282,13 @@ font-family: 'Roboto', sans-serif;
 .visible{
     display: block;
 }
+
+/* ===========================================================================
+                               CONTACTO
+================================================================================*/
+#contacto {
+  background-color: #e64017;
+  border: 2px solid #f8b700;
+  height: 1350px;
+  width: 100%;
+}
