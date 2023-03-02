@@ -50,7 +50,8 @@ body {
 	z-index: 1;
 }
 #menu {
-	background-color: #1b1010;
+	/* background-color: #1b1010; */
+  background-image: url('../img/bgTituloSecciones.png');
 	border: 1px solid #f8b700;
 	position: relative;
 	top: 95px;
@@ -108,7 +109,9 @@ font-family: 'Roboto', sans-serif;
 .titulo-seccion {
 	width: 100%;
 	height: 100px;
-	background: #1b1010;
+ background-image: url('../img/bgTituloSecciones.png');
+
+	/* background: #1b1010; */
 	border-top: 1px solid #f8b700;
 	border-bottom: 1px solid #f8b700;
 	margin-top: 40px;
@@ -131,7 +134,7 @@ font-family: 'Roboto', sans-serif;
                                JUEGOS
 ================================================================================*/
 #juegos {
-	background-color: #241410;
+	background: linear-gradient(#241410, #3D2424);  /* 241410 3D2424 */
 	border: 2px solid #f8b700;
 	height: 1520px;
 	width: 100%;
@@ -160,6 +163,9 @@ font-family: 'Roboto', sans-serif;
 	text-align: justify;
 }
 .video-juego {
+  -webkit-box-shadow: 1px 1px 19px 5px rgba(0217,133,8,0.75);
+-moz-box-shadow: 1px 1px 19px 5px rgba(0217,133,8,0.75);
+box-shadow: 1px 1px 19px 5px rgba(0217,133,8,0.75);
 	background: #0c19d6;
 	margin: 75px 200px 0 0;
 	width: 650px;
@@ -174,7 +180,7 @@ font-family: 'Roboto', sans-serif;
                                WALLPAPERS
 ================================================================================*/
 #wallpapers {
-	background-color: #123749;
+	background: linear-gradient(#3D2424, #6A1306);
 	border: 2px solid #f8b700;
 	height: 1620px;
 	width: 100%;
@@ -185,9 +191,13 @@ font-family: 'Roboto', sans-serif;
 	width: 1600px;
 	margin: 60px auto;
 	background-color: #123749;
+  
 }
 .img-wallpapers {
   background-color: #0c19d6 ;
+  -webkit-box-shadow: 1px 1px 19px 5px rgba(0217,133,8,0.75);
+-moz-box-shadow: 1px 1px 19px 5px rgba(0217,133,8,0.75);
+box-shadow: 1px 1px 19px 5px rgba(0217,133,8,0.75);
   border-radius: 15px;
 	width: calc(100% / 3 - 100px);
 	height: 225px;
@@ -202,7 +212,7 @@ font-family: 'Roboto', sans-serif;
                                 EQUIPO
 ================================================================================*/
 #equipo {
-    background-color: #241410;
+    background: linear-gradient(#6A1306, #123749);
 	border: 2px solid #f8b700;
     height: 1350px;
     overflow: hidden;
@@ -219,6 +229,7 @@ font-family: 'Roboto', sans-serif;
 }
 .pestanaEquipo {
 /*    border: 1px solid black;*/
+
     color: #D98508;
     display: block;
     float: left;
@@ -231,8 +242,10 @@ font-family: 'Roboto', sans-serif;
 
 
 .seleccionado{
-  color:#8D1B0A;
-  font-size: 2.2rem;
+  /* Creamos un borde para la pestaña seleccionada */
+  -webkit-text-stroke: 1px #D98508;
+  color:#1b1010;
+
 }
 
 #containerProgramacion, #containerDiseno, #containerAnimacion {
@@ -252,6 +265,9 @@ font-family: 'Roboto', sans-serif;
 }
 .fotoEmpleado {
     background-color: #0c19d6;
+    -webkit-box-shadow: 1px 1px 19px 5px rgba(0217,133,8,0.75);
+-moz-box-shadow: 1px 1px 19px 5px rgba(0217,133,8,0.75);
+box-shadow: 1px 1px 19px 5px rgba(0217,133,8,0.75);
     border-radius: 150px;
     height: 324px;
     width: 100%;
@@ -287,8 +303,15 @@ font-family: 'Roboto', sans-serif;
                                CONTACTO
 ================================================================================*/
 #contacto {
-  background-color: #e64017;
+  background: linear-gradient(#123749, #3676A7);
   border: 2px solid #f8b700;
   height: 1350px;
   width: 100%;
 }
+
+/* ===========================================================================
+                               RRSS
+================================================================================*/
+/* ===========================================================================
+                               FOOTER
+================================================================================*/
