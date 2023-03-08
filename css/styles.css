@@ -390,6 +390,10 @@ textarea {
     color: #3676A7	;
      margin: 0 0 15px 0;
 }
+textarea::placeholder {
+  color: #140101;
+}
+
 
 #enviar {
     border-radius: 15px;
