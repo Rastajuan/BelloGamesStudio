@@ -10,7 +10,7 @@ enlaceProgramacion.addEventListener("click", () => {
 	programacion.classList.add("visible");
 	diseno.classList.remove("visible");
 	diseno.classList.add("invisible");
-	animacion.classList.remove("visble");
+	animacion.classList.remove("visible");
 	animacion.classList.add("invisible");
 });
 
@@ -18,7 +18,7 @@ enlaceDiseno.addEventListener("click", () => {
 	diseno.classList.add("visible");
 	programacion.classList.remove("visible");
 	programacion.classList.add("invisible");
-	animacion.classList.remove("visble");
+	animacion.classList.remove("visible");
 	animacion.classList.add("invisible");
 });
 
