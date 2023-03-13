@@ -1,5 +1,5 @@
 /* FUENTES 
-font-family: 'Open Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;  
 font-family: 'Oswald', sans-serif;
 font-family: 'Roboto', sans-serif;
 */
@@ -12,24 +12,29 @@ font-family: 'Roboto', sans-serif;
 	box-sizing: border-box;
 }
 
+/* ===========================================================================
+                               GENERAL
+================================================================================*/
 html {
 	font-family: "Open Sans", sans-serif;
 	font-size: 16px;
 	color: #ebdec2;
 }
+
 body {
 	width: 1920px;
 }
+
 #container {
-	width: 100%;
+	width: 100%; /* 1920px */
 	min-height: 7000px;
 }
 
 .boton-flotante {
-  position: fixed;
+  position: fixed; /* Posicionado fijo */
   bottom: 20px;
   right: 20px;
-  z-index: 999;
+  z-index: 999; /* Situado en la parte superior */
   background-color: #D98508;
   color: #1B1010;
   border-radius: 50%;
@@ -47,14 +52,24 @@ body {
   background-color: #1B1010;
   color: #D98508
 }
+
 /* ===========================================================================
                                HEADER                                           
 ================================================================================*/
-.header {
+header {
 	background-color: #241410;
 	height: 1050px;
 	width: 1920px;
 	border-bottom: 1px solid #f8b700;
+}
+
+h1 {
+	/* background-color: #f00c0c; */
+	margin-top: 200px;
+	color: white;
+	font-family: "Oswald", sans-serif;
+	font-size: 9rem;
+	text-align: center;
 }
 
 #logo {
@@ -70,7 +85,7 @@ body {
 	left: 90px;
 	width: 240px;
 	float: left;
-	z-index: 1;
+	z-index: 1; /* Situado en la parte superior */
 }
 #menu {
 	/* background-color: #1b1010; */
@@ -80,38 +95,28 @@ body {
 	top: 95px;
 	/* overflow: hidden; */
 }
-#menu ul {
+#menu  {
 	width: 100%;
 	height: 100px;
 	border: 1px solid #f8b700;
-	line-height: 120px;
+	line-height: 120px; 
 	text-align: center;
 }
 
 #menu li {
-	display: inline-block;
+	display: inline-block; /* Para que los elementos se muestren en linea */
 	margin: 0 50px;
 }
-#menu ul > li > a {
+#menu li > a { 
 	color: #f8b700;
 	font: bold 2.5rem "Roboto", sans-serif;
 	text-decoration: none;
 	text-transform: uppercase;
 }
-#menu ul > li > a:hover {
+#menu  li > a:hover {
 	color: #D98508;
 }
-#hero-text {
-	text-align: center;
-}
-h1 {
-	/* background-color: #f00c0c; */
-	margin-top: 200px;
-	color: white;
-	font-family: "Oswald", sans-serif;
-	font-size: 9rem;
-	text-align: center;
-}
+
 .sub-hero-text {
 	margin: 80px auto 180px auto;
 	color: #ebdec2;
@@ -157,7 +162,7 @@ font-family: 'Roboto', sans-serif;
                                JUEGOS
 ================================================================================*/
 #juegos {
-	background: linear-gradient(#241410, #3d2424); /* 241410 3D2424 */
+	background: linear-gradient(#241410, #3D2424); /* 241410 3D2424 */
 	border: 2px solid #f8b700;
 	height: 1520px;
 	width: 100%;
@@ -171,13 +176,13 @@ font-family: 'Roboto', sans-serif;
 	width: 650px;
 	float: left;
 }
-.texto-juego > p:nth-child(1) {
+.texto-juego > p:nth-child(1) {  /* El primer hijo, el título del juego */
 	color: #f8b700;
 	font-family: "Roboto", sans-serif;
 	font-size: 2.3rem;
 	text-transform: uppercase;
 }
-.texto-juego > p:nth-child(2) {
+.texto-juego > p:nth-child(2) { /* El segundo hijo, el texto */
 	color: #ebdec2;
 	font-family: "Roboto", sans-serif;
 	font-size: 1.5rem;
@@ -203,7 +208,7 @@ font-family: 'Roboto', sans-serif;
                                WALLPAPERS
 ================================================================================*/
 #wallpapers {
-	background: linear-gradient(#3d2424, #6a1306);
+	background: linear-gradient(#3d2424, #6a1306); /* 3d2424 6a1306 */
 	border: 2px solid #f8b700;
 	height: 1620px;
 	width: 100%;
@@ -234,7 +239,7 @@ font-family: 'Roboto', sans-serif;
                                 EQUIPO
 ================================================================================*/
 #equipo {
-	background: linear-gradient(#6a1306, #123749);
+	background: linear-gradient(#6a1306, #123749); /* 6a1306 123749 */
 	border: 2px solid #f8b700;
 	height: 1350px;
 	overflow: hidden;
@@ -329,7 +334,7 @@ font-family: 'Roboto', sans-serif;
                                CONTACTO
 ================================================================================*/
 #contacto {
-	background: linear-gradient(#123749, #3676a7);
+	background: linear-gradient(#123749, #3676a7); /* 123749 3676a7 */
 	border: 2px solid #f8b700;
 	height: 1070px;
 	width: 100%;
