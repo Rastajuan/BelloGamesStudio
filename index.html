@@ -1,364 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bello Games Studio</title>
+		<!-- GOGGLE FONTS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- CUSTOM CSS -->
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bello Games Studio</title>
-  <!-- GOGGLE FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet" />
-  <!-- CUSTOM CSS -->
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
+	<body>
+		<div id="container">
+			<!-- HEADER -->
+			<header>
+				<div id="container-fijo">
+					<!-- LOGO -->
+					<img src="img/logo.png" id="logo" />
 
-<body>
-  <!-- BOTON FLOTANTE  PARA VOLVER AL MENU PRINCIPAL-->
-  <a href="#" class="boton-flotante">MENU</a>
+					<!-- MENU -->
+					<nav>
+						<ul id="menu">
+							<li><a href="#">Home</a></li>
+							<li><a href="#juegos">Juegos</a></li>
+							<li><a href="#wallpapers">Wallpapers</a></li>
+							<li><a href="#equipo">Equipo</a></li>
+							<li><a href="#contacto">Contacto</a></li>
+						</ul>
+					</nav>
+				</div>
 
+				<!-- HERO TXT -->
 
-  <div id="container">
-    <!-- HEADER -->
-    <header>
-      <!-- LOGO -->
-      <img src="img/logo.png" id="logo">
-       
-      <!-- MENU -->
-      <nav>
+				<h1>BELLO GAMES STUDIO</h1>
+				<p class="sub-hero-text">
+					Somos creadores independientes de videojuegos especializados en el
+					desarrollo de Unity y Unreal Engine. Desde 2020, hemos estado poniendo
+					nuestras habilidades y buen humor al servicio de editores y estudios
+					de videojuegos para ofrecer experiencias &uacute;nicas y emocionantes
+					a los jugadores de todo el mundo.
+				</p>
+			</header>
+			<!-- ===JUEGOS===  -->
+			<section id="juegos">
+				<h2 class="titulo-seccion">Juegos</h2>
+				<div id="juego">
+					<div class="texto-juego">
+						<h3>Muper Sario 3</h3>
+						<p>
+							Un divertido juego de mesa familiar en formato videojuego. Acaba
+							con ese cuñado que no soportas o env&iacute;a a la tia Antonia al
+							inframundo con los personajes del famoso Muper Sario!!
+						</p>
+					</div>
+					<video src="/img/videos/mario.mp4" class="video-juego" controls>
+						<p>Su navegador no soporta vídeos HTML5.</p>
+					</video>
+				</div>
 
-        <ul id="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#juegos">Juegos</a></li>
-          <li><a href="#wallpapers">Wallpapers</a></li>
-          <li><a href="#equipo">Equipo</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
+				<div id="juego">
+					<div class="texto-juego">
+						<h3>Kirky's land 2</h3>
+						<p>
+							Si no te importa tu f&iacute;sico y quieres jugar con un personaje
+							gordo, rosa y de goma...este es tu juego. Encarna al famoso Kirky
+							en una aventura en sus sueños y devora el universo conocido.
+						</p>
+					</div>
+					<video src="/img/videos/kirby.mp4" class="video-juego" controls>
+						<p>Su navegador no soporta vídeos HTML5.</p>
+					</video>
+				</div>
+				<div id="juego">
+					<div class="texto-juego">
+						<h3>Legend of Zerda</h3>
+						<p>
+							Recorre un mundo infinito en el reino de Fyrule, rescata a tu
+							amada (si la encuentras) y sum&eacute;rgete en un mundo lleno de
+							enemigos mortales, como los terribles inspectores de Hacienda de
+							Fyrule...¡o los lectores de la factura de la luz!
+						</p>
+					</div>
+					<video src="/img/videos/zerda.mp4" class="video-juego" controls>
+						<p>Su navegador no soporta vídeos HTML5.</p>
+					</video>
+				</div>
+			</section>
 
-      </nav>
+			<!-- WALLPAPERS -->
+			<section id="wallpapers">
+				<h2 class="titulo-seccion">wallpapers</h2>
+				<div class="sub-titulo-secciones">
+					<p>DESCARGA NUESTROS FONDOS DE ESCRITORIO</p>
+				</div>
+				<div id="imgs-wallpaper">
+					<img src="img/wallpapers/1.jpg" class="img-wallpapers" />
+					<img src="img/wallpapers/2.jpg" class="img-wallpapers" />
+					<img src="img/wallpapers/3.jpg" class="img-wallpapers" />
+					<img src="img/wallpapers/4.jpg" class="img-wallpapers" />
+					<img src="img/wallpapers/5.jpg" class="img-wallpapers" />
+					<img src="img/wallpapers/6.jpg" class="img-wallpapers" />
+					<img src="img/wallpapers/7.jpg" class="img-wallpapers" />
+					<img src="img/wallpapers/8.jpg" class="img-wallpapers" />
+					<img src="img/wallpapers/9.jpg" class="img-wallpapers" />
+					<img src="img/wallpapers/10.png" class="img-wallpapers" />
+					<img src="img/wallpapers/11.jpg" class="img-wallpapers" />
+					<img src="img/wallpapers/12.jpg" class="img-wallpapers" />
+				</div>
+			</section>
 
-      <!-- HERO TXT -->
+			<!-- EQUIPO -->
+			<section id="equipo">
+				<h2 class="titulo-seccion">Equipo</h2>
+				<div id="containerPestana">
+					<a
+						href="#equipo"
+						id="enlaceProgramacion"
+						class="pestanaEquipo seleccionado"
+					>
+						PROGRAMACION</a
+					>
 
-      <h1>BELLO GAMES STUDIO</h1>
-      <p class="sub-hero-text">Somos creadores independientes de videojuegos especializados en el desarrollo de
-        Unity y Unreal Engine. Desde 2020, hemos estado poniendo nuestras habilidades y buen humor al servicio de
-        editores y
-        estudios de videojuegos para ofrecer experiencias &uacute;nicas y emocionantes a los jugadores de todo el
-        mundo.
-      </p>
+					<a href="#equipo" id="enlaceDiseno" class="pestanaEquipo"> DISEÑO</a>
 
+					<a href="#equipo" id="enlaceAnimacion" class="pestanaEquipo">
+						ANIMACION</a
+					>
+				</div>
+				<!-- Programacion -->
+				<div id="containerProgramacion" class="visible">
+					<div class="empleado">
+						<img src="img/workers/1.png" class="fotoEmpleado" />
+						<p>Wade Warren</p>
+					</div>
+					<div class="empleado">
+						<img src="img/workers/2.png" class="fotoEmpleado" />
+						<p>Cameron Williamson</p>
+					</div>
+					<div class="empleado">
+						<img src="img/workers/3.png" class="fotoEmpleado" />
+						<p>Leslie Alexander</p>
+					</div>
+					<div class="empleado">
+						<img src="img/workers/4.png" class="fotoEmpleado" />
+						<p>Guy Hawkins</p>
+					</div>
+					<div class="empleado">
+						<img src="img/workers/5.png" class="fotoEmpleado" />
+						<p>Kristin Watson</p>
+					</div>
+					<div class="empleado">
+						<img src="img/workers/6.png" class="fotoEmpleado" />
+						<p>Albert Flores</p>
+					</div>
+				</div>
+				<!-- Diseño -->
+				<div id="containerDiseno" class="invisible">
+					<div class="empleado">
+						<img src="img/workers/7.png" class="fotoEmpleado" />
+						<p>Darlene Robertson</p>
+					</div>
+					<div class="empleado">
+						<img src="img/workers/8.png" class="fotoEmpleado" />
+						<p>Floyd Miles</p>
+					</div>
+					<div class="empleado">
+						<img src="img/workers/9.png" class="fotoEmpleado" />
+						<p>Annette Black</p>
+					</div>
+					<div class="empleado">
+						<img src="img/workers/10.png" class="fotoEmpleado" />
+						<p>Devon Lane</p>
+					</div>
+					<div class="empleado">
+						<img src="img/workers/11.png" class="fotoEmpleado" />
+						<p>Dianne Rusell</p>
+					</div>
+					<div class="empleado">
+						<img src="img/workers/12.png" class="fotoEmpleado" />
+						<p>Darrell Steward</p>
+					</div>
+				</div>
+				<!-- Animacion -->
+				<div id="containerAnimacion" class="invisible">
+					<div class="empleado">
+						<img src="img/workers/13.png" class="fotoEmpleado" />
+						<p>Theresa Webb</p>
+					</div>
+					<div class="empleado">
+						<img src="img/workers/14.png" class="fotoEmpleado" />
+						<p>Jerome Bell</p>
+					</div>
+					<div class="empleado">
+						<img src="img/workers/15.png" class="fotoEmpleado" />
+						<p>Kathryn Murphy</p>
+					</div>
+					<div class="empleado">
+						<img src="img/workers/16.png" class="fotoEmpleado" />
+						<p>Marvin McKinney</p>
+					</div>
+					<div class="empleado">
+						<img src="img/workers/17.png" class="fotoEmpleado" />
+						<p>Eleanor Pena</p>
+					</div>
+					<div class="empleado">
+						<img src="img/workers/1.png" class="fotoEmpleado" />
+						<p>Devon Lane</p>
+					</div>
+				</div>
+			</section>
 
-    </header>
-    <!-- ===JUEGOS===  -->
-    <section id="juegos">
-      <h2 class="titulo-seccion">
-        Juegos
-      </h2>
-      <div id="juego">
-        <div class="texto-juego">
-          <h3>Muper Sario 3</h3>
-          <p>Un divertido juego de mesa familiar en formato videojuego. Acaba con ese cuñado que no soportas o
-            env&iacute;a a la tia Antonia al inframundo con los personajes del famoso Muper Sario!!</p>
-        </div>
-        <div class="video-juego">
-          <p>VIDEO DEL JUEGO</p>
-        </div>
-      </div>
+			<!-- CONTACTO -->
 
-      <div id="juego">
-        <div class="texto-juego">
-          <h3>Kirky's land 2</h3>
-          <p>Si no te importa tu f&iacute;sico y quieres jugar con un personaje gordo, rosa y de goma...este es tu
-            juego. Encarna al famoso Kirky en una aventura en sus sueños y devora el universo conocido.</p>
-        </div>
-        <div class="video-juego">
-          <p>VIDEO DEL JUEGO</p>
-        </div>
-      </div>
-      <div id="juego">
-        <div class="texto-juego">
-          <h3>Legend of Zerda</h3>
-          <p>Recorre un mundo infinito en la tierra de Barkelonia, rescata a tu amada (si la encuentras) y
-            sum&eacute;rgete en un mundo lleno de enemigos mortales, como los terribles inspectores de Hacienda de
-            Barkelonia...¡o los lectores de la factura de la luz! </p>
-        </div>
-        <div class="video-juego">
-          <p>VIDEO DEL JUEGO</p>
-        </div>
-      </div>
-    </section>
+			<section id="contacto">
+				<h2 class="titulo-seccion">Contacto</h2>
+				<div id="containerContacto">
+					<!-- Mapa -->
+					<div id="mapa">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d56947.55540520484!2d2.130232250278396!3d41.397170174770636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1677325255211!5m2!1ses!2ses"
+							width="646"
+							height="646"
+							style="border: 0"
+							allowfullscreen=""
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"
+						></iframe>
+					</div>
+					<!--Modal del formulario-->
+					<div id="modal" class="modal">
+						<div class="modal-contenido">
+							<span class="cerrar">&times;</span>
+							<h2>Datos del formulario</h2>
+							<p>Nombre: <span id="nombreModal"></span></p>
+							<p>Correo: <span id="correoModal"></span></p>
+							<p>Motivo de la consulta: <span id="seleccionModal"></span></p>
+							<p>Consulta: <span id="textareaModal"></span></p>
+              <button type="submit" name="enviar">Enviar formulario</button>
+						</div>
+					</div>
+					<!-- Formulario -->
+					<div id="formulario">
+						<form action="" id="formularioContacto">
+							<h3 class="formEncabezado">Formulario de contacto</h3>
 
-    <!-- WALLPAPERS -->
-    <section id="wallpapers">
-      <h2 class="titulo-seccion">
-        wallpapers
-      </h2>
-      <div class="sub-titulo-secciones">
-        <p>DESCARGA NUESTROS FONDOS DE ESCRITORIO</p>
-      </div>
-      <div id="imags-wallpaper">
-        <img src="img/wallpapers/1.jpg" class="img-wallpapers"/>
-        <img src="img/wallpapers/2.jpg" class="img-wallpapers"/>
-        <img src="img/wallpapers/3.jpg" class="img-wallpapers"/>
-        <img src="img/wallpapers/4.jpg" class="img-wallpapers"/>
-        <img src="img/wallpapers/5.jpg" class="img-wallpapers"/>
-        <img src="img/wallpapers/6.jpg" class="img-wallpapers"/>
-        <img src="img/wallpapers/7.jpg" class="img-wallpapers"/>
-        <img src="img/wallpapers/8.jpg" class="img-wallpapers"/>
-        <img src="img/wallpapers/9.jpg" class="img-wallpapers"/>
-        <img src="img/wallpapers/10.png" class="img-wallpapers"/>
-        <img src="img/wallpapers/11.jpg" class="img-wallpapers"/>
-        <img src="img/wallpapers/12.jpg" class="img-wallpapers"/>
-      </div>
-    </section>
+							<input
+								id="nombre"
+								name="nombre"
+								placeholder="Introduzca su nombre y apellidos"
+								type="text"
+							/>
+							<br />
 
-    <!-- EQUIPO -->
-    <section id="equipo">
-      <h2 class="titulo-seccion">
-        Equipo
-      </h2>
-      <div id="containerPestana">
-        <a href="#equipo" id="enlaceProgramacion" class="pestanaEquipo seleccionado">
-          PROGRAMACION</a>
+							<input
+								id="correo"
+								name="correo"
+								placeholder="Introduzca su correo"
+								type="email"
+							/>
+							<br />
 
-        <a href="#equipo" id="enlaceDiseno" class="pestanaEquipo">
-          DISEÑO</a>
+							<br />
+							<select id="mensaje" name="seleccion">
+								<option value="" selected disabled>
+									<!-- Lo seleccionamos como inicial pero deshabilitamos su eleccion -->
+									Seleccione el motivo de la consulta
+								</option>
+								<option value="creacion">Creación de videojuegos</option>
+								<option value="asesoria">Asesoría informática</option>
+								<option value="problemas">Problemas de software</option>
+								<option value="otros">Otros</option>
+							</select>
 
-        <a href="#equipo" id="enlaceAnimacion" class="pestanaEquipo">
-          ANIMACION</a>
+							<textarea
+								cols="40"
+								name="miTextarea"
+								rows="5"
+								placeholder="Escriba aquí su consulta"
+							></textarea>
 
-      </div>
-      <!-- Programacion -->
-      <div id="containerProgramacion" class="visible">
-        <div class="empleado">
-          <img src="img/workers/1.png" class="fotoEmpleado">
-          <p>
-            Wade Warren
-          </p>
-        </div>
-        <div class="empleado">
-          <img src="img/workers/2.png" class="fotoEmpleado">
-          <p>
-            Cameron Williamson
-          </p>
-        </div>
-        <div class="empleado">
-          <img src="img/workers/3.png" class="fotoEmpleado">
-          <p>
-            Leslie Alexander
-          </p>
-        </div>
-        <div class="empleado">
-          <img src="img/workers/4.png" class="fotoEmpleado">
-          <p>
-            Guy Hawkins
-          </p>
-        </div>
-        <div class="empleado">
-          <img src="img/workers/5.png" class="fotoEmpleado">
-          <p>
-            Kristin Watson
-          </p>
-        </div>
-        <div class="empleado">
-          <img src="img/workers/6.png" class="fotoEmpleado">
-          <p>
-            Albert Flores
-          </p>
-        </div>
-      </div>
-      <!-- Diseño -->
-      <div id="containerDiseno" class="invisible">
-        <div class="empleado">
-          <img src="img/workers/7.png" class="fotoEmpleado">
-          <p>
-            Darlene Robertson
-          </p>
-        </div>
-        <div class="empleado">
-          <img src="img/workers/8.png" class="fotoEmpleado">
-          <p>
-            Floyd Miles
-          </p>
-        </div>
-        <div class="empleado">
-          <img src="img/workers/9.png" class="fotoEmpleado">
-          <p>
-            Annette Black
-          </p>
-        </div>
-        <div class="empleado">
-          <img src="img/workers/10.png" class="fotoEmpleado">
-          <p>
-            Devon Lane
-          </p>
-        </div>
-        <div class="empleado">
-          <img src="img/workers/11.png" class="fotoEmpleado">
-          <p>
-            Dianne Rusell
-          </p>
-        </div>
-        <div class="empleado">
-          <img src="img/workers/12.png" class="fotoEmpleado">
-          <p>
-            Darrell Steward
-          </p>
-        </div>
-      </div>
-      <!-- Animacion -->
-      <div id="containerAnimacion" class="invisible">
-        <div class="empleado">
-          <img src="img/workers/13.png" class="fotoEmpleado">
-          <p>
-            Theresa Webb
-          </p>
-        </div>
-        <div class="empleado">
-          <img src="img/workers/14.png" class="fotoEmpleado">
-          <p>
-            Jerome Bell
-          </p>
-        </div>
-        <div class="empleado">
-          <img src="img/workers/15.png" class="fotoEmpleado">
-          <p>
-            Kathryn Murphy
-          </p>
-        </div>
-        <div class="empleado">
-          <img src="img/workers/16.png" class="fotoEmpleado">
-          <p>
-            Marvin McKinney
-          </p>
-        </div>
-        <div class="empleado">
-          <img src="img/workers/17.png" class="fotoEmpleado">
-          <p>
-            Eleanor Pena
-          </p>
-        </div>
-        <div class="empleado">
-          <img src="img/workers/1.png" class="fotoEmpleado">
-          <p>
-            Devon Lane
-          </p>
-        </div>
-      </div>
-    </section>
+							<input id="btnEnviar" name="" type="submit" value="Enviar" />
+						</form>
+					</div>
+				</div>
+			</section>
 
-    <!-- CONTACTO -->
+			<!-- RRSS -->
+			<section id="rrss">
+				<div id="containerRRSS ">
+					<h3 class="sub-titulo-secciones sub-rrss">
+						SIGUENOS EN NUESTRAS REDES SOCIALES
+					</h3>
 
-    <section id="contacto">
-      <h2 class="titulo-seccion">
-        Contacto
-      </h2>
-      <div id="containerContacto">
-        <!-- Mapa -->
-        <div id="mapa">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d56947.55540520484!2d2.130232250278396!3d41.397170174770636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1677325255211!5m2!1ses!2ses"
-            width="646" height="646" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <!-- Formulario -->
-        <div id="formulario">
-          <form action="" id="formularioContacto">
-            <h3 class="formEncabezado">
-              Formulario de contacto
-            </h3>
+					<div class="rrss">
+						<a href="" title="GitHub"><img src="/img/rrss/github.png" /></a>
+						<a href="" title="LinkedIn"><img src="/img/rrss/linkedin.png" /></a>
+						<a href="" title="Tweeter"> <img src="/img/rrss/tweeter.png" /></a>
+						<a href="" title="Instagram"
+							><img src="/img/rrss/instagram.png"
+						/></a>
+						<a href="" title="Facebook"><img src="/img/rrss/facebook.png" /></a>
+					</div>
+				</div>
+			</section>
 
-            <input name="nombre" placeholder="Introduzca su nombre y apellidos" type="text">
-            <br>
+			<!-- FOOTER -->
+			<footer id="piePagina">
+				<!-- Logo -->
+				<img src="img/logo.png" class="logoFooter" />
+				<!-- Copyleft -->
+				<div id="copyletf">
+					<p>
+						2023 Juan Bello. Trabajo para la asignatura de Diseño de Interfaces
+						Web. 2º DAW
+					</p>
+					<br /><br />
+					<a
+						rel="license"
+						href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+						><img
+							alt="Llicència de Creative Commons"
+							style="border-width: 0"
+							src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a
+					><br /><br />Aquesta obra està subjecta a una llicència de
+					<a
+						class="creative"
+						rel="license"
+						href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+						>Reconeixement-NoComercial-CompartirIgual 4.0 Internacional de
+						Creative Commons</a
+					>
+				</div>
+			</footer>
+		</div>
 
-            <input name="correo" placeholder="Introduzca su correo" type="email">
-            <br>
-
-            <br>
-            <select name="seleccion">
-              <option value="" selected disabled> <!-- Lo seleccionamos como inicial pero deshabilitamos su eleccion -->
-                Seleccione el motivo de la consulta
-              </option>
-              <option value="creacion">
-                Creación de videojuegos
-              </option>
-              <option value="asesoria">
-                Asesoría informática
-              </option>
-              <option value="problemas">
-                Problemas de software
-              </option>
-              <option value="otros">
-                Otros
-              </option>
-            </select>
-           
-            <textarea cols="40" name="miTextarea" rows="5" placeholder="Escriba aquí su consulta"></textarea>
-
-            <input id="enviar" name="" type="submit" value="Enviar">
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- RRSS -->
-    <section id="rrss">
-      <div id="containerRRSS ">
-        <h3 class="sub-titulo-secciones sub-rrss">SIGUENOS EN NUESTRAS REDES SOCIALES</h3>
-
-        <div class="rrss">
-          <p> 
-            GITHUB
-
-          </p>
-
-          <p>
-            LINKEDIN
-
-          </p>
-
-          <p>
-            TWITTER
-
-          </p>
-          <p>
-            INSTAGRAM
-
-          </p>
-          <p>
-            FACEBOOK
-
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer id="piePagina">
-      
-        <img src="img/logo.png" class="logoFooter"/>
-   
-
-      <div id="copyletf">
-        <p>2023 Juan Bello. Trabajo para la asignatura de Diseño de Interfaces Web. 2º DAW</p>
-        <br><br>
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
-            alt="Llicència de Creative Commons" style="border-width:0"
-            src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br>Aquesta obra
-        està subjecta a una
-        llicència de <a class="creative" rel="license"
-          href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Reconeixement-NoComercial-CompartirIgual 4.0
-          Internacional de Creative Commons</a>
-      </div>
-    </footer>
-
-  </div>
-
-  <!-- Enlace custom javascript -->
-  <script src="js/scripts.js"></script>
-</body>
-
+		<!-- Enlace custom javascript -->
+		<script src="js/scripts.js"></script>
+	</body>
 </html>
