@@ -560,7 +560,7 @@ button[name="enviar"]:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.7);
+  background: #d98508bf;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -573,6 +573,15 @@ button[name="enviar"]:focus {
 .lightbox-activo {
   opacity: 1;
   pointer-events: auto;
+}
+
+.lightbox-cerrar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 150px 10px 10px;
+  cursor: pointer;
+  font-size: 5rem;
 }
 
 .lightbox img {
