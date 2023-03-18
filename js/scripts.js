@@ -99,21 +99,24 @@ document.body.appendChild(lightbox);
 const contenedorLightbox = document.getElementById('imgs-wallpaper');
 
 contenedorLightbox.addEventListener("click", (e) => {
-  if (e.target.classList.contains("img-wallpapers")) { // Comprueba si el elemento clickeado es una imagen con la clase 'img-wallpapers'
-    
+  if (e.target.classList.contains("img-wallpapers")) {
+		// Comprueba si el elemento clickeado es una imagen con la clase 'img-wallpapers'
+
+		// Muestra el lightbox
 		// Muestra el lightbox
 		lightbox.innerHTML = `
   <img src="${e.target.src}" alt="">
+  <span class="lightbox-cerrar">&times;</span>
 `;
 
 		lightbox.classList.add("lightbox-activo");
 	}
 });
 
-// Oculta el lightbox cuando se hace clic en él
+// Oculta el lightbox cuando se hace clic fuera de él o en la cruz de cerrar
+
 lightbox.addEventListener("click", (e) => {
-	// Si el evento de clic se originó en el elemento lightbox, ocultelo
-	if (e.target === lightbox) {
+	if (e.target === lightbox || e.target.classList.contains("lightbox-cerrar")) {
 		lightbox.classList.remove("lightbox-activo");
 		document.body.style.overflow = "auto";
 	}
