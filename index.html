@@ -242,19 +242,20 @@
 							<p>Correo: <span id="correoModal"></span></p>
 							<p>Motivo de la consulta: <span id="seleccionModal"></span></p>
 							<p>Consulta: <span id="textareaModal"></span></p>
-              <button type="submit" name="enviar">Enviar formulario</button>
+							<button type="submit" name="enviar">Enviar formulario</button>
 						</div>
 					</div>
 					<!-- Formulario -->
 					<div id="formulario">
 						<form action="" id="formularioContacto">
 							<h3 class="formEncabezado">Formulario de contacto</h3>
-
+							<!-- Añadiremos un elemento data-tooltip para poder seleccionar los elementos del formulario con javascript y añadirles un tooltip con la información de cada uno de ellos. -->
 							<input
 								id="nombre"
 								name="nombre"
 								placeholder="Introduzca su nombre y apellidos"
 								type="text"
+								data-tooltip="Introduzca su nombre y apellidos"
 							/>
 							<br />
 
@@ -263,11 +264,16 @@
 								name="correo"
 								placeholder="Introduzca su correo"
 								type="email"
+								data-tooltip="Introduzca su correo"
 							/>
 							<br />
 
 							<br />
-							<select id="mensaje" name="seleccion">
+							<select
+								id="mensaje"
+								name="seleccion"
+								data-tooltip="Seleccione el motivo de la consulta"
+							>
 								<option value="" selected disabled>
 									<!-- Lo seleccionamos como inicial pero deshabilitamos su eleccion -->
 									Seleccione el motivo de la consulta
@@ -283,6 +289,8 @@
 								name="miTextarea"
 								rows="5"
 								placeholder="Escriba aquí su consulta"
+								id="textarea"
+								data-tooltip="Escriba aquí su consulta"
 							></textarea>
 
 							<input id="btnEnviar" name="" type="submit" value="Enviar" />
