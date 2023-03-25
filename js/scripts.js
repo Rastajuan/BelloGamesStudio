@@ -135,6 +135,7 @@
 	/* ===========================================================================
                                TOOLTIPS FORMULAROI
 ================================================================================*/
+  // Se ha añadido un data tooltip a los elementos que queremos que tengan tooltip. 
 	// Selecciona todos los elementos con el atributo data-tooltip
 	const tooltips = document.querySelectorAll("[data-tooltip]");
 
