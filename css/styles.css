@@ -72,7 +72,7 @@ h1 {
 	left: 90px;
 	width: 240px;
 	float: left;
-	z-index: 1; /* Situado en la parte superior */
+	z-index: 999; /* Situado en la parte superior */
 }
 #menu {
 	/* background-color: #1b1010; */
@@ -104,6 +104,8 @@ h1 {
 	color: #d98508;
 }
 
+
+
 .sub-hero-text {
 	margin: 80px auto 180px auto;
 	color: #ebdec2;
@@ -121,34 +123,6 @@ font-family: 'Roboto', sans-serif;
 /* ===========================================================================
                               SCROLL MENU
 ================================================================================*/
-.fixed {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	background-color: white;
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-	z-index: 999;
-}
-
-.fixed #logo {
-	max-height: 50px;
-	transition: max-height 0.2s ease-in-out;
-}
-
-.fixed #menu {
-	margin-top: 15px;
-	transition: margin-top 0.2s ease-in-out;
-}
-
-.fixed #menu li {
-	display: inline-block;
-	margin-right: 20px;
-}
-
-.fixed #menu li:last-child {
-	margin-right: 0;
-}
 
 /* ===========================================================================
                                SECCIONES GENERAL
@@ -218,6 +192,7 @@ font-family: 'Roboto', sans-serif;
 	border: 1px solid #f8b700;
 	border-radius: 15px;
 	float: right;
+  cursor: pointer;
 }
 
 /* ===========================================================================
@@ -246,7 +221,6 @@ font-family: 'Roboto', sans-serif;
 		100% / 3 - 100px
 	); /* 100px es el doble del margin de las imagenes */
 	height: 225px;
-	line-height: 225px;
 	border: 1px solid #f8b700;
 	margin: 50px;
 	text-align: center;
@@ -410,6 +384,9 @@ font-family: 'Roboto', sans-serif;
 #mapa {
 	/*    background-color: lightcoral;
     border: 1px solid black;*/
+	-webkit-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
+	-moz-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
+	box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	float: left;
 	height: 650px;
 	position: relative;
@@ -459,18 +436,20 @@ textarea {
 	color: #3676a7;
 } */
 
-#enviar {
+#btnEnviar {
+ background-color: transparent;
 	border-radius: 15px;
 	border: none;
-	color: #3676a7;
+	color: #fff;
 	font-size: 1.5rem;
 	margin-top: 20px;
 	width: 150px;
+  text-align: left;
 }
 
-#enviar:hover {
-	background-color: #3676a7;
-	color: #fff;
+#btnEnviar:hover {
+	 background-color: transparent;
+	color: #d98508;
 	cursor: pointer;
 }
 ::placeholder {
@@ -500,7 +479,12 @@ textarea {
 	-webkit-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	-moz-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	box-shadow: 1px 1px 19px 5px #d98508bf;
-	background-color: rgba(36,20,16,0.6); /* Cambiar a un color de fondo con transparencia media */
+	background-color: rgba(
+		36,
+		20,
+		16,
+		0.6
+	); /* Cambiar a un color de fondo con transparencia media */
 	border-radius: 15px;
 	margin: 15% auto;
 	padding: 20px;
@@ -591,6 +575,9 @@ button[name="enviar"]:focus {
 }
 
 .rrss img {
+	-webkit-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
+	-moz-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
+	box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	border: 1px solid #f8b700;
 	width: 75px;
 	height: 75px;

@@ -1,4 +1,47 @@
 /* ===========================================================================
+                               MENU DESPLEGABLE
+================================================================================*/ 
+const equipoLink = document.querySelector('#menu li:nth-child(4) a');
+    const submenu = document.querySelector('#menu li:nth-child(4) ul');
+    
+    equipoLink.addEventListener('mouseenter', () => {
+        submenu.style.display = 'block';
+    });
+    
+    equipoLink.addEventListener('mouseleave', () => {
+        submenu.style.display = 'none';
+    });
+
+
+/*===========================================================================
+                                SCROLL MENU
+================================================================================*/
+/* window.addEventListener("load", function () {
+	const container = document.getElementById("container-fijo");
+	const logo = document.getElementById("logo");
+	const menu = document.getElementById("menu");
+
+	function onScroll() {
+		const scrollPosition = window.pageYOffset;
+
+		if (scrollPosition > 0 && !container.classList.contains("fixed")) {
+      container.classList.add("fixed");
+      logo.classList.add("fixed");
+      menu.classList.add("fixed");
+			logo.style.maxHeight = "50px";
+			menu.style.marginTop = "15px";
+		} else if (scrollPosition === 0 && container.classList.contains("fixed")) {
+			container.classList.remove("fixed");
+			logo.style.maxHeight = null;
+			menu.style.marginTop = null;
+		}
+	}
+
+	window.addEventListener("scroll", onScroll);
+});
+ */
+
+/* ===========================================================================
                                 SLIDE HEADER
 ================================================================================*/
 // Obtener el elemento header
@@ -6,9 +49,10 @@ const header = document.querySelector("header");
 
 // Crear un array con las imágenes del slideshow
 const imagenes = [
-	"/img/wallpapers/1.jpg",
-	"/img/wallpapers/2.jpg",
-	"/img/wallpapers/3.jpg",
+	"/img/SlideHeader/1.jpg",
+	"/img/SlideHeader/2.jpg",
+	"/img/SlideHeader/3.jpg",
+	"/img/SlideHeader/4.jpg",
 ];
 
 // Establecer la duración de cada imagen en milisegundos
@@ -100,13 +144,16 @@ contenedorLightbox.addEventListener("click", (e) => {
 		// Comprueba si el elemento clickeado es una imagen con la clase 'img-wallpapers'
 
 		// Muestra el lightbox
-		// Muestra el lightbox
 		lightbox.innerHTML = `
-  <img src="${e.target.src}" alt="">
-  <span class="lightbox-cerrar">&times;</span>
-`;
+			<img src="${e.target.src}" alt="">
+			<span class="lightbox-cerrar">&times;</span>
+		`;
 
 		lightbox.classList.add("lightbox-activo");
+
+		// Escala la imagen en un 150%
+		const img = lightbox.querySelector("img");
+		img.style.transform = "scale(2.5)";
 	}
 });
 
