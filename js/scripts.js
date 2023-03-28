@@ -1,21 +1,24 @@
 /* ===========================================================================
                                 MODAL BIENVENIDA
-================================================================================*/ document.addEventListener(
-	"DOMContentLoaded",
-	function () {
+================================================================================*/
+/* Añadimos el evento DOMContentLoaded para que se ejecute el código JavaScript cuando el documento HTML haya sido cargado por completo. Asi el modal será lo primero en aparecer al cargar la página*/
+document.addEventListener("DOMContentLoaded", function () {
 		var modal = document.querySelector(".modal-bienvenida");
 		var btnCerrar = document.querySelector(".modal-bienvenida-cerrar");
 
+    // Con esta función se abre el modal al cargar la página dándole la propiedad display: block, que es la que lo hace visible. Si no se le da esta propiedad, el modal no se verá ya que por defecto tiene display: none
 		if (modal) {
 			modal.style.display = "block";
 		}
 
+    // Con esta función se cierra el modal al hacer click en el botón de cerrar
 		if (btnCerrar) {
 			btnCerrar.addEventListener("click", function () {
 				modal.style.display = "none";
 			});
 		}
 
+    // Con esta función se cierra el modal al hacer click fuera de él
 		window.addEventListener("click", function (event) {
 			if (event.target === modal) {
 				modal.style.display = "none";
