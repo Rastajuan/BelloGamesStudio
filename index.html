@@ -12,6 +12,10 @@
 			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
 			rel="stylesheet"
 		/>
+		<!-- AOS CSS -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<!-- AOS JS -->
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<!-- CUSTOM CSS -->
 		<link rel="stylesheet" href="css/styles.css" />
 	</head>
@@ -38,8 +42,16 @@
 
 				<!-- HERO TXT -->
 
-				<h1>BELLO GAMES STUDIO</h1>
-				<p class="sub-hero-text">
+				<h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+					BELLO GAMES STUDIO
+				</h1>
+				<p
+					class="sub-hero-text"
+					data-aos="fade-zoom-in"
+					data-aos-easing="ease-in-back"
+					data-aos-delay="300"
+					data-aos-offset="0"
+				>
 					Somos creadores independientes de videojuegos especializados en el
 					desarrollo de Unity y Unreal Engine. Desde 2020, hemos estado poniendo
 					nuestras habilidades y buen humor al servicio de editores y estudios
@@ -51,21 +63,21 @@
 			<section id="juegos">
 				<h2 class="titulo-seccion">Juegos</h2>
 				<div id="juego">
-					<div class="texto-juego">
+					<div class="texto-juego" data-aos="fade-right">
 						<h3>Muper Sario 3</h3>
-						<p>
+						<p >
 							Un divertido juego de mesa familiar en formato videojuego. Acaba
 							con ese cuñado que no soportas o env&iacute;a a la tia Antonia al
 							inframundo con los personajes del famoso Muper Sario!!
 						</p>
 					</div>
-					<video src="/img/videos/mario.mp4" class="video-juego" controls>
+					<video src="/img/videos/mario.mp4" class="video-juego" controls data-aos="fade-left">
 						<p>Su navegador no soporta vídeos HTML5.</p>
 					</video>
 				</div>
 
 				<div id="juego">
-					<div class="texto-juego">
+					<div class="texto-juego" data-aos="fade-right">
 						<h3>Kirky's land 2</h3>
 						<p>
 							Si no te importa tu f&iacute;sico y quieres jugar con un personaje
@@ -73,12 +85,12 @@
 							en una aventura en sus sueños y devora el universo conocido.
 						</p>
 					</div>
-					<video src="/img/videos/kirby.mp4" class="video-juego" controls>
+					<video src="/img/videos/kirby.mp4" class="video-juego" controls data-aos="fade-left">
 						<p>Su navegador no soporta vídeos HTML5.</p>
 					</video>
 				</div>
 				<div id="juego">
-					<div class="texto-juego">
+					<div class="texto-juego" data-aos="fade-right">
 						<h3>Legend of Zerda</h3>
 						<p>
 							Recorre un mundo infinito en el reino de Fyrule, rescata a tu
@@ -87,7 +99,7 @@
 							Fyrule...¡o los lectores de la factura de la luz!
 						</p>
 					</div>
-					<video src="/img/videos/zerda.mp4" class="video-juego" controls>
+					<video src="/img/videos/zerda.mp4" class="video-juego" controls data-aos="fade-left">
 						<p>Su navegador no soporta vídeos HTML5.</p>
 					</video>
 				</div>
@@ -100,18 +112,66 @@
 					<p>DESCARGA NUESTROS FONDOS DE ESCRITORIO</p>
 				</div>
 				<div id="imgs-wallpaper">
-					<img src="img/wallpapers/1.jpg" class="img-wallpapers" />
-					<img src="img/wallpapers/2.jpg" class="img-wallpapers" />
-					<img src="img/wallpapers/3.jpg" class="img-wallpapers" />
-					<img src="img/wallpapers/4.jpg" class="img-wallpapers" />
-					<img src="img/wallpapers/5.jpg" class="img-wallpapers" />
-					<img src="img/wallpapers/6.jpg" class="img-wallpapers" />
-					<img src="img/wallpapers/7.jpg" class="img-wallpapers" />
-					<img src="img/wallpapers/8.jpg" class="img-wallpapers" />
-					<img src="img/wallpapers/9.jpg" class="img-wallpapers" />
-					<img src="img/wallpapers/10.png" class="img-wallpapers" />
-					<img src="img/wallpapers/11.jpg" class="img-wallpapers" />
-					<img src="img/wallpapers/12.jpg" class="img-wallpapers" />
+					<img
+						src="img/wallpapers/1.jpg"
+						class="img-wallpapers"
+						data-aos="flip-right"
+					/>
+					<img
+						src="img/wallpapers/2.jpg"
+						class="img-wallpapers"
+						data-aos="flip-right"
+					/>
+					<img
+						src="img/wallpapers/3.jpg"
+						class="img-wallpapers"
+						data-aos="flip-right"
+					/>
+					<img
+						src="img/wallpapers/4.jpg"
+						class="img-wallpapers"
+						data-aos="flip-right"
+					/>
+					<img
+						src="img/wallpapers/5.jpg"
+						class="img-wallpapers"
+						data-aos="flip-right"
+					/>
+					<img
+						src="img/wallpapers/6.jpg"
+						class="img-wallpapers"
+						data-aos="flip-right"
+					/>
+					<img
+						src="img/wallpapers/7.jpg"
+						class="img-wallpapers"
+						data-aos="flip-right"
+					/>
+					<img
+						src="img/wallpapers/8.jpg"
+						class="img-wallpapers"
+						data-aos="flip-right"
+					/>
+					<img
+						src="img/wallpapers/9.jpg"
+						class="img-wallpapers"
+						data-aos="flip-right"
+					/>
+					<img
+						src="img/wallpapers/10.png"
+						class="img-wallpapers"
+						data-aos="flip-right"
+					/>
+					<img
+						src="img/wallpapers/11.jpg"
+						class="img-wallpapers"
+						data-aos="flip-right"
+					/>
+					<img
+						src="img/wallpapers/12.jpg"
+						class="img-wallpapers"
+						data-aos="flip-right"
+					/>
 				</div>
 			</section>
 
@@ -257,7 +317,7 @@
 								type="text"
 								data-tooltip="Introduzca su nombre y apellidos"
 							/>
-               <div style="color:red;display:none" id="nombreError"></div>
+							<div style="color: red; display: none" id="nombreError"></div>
 							<br />
 
 							<input
@@ -267,7 +327,9 @@
 								type="email"
 								data-tooltip="Introduzca su correo"
 							/>
-               <div style="color:red;display:none" id="correoError">Introduzca la contraseña</div>
+							<div style="color: red; display: none" id="correoError">
+								Introduzca la contraseña
+							</div>
 							<br />
 
 							<br />
@@ -349,9 +411,12 @@
 				</div>
 			</footer>
 		</div>
-
+		<!-- Inicializacion libreria AOS -->
+		<script>
+			AOS.init();
+		</script>
 		<!-- Enlace custom javascript -->
 		<script src="js/scripts.js"></script>
-    <script src="js/validacionFormulario.js"></script>
+		<script src="js/validacionFormulario.js"></script>
 	</body>
 </html>
