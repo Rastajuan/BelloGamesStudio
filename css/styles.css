@@ -31,6 +31,59 @@ body {
 }
 
 /* ===========================================================================
+                            MODAL DE BIENVENIDA                                           
+================================================================================*/
+.modal-bienvenida {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-bienvenida-contenido {
+	-webkit-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
+	-moz-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
+	box-shadow: 1px 1px 19px 5px #d98508bf;
+	background-color: rgba(
+		36,
+		20,
+		16,
+		0.6
+	); /* Cambiar a un color de fondo con transparencia media */
+	border-radius: 15px;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid yellow; /* Agregar un borde amarillo de 2px */
+	width: 80%;
+	max-width: 1000px;
+	font-family: inherit;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+.modal-bienvenida-cerrar {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.modal-bienvenida-cerrar:hover,
+.modal-bienvenida-cerrar:focus {
+	color: #d98508bf;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+/* ===========================================================================
                                HEADER                                           
 ================================================================================*/
 header {

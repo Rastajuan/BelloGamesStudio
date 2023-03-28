@@ -1,17 +1,42 @@
 /* ===========================================================================
-                               MENU DESPLEGABLE
-================================================================================*/ 
-const equipoLink = document.querySelector('#menu li:nth-child(4) a');
-    const submenu = document.querySelector('#menu li:nth-child(4) ul');
-    
-    equipoLink.addEventListener('mouseenter', () => {
-        submenu.style.display = 'block';
-    });
-    
-    equipoLink.addEventListener('mouseleave', () => {
-        submenu.style.display = 'none';
-    });
+                                MODAL BIENVENIDA
+================================================================================*/ document.addEventListener(
+	"DOMContentLoaded",
+	function () {
+		var modal = document.querySelector(".modal-bienvenida");
+		var btnCerrar = document.querySelector(".modal-bienvenida-cerrar");
 
+		if (modal) {
+			modal.style.display = "block";
+		}
+
+		if (btnCerrar) {
+			btnCerrar.addEventListener("click", function () {
+				modal.style.display = "none";
+			});
+		}
+
+		window.addEventListener("click", function (event) {
+			if (event.target === modal) {
+				modal.style.display = "none";
+			}
+		});
+	}
+);
+
+/* ===========================================================================
+                               MENU DESPLEGABLE
+================================================================================*/
+const equipoLink = document.querySelector("#menu li:nth-child(4) a");
+const submenu = document.querySelector("#menu li:nth-child(4) ul");
+
+equipoLink.addEventListener("mouseenter", () => {
+	submenu.style.display = "block";
+});
+
+equipoLink.addEventListener("mouseleave", () => {
+	submenu.style.display = "none";
+});
 
 /*===========================================================================
                                 SCROLL MENU
