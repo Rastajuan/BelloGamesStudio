@@ -16,57 +16,51 @@
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<!-- AOS JS -->
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 		<!-- CUSTOM CSS -->
-		<link rel="stylesheet" href="css/styles.css" />
+		<!-- <link rel="stylesheet" href="css/styles.css" /> -->
+		<link rel="stylesheet" href="css/styles2.css" />
 	</head>
 
 	<body>
-		<!-- MODAL DE BIENVENIDA -->
-		<!-- Modal -->
-		<div id="modal" class="modal-bienvenida">
-			<div class="modal-bienvenida-contenido">
-				<span class="modal-bienvenida-cerrar">&times;</span>
-				<h2>Bienvenido/a</h2>
-				<p>
-					Estamos emocionados de que hayas decidido unirte a nosotros en esta
-					aventura. Aquí encontrarás las últimas noticias sobre tus juegos
-					favoritos, fondos de ecritorio para descargar y mucho más. ¡Que
-					comience la diversión!
-				</p>
-			</div>
-		</div>
-
 		<div id="container">
 			<!-- HEADER -->
 			<header>
-				<div id="container-fijo">
-					<!-- LOGO -->
-					<img src="img/logo.png" id="logo" />
+				<!-- LOGO -->
+				<a href="#"
+					><img
+						src="/img/logo.png"
+						alt="Logo Bello Games Studio"
+						id="logo"
+						data-aos="fade-down"
+						data-aos-easing="linear"
+						data-aos-duration="300"
+						class="imagen-parpadeante"
+				/></a>
 
-					<!-- MENU -->
-					<nav>
-						<ul id="menu">
-							<li><a href="#">Home</a></li>
-							<li><a href="#juegos">Juegos</a></li>
-							<li><a href="#wallpapers">Wallpapers</a></li>
-							<li><a href="#equipo">Equipo</a></li>
-							<li><a href="#contacto">Contacto</a></li>
-						</ul>
-					</nav>
-				</div>
+				<!-- MENU -->
+				<nav id="barraNavegación">
+					<ul id="menu">
+						<li class="enlacesMenu"><a href="#">Home</a></li>
+						<li class="enlacesMenu"><a href="#juegos">Juegos</a></li>
+						<li class="enlacesMenu"><a href="#wallpapers">Wallpapers</a></li>
+						<li class="enlacesMenu"><a href="#equipo">Equipo</a>
+							<ul id="submenu">
+								<li class="elementoSubmenu"><a href="">Programaci&oacute;n</a>
+								</li>
+								<li class="elementoSubmenu"><a href="">Diseño</a></li>
+								<li class="elementoSubmenu"><a href="">Animaci&oacute;n</a></li>
+							</ul>
+						</li>
+						<li class="enlacesMenu"><a href="#contacto">Contacto</a></li>
+					</ul>
+				</nav>
 
 				<!-- HERO TXT -->
 
-				<h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-					BELLO GAMES STUDIO
-				</h1>
-				<p
-					class="sub-hero-text"
-					data-aos="fade-zoom-in"
-					data-aos-easing="ease-in-back"
-					data-aos-delay="300"
-					data-aos-offset="0"
-				>
+				<!-- <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom"> -->
+				<h1 class="hero-text">BELLO GAMES STUDIO</h1>
+				<p class="sub-hero-text">
 					Somos creadores independientes de videojuegos especializados en el
 					desarrollo de Unity y Unreal Engine. Desde 2020, hemos estado poniendo
 					nuestras habilidades y buen humor al servicio de editores y estudios
@@ -76,7 +70,7 @@
 			</header>
 			<!-- ===JUEGOS===  -->
 			<section id="juegos">
-				<h2 class="titulo-seccion">Juegos</h2>
+				<h2 class="titulo-seccion" data-aos="fade-down">Juegos</h2>
 				<div id="juego">
 					<div class="texto-juego" data-aos="fade-right">
 						<h3>Muper Sario 3</h3>
@@ -137,7 +131,7 @@
 
 			<!-- WALLPAPERS -->
 			<section id="wallpapers">
-				<h2 class="titulo-seccion">wallpapers</h2>
+				<h2 class="titulo-seccion" data-aos="fade-down">wallpapers</h2>
 				<div class="sub-titulo-secciones">
 					<p>DESCARGA NUESTROS FONDOS DE ESCRITORIO</p>
 				</div>
@@ -207,46 +201,70 @@
 
 			<!-- EQUIPO -->
 			<section id="equipo">
-				<h2 class="titulo-seccion">Equipo</h2>
+				<h2 class="titulo-seccion" data-aos="fade-down">Equipo</h2>
 				<div id="containerPestana">
 					<a
 						href="#equipo"
 						id="enlaceProgramacion"
 						class="pestanaEquipo seleccionado"
 					>
-						PROGRAMACION</a
+						PROGRAMACI&Oacute;N</a
 					>
 
 					<a href="#equipo" id="enlaceDiseno" class="pestanaEquipo"> DISEÑO</a>
 
 					<a href="#equipo" id="enlaceAnimacion" class="pestanaEquipo">
-						ANIMACION</a
+						ANIMACI&Oacute;N</a
 					>
 				</div>
 				<!-- Programacion -->
 				<div id="containerProgramacion" class="visible" data-aos="fade-up">
 					<div class="empleado">
-						<img src="img/workers/1.png" class="fotoEmpleado" data-aos="flip-up"/>
+						<img
+							src="img/workers/1.png"
+							class="fotoEmpleado"
+							data-aos="flip-up"
+						/>
 						<p>Wade Warren</p>
 					</div>
 					<div class="empleado">
-						<img src="img/workers/2.png" class="fotoEmpleado" data-aos="flip-up"/>
+						<img
+							src="img/workers/2.png"
+							class="fotoEmpleado"
+							data-aos="flip-up"
+						/>
 						<p>Cameron Williamson</p>
 					</div>
 					<div class="empleado">
-						<img src="img/workers/3.png" class="fotoEmpleado" data-aos="flip-up"/>
+						<img
+							src="img/workers/3.png"
+							class="fotoEmpleado"
+							data-aos="flip-up"
+						/>
 						<p>Albert Flores</p>
 					</div>
 					<div class="empleado">
-						<img src="img/workers/4.png" class="fotoEmpleado" data-aos="flip-up"/>
+						<img
+							src="img/workers/4.png"
+							class="fotoEmpleado"
+							data-aos="flip-up"
+						/>
 						<p>Guy Hawkins</p>
 					</div>
 					<div class="empleado">
-						<img src="img/workers/5.png" class="fotoEmpleado" data-aos="flip-up"/>
+						<img
+							src="img/workers/5.png"
+							class="fotoEmpleado"
+							data-aos="flip-up"
+						/>
 						<p>Kristin Watson</p>
 					</div>
 					<div class="empleado">
-						<img src="img/workers/6.png" class="fotoEmpleado" data-aos="flip-up"/>
+						<img
+							src="img/workers/6.png"
+							class="fotoEmpleado"
+							data-aos="flip-up"
+						/>
 						<p>Leslie Alexander</p>
 					</div>
 				</div>
@@ -309,7 +327,7 @@
 			<!-- CONTACTO -->
 
 			<section id="contacto">
-				<h2 class="titulo-seccion">Contacto</h2>
+				<h2 class="titulo-seccion" data-aos="fade-down">Contacto</h2>
 				<div id="containerContacto">
 					<!-- Mapa -->
 					<div
@@ -341,7 +359,12 @@
 						</div>
 					</div>
 					<!-- Formulario -->
-					<div id="formulario">
+					<div
+						id="formulario"
+						data-aos="zoom-in-up"
+						data-aos-easing="linear"
+						data-aos-duration="500"
+					>
 						<form action="" id="formularioContacto">
 							<h3 class="formEncabezado">Formulario de contacto</h3>
 							<!-- Añadiremos un elemento data-tooltip para poder seleccionar los elementos del formulario con javascript y añadirles un tooltip con la información de cada uno de ellos. -->
@@ -398,6 +421,21 @@
 				</div>
 			</section>
 
+			<!-- SECCION CON PARALLAX -->
+		<!-- 	<div
+				class="parallax-window"
+				data-parallax="scroll"
+				src="/img/wallpapers/7.jpg"
+			>
+				<div class="parallax-container">
+					<h1>Efecto parallax con texto</h1>
+					<p>
+						Este es un ejemplo de cómo usar Parallax.js para crear un efecto de
+						movimiento de texto.
+					</p>
+				</div>
+			</div> -->
+
 			<!-- RRSS -->
 			<section id="rrss">
 				<div id="containerRRSS ">
@@ -406,13 +444,34 @@
 					</h3>
 
 					<div class="rrss">
-						<a href="https://github.com/Rastajuan" title="GitHub" target="_blank"><img src="/img/rrss/github.png" data-aos="flip-down"/></a>
-						<a href="https://www.linkedin.com/in/juan-bello-fernandez/" title="LinkedIn" target="_blank"><img src="/img/rrss/linkedin.png" data-aos="flip-down"/></a>
-						<a href="https://twitter.com/juanbello_" title="Tweeter" target="_blank"> <img src="/img/rrss/tweeter.png" data-aos="flip-down"/></a>
-						<a href="https://www.instagram.com/" title="Instagram" target="_blank"
-							><img src="/img/rrss/instagram.png"
-						data-aos="flip-down"/></a>
-						<a href="https://www.facebook.com/" title="Facebook" target="_blank"><img src="/img/rrss/facebook.png" data-aos="flip-down"/></a>
+						<a
+							href="https://github.com/Rastajuan"
+							title="GitHub"
+							target="_blank"
+							><img src="/img/rrss/github.png" data-aos="flip-down"
+						/></a>
+						<a
+							href="https://www.linkedin.com/in/juan-bello-fernandez/"
+							title="LinkedIn"
+							target="_blank"
+							><img src="/img/rrss/linkedin.png" data-aos="flip-down"
+						/></a>
+						<a
+							href="https://twitter.com/juanbello_"
+							title="Tweeter"
+							target="_blank"
+						>
+							<img src="/img/rrss/tweeter.png" data-aos="flip-down"
+						/></a>
+						<a
+							href="https://www.instagram.com/"
+							title="Instagram"
+							target="_blank"
+							><img src="/img/rrss/instagram.png" data-aos="flip-down"
+						/></a>
+						<a href="https://www.facebook.com/" title="Facebook" target="_blank"
+							><img src="/img/rrss/facebook.png" data-aos="flip-down"
+						/></a>
 					</div>
 				</div>
 			</section>
@@ -446,12 +505,14 @@
 				</div>
 			</footer>
 		</div>
+		<!-- CUSTOM JS -->
+		<!-- <script src="js/scripts.js"></script> -->
+		<script src="js/scriptsMio.js"></script>
+		<!-- Parallax -->
+		<script src="https://cdn.jsdelivr.net/parallax.js/1.5.0/parallax.min.js"></script>
 		<!-- Inicializacion libreria AOS -->
 		<script>
 			AOS.init();
 		</script>
-		<!-- Enlace custom javascript -->
-		<script src="js/scripts.js"></script>
-		<script src="js/validacionFormulario.js"></script>
 	</body>
 </html>
