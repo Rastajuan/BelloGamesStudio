@@ -6,61 +6,44 @@
 /*===========================================================================
                                 SCROLL MENU
 ================================================================================*/
-//Asignamos a una variable la posición del scroll
-// Selecciona el elemento del menú una sola vez al principio y guárdalo en una variable
-const menuElement = document.getElementById("container-fijo");
 
-// Guarda la posición de desplazamiento anterior al principio
-let prevScrollpos = document.documentElement.scrollTop;
+const barraNavegacion = document.getElementById("barraNavegación");
+const logo = document.getElementById("logo");
+const tamanioLogo = "240px";
+const distanciaTop = barraNavegacion.offsetTop;
+const enlacesMenu = document.querySelectorAll("#menu li.enlacesMenu a");
+const elementoSubmenu = document.querySelectorAll("#submenu li.elementoSubmenu a"
+);
 
-// Agrega un evento de desplazamiento que llama a la función esconderMostrarMenu
-window.addEventListener('scroll', esconderMostrarMenu, { passive: true });
 
-// Función para esconder o mostrar el menú
-function esconderMostrarMenu() {
-// Obtén la posición de desplazamiento actual
-let actualScrollPos = document.documentElement.scrollTop;
+function cambiarClases() {
+	const scrollVertical = window.scrollY;
+	const esSuperior = scrollVertical > distanciaTop;
+	const esInferior = scrollVertical <= 0;
 
-// Compara la posición de desplazamiento anterior y actual para determinar si el usuario está desplazándose hacia arriba o hacia abajo
-if (prevScrollpos > actualScrollPos) {
-// Si el usuario está desplazándose hacia arriba, muestra el menú
-menuElement.style.display = "block";
-} else {
-// Si el usuario está desplazándose hacia abajo, oculta el menú
-menuElement.style.display = "none";
-}
-
-// Actualiza la posición de desplazamiento anterior a la posición de desplazamiento actual para la próxima vez que se llame a la función
-prevScrollpos = actualScrollPos;
-}
-
-/* window.addEventListener("load", function () {
-	const container = document.getElementById("container-fijo");
-	const logo = document.getElementById("logo");
-	const menu = document.getElementById("menu");
-
-	function onScroll() {
-		const scrollPosition = window.pageYOffset;
-
-		if (scrollPosition > 0 && !container.classList.contains("fixed")) {
-      container.classList.add("fixed");
-      logo.classList.add("fixed");
-      menu.classList.add("fixed");
-			logo.style.maxHeight = "50px";
-			menu.style.marginTop = "15px";
-		} else if (scrollPosition === 0 && container.classList.contains("fixed")) {
-			container.classList.remove("fixed");
-			logo.style.maxHeight = null;
-			menu.style.marginTop = null;
-		}
+	if (esSuperior) {
+		barraNavegacion.classList.add("nav-scroll");
+    logo.classList.add("logo-scroll");
+    enlacesMenu.forEach((enlace) => {
+      enlace.classList.add("enlacesMenu-scroll");
+    });
+	} else if (esInferior) {
+		barraNavegacion.classList.remove("nav-scroll");
+    logo.classList.remove("logo-scroll");
+    menu.classList.remove("menu-scroll");
+    enlacesMenu.forEach((enlace) => {
+      enlace.classList.remove("enlacesMenu-scroll");
+    });
+		logo.style.width = tamanioLogo;
+		logo.style.height = tamanioLogo;
 	}
+}
 
-	window.addEventListener("scroll", onScroll);
-});
- */
+// Ponemos en escucha el evento scroll y ejecutamos la función cambiarClases
+window.addEventListener("scroll", cambiarClases);
 
 /* ===========================================================================
-                                SLIDE HEADER
+                                SLIDESHOW HEADER
 ================================================================================*/
 // Obtener el elemento header
 const header = document.querySelector("header");
@@ -74,7 +57,7 @@ const imagenes = [
 ];
 
 // Establecer la duración de cada imagen en milisegundos
-const duracion = 3000;
+const duracion = 2000;
 
 // Iniciar el índice de la imagen en cero
 let index = 0;
