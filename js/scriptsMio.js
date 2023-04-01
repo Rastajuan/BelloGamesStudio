@@ -6,36 +6,39 @@
 /*===========================================================================
                                 SCROLL MENU
 ================================================================================*/
-
 const barraNavegacion = document.getElementById("barraNavegación");
 const logo = document.getElementById("logo");
 const tamanioLogo = "240px";
 const distanciaTop = barraNavegacion.offsetTop;
 const enlacesMenu = document.querySelectorAll("#menu li.enlacesMenu a");
-const elementoSubmenu = document.querySelectorAll("#submenu li.elementoSubmenu a"
-);
+const subMenu = document.querySelector(".enlacesMenu > #submenu");
+const elementoSubmenu = document.querySelectorAll("#submenu li.elementoSubmenu a");
 
-
+/* Función que cambia las clases de los elementos de la barra de navegacion */
 function cambiarClases() {
 	const scrollVertical = window.scrollY;
 	const esSuperior = scrollVertical > distanciaTop;
 	const esInferior = scrollVertical <= 0;
 
+  //Cuanado el scroll es superior a la distanciaTop, o sea, cuando el scroll baja
 	if (esSuperior) {
 		barraNavegacion.classList.add("nav-scroll");
     logo.classList.add("logo-scroll");
+    subMenu.classList.add("submenu-scroll");
     enlacesMenu.forEach((enlace) => {
       enlace.classList.add("enlacesMenu-scroll");
     });
-	} else if (esInferior) {
+    
+  }
+  //Cuando la posicion es la inicial
+  else if (esInferior) {
 		barraNavegacion.classList.remove("nav-scroll");
     logo.classList.remove("logo-scroll");
-    menu.classList.remove("menu-scroll");
+    subMenu.classList.remove("submenu-scroll");
     enlacesMenu.forEach((enlace) => {
       enlace.classList.remove("enlacesMenu-scroll");
     });
-		logo.style.width = tamanioLogo;
-		logo.style.height = tamanioLogo;
+		logo.classList.remove("logo-scroll");
 	}
 }
 
@@ -50,7 +53,7 @@ const header = document.querySelector("header");
 
 // Crear un array con las imágenes del slideshow
 const imagenes = [
-	"/img/SlideHeader/1.jpg",
+	"/img/SlideHeader/5.jpg",
 	"/img/SlideHeader/2.jpg",
 	"/img/SlideHeader/3.jpg",
 	"/img/SlideHeader/4.jpg",
