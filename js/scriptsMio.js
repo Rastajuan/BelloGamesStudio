@@ -1,3 +1,4 @@
+
 /* ===========================================================================
                                MENU DESPLEGABLE
 ================================================================================*/
@@ -13,24 +14,24 @@ const menuElement = document.getElementById("container-fijo");
 let prevScrollpos = document.documentElement.scrollTop;
 
 // Agrega un evento de desplazamiento que llama a la función esconderMostrarMenu
-window.addEventListener("scroll", esconderMostrarMenu, { passive: true });
+window.addEventListener('scroll', esconderMostrarMenu, { passive: true });
 
 // Función para esconder o mostrar el menú
 function esconderMostrarMenu() {
-	// Obtén la posición de desplazamiento actual
-	let actualScrollPos = document.documentElement.scrollTop;
+// Obtén la posición de desplazamiento actual
+let actualScrollPos = document.documentElement.scrollTop;
 
-	// Compara la posición de desplazamiento anterior y actual para determinar si el usuario está desplazándose hacia arriba o hacia abajo
-	if (prevScrollpos > actualScrollPos) {
-		// Si el usuario está desplazándose hacia arriba, muestra el menú
-		menuElement.style.display = "block";
-	} else {
-		// Si el usuario está desplazándose hacia abajo, oculta el menú
-		menuElement.style.display = "none";
-	}
+// Compara la posición de desplazamiento anterior y actual para determinar si el usuario está desplazándose hacia arriba o hacia abajo
+if (prevScrollpos > actualScrollPos) {
+// Si el usuario está desplazándose hacia arriba, muestra el menú
+menuElement.style.display = "block";
+} else {
+// Si el usuario está desplazándose hacia abajo, oculta el menú
+menuElement.style.display = "none";
+}
 
-	// Actualiza la posición de desplazamiento anterior a la posición de desplazamiento actual para la próxima vez que se llame a la función
-	prevScrollpos = actualScrollPos;
+// Actualiza la posición de desplazamiento anterior a la posición de desplazamiento actual para la próxima vez que se llame a la función
+prevScrollpos = actualScrollPos;
 }
 
 /* window.addEventListener("load", function () {
