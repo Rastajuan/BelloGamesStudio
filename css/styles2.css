@@ -41,21 +41,14 @@ header {
 	background-image: url("/img/HeroImage.jpg");
 	background-size: cover; /* Esta propiedad ajustará la imagen para cubrir todo el fondo*/
 }
-.fijado {
-	position: fixed;
-	top: 0;
-	left: 0;
+
+nav {
+	background-color: #eb0b0b;
 	width: 100%;
-
-}
-.fijo {
-  position: fixed;
-}
-
-nav{
-  background-color: #eb0b0b;
-  position: relative;
+	height: 100px;
 	top: 65px;
+	position: fixed;
+	z-index: 1;
 }
 #logo {
 	background-color: #e2b026;
@@ -70,7 +63,7 @@ nav{
 	left: 90px;
 	width: 240px;
 	float: left;
-	z-index: 9999; 
+	z-index: 9999;
 }
 
 /* MENU */
@@ -81,14 +74,13 @@ nav{
 	align-items: center;
 	background-image: url("../img/bgTituloSecciones.png");
 	border: 1px solid #f8b700;
-	position: fixed;
-	
+	/* position: fixed; */
 	width: 100%;
-	height: 100px;
+	height: 100%;
 	border: 1px solid #f8b700;
 	text-align: center;
 	padding-left: 250px;
-  z-index: 500;
+	z-index: 500;
 	/* overflow: hidden; */
 }
 
@@ -109,27 +101,31 @@ nav{
 
 .enlacesMenu > a:hover {
 	color: #d98508;
- transform: scale(3.2);
+	/* transform: scale(3.2); */
 }
 
 /* SUBMENU */
 #submenu {
 	width: 300px;
-	height: auto;
+	height: 150px;
 	list-style: none;
 	position: absolute;
-  top: 100px;
+	padding-top: 25px;
 	z-index: 1;
-  /* background-color: #d90808; */
+	display: none;
+	/* background-color: #d90808; */
 }
 
 .elementoSubmenu {
-	width: 100%;
-  display: none;
+
+	height: 50px;
+	line-height: 50px;
+  /* background-color: #fff; */
 	/* padding-top: 30px; */
 }
 
 .elementoSubmenu > a {
+  	width: auto;
 	color: #f8b700;
 	font: bold 2.5rem "Roboto", sans-serif;
 	text-decoration: none;
@@ -137,9 +133,16 @@ nav{
 	line-height: 2.5rem;
 	transition: all 0.3s ease-in-out;
 	font-size: 1.8rem;
+  
 }
 .elementoSubmenu > a:hover {
-	color: #d90808;
+	color: #d98508;
+	/* transform: scale(3.2); */
+}
+
+/* Desplegamos el submenu que tenemos con display:none */
+.enlacesMenu:hover #submenu {
+	display: block;
 }
 
 /* HERO */
@@ -542,7 +545,7 @@ textarea {
 	-webkit-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	-moz-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
-	border: 1px solid #f8b700;
+	border: 1px solid #d98508bf;
 	width: 75px;
 	height: 75px;
 	margin-left: 65px;
@@ -555,7 +558,7 @@ textarea {
 	-webkit-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	-moz-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
-	border: 1px solid #f8b700;
+	border: 1px solid #d98508bf;
 	width: 75px;
 	height: 75px;
 	margin-left: 65px;
@@ -610,18 +613,44 @@ textarea {
                               ELEMENTOS DE LA UF2                                         
 ================================================================================*/
 /* ===========================================================================
-                               TOOLTIPS FORMULARIO
+                               EFECTO SCROLL EN MENU
 ================================================================================*/
-.tooltip {
-	position: absolute;
-	z-index: 9999;
-	padding: 8px;
-	background-color: rgba(0, 0, 0, 0.9);
-	color: #d98508bf;
-	border-radius: 4px;
-	font-size: 1.2rem;
-	font-weight: bold;
-	opacity: 0.8;
-	width: 60%;
-	/* bottom: 100%; */
+/* Logo */
+.logo-scroll {
+	max-height: 50px;
+	max-width: 50px;
+	transition: all 0.3s ease;
+  position: relative;
+  top: 0px;
+}
+.nav-scroll {
+	background-color: #eb0b0b;
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	transition: all 0.3s ease;
+}
+
+#menu .enlacesMenu a.enlacesMenu-scroll {
+  color: #f8b700;
+  font: bold 1.2rem "Roboto", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+#menu .enlacesMenu a.enlacesMenu-scroll:hover {
+  color: #d98508;
+}
+
+
+/* ===========================================================================
+                             MODAL FORMULARIO                                       
+================================================================================*/
+.modal {
+	display: none;
 }
