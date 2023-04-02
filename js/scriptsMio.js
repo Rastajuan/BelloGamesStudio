@@ -6,36 +6,39 @@
 /*===========================================================================
                                 SCROLL MENU
 ================================================================================*/
-
 const barraNavegacion = document.getElementById("barraNavegación");
 const logo = document.getElementById("logo");
 const tamanioLogo = "240px";
 const distanciaTop = barraNavegacion.offsetTop;
 const enlacesMenu = document.querySelectorAll("#menu li.enlacesMenu a");
-const elementoSubmenu = document.querySelectorAll("#submenu li.elementoSubmenu a"
-);
+const subMenu = document.querySelector(".enlacesMenu > #submenu");
+const elementoSubmenu = document.querySelectorAll("#submenu li.elementoSubmenu a");
 
-
+/* Función que cambia las clases de los elementos de la barra de navegacion */
 function cambiarClases() {
 	const scrollVertical = window.scrollY;
 	const esSuperior = scrollVertical > distanciaTop;
 	const esInferior = scrollVertical <= 0;
 
+  //Cuanado el scroll es superior a la distanciaTop, o sea, cuando el scroll baja
 	if (esSuperior) {
 		barraNavegacion.classList.add("nav-scroll");
     logo.classList.add("logo-scroll");
+    subMenu.classList.add("submenu-scroll");
     enlacesMenu.forEach((enlace) => {
       enlace.classList.add("enlacesMenu-scroll");
     });
-	} else if (esInferior) {
+    
+  }
+  //Cuando la posicion es la inicial
+  else if (esInferior) {
 		barraNavegacion.classList.remove("nav-scroll");
     logo.classList.remove("logo-scroll");
-    menu.classList.remove("menu-scroll");
+    subMenu.classList.remove("submenu-scroll");
     enlacesMenu.forEach((enlace) => {
       enlace.classList.remove("enlacesMenu-scroll");
     });
-		logo.style.width = tamanioLogo;
-		logo.style.height = tamanioLogo;
+		logo.classList.remove("logo-scroll");
 	}
 }
 
@@ -45,36 +48,36 @@ window.addEventListener("scroll", cambiarClases);
 /* ===========================================================================
                                 SLIDESHOW HEADER
 ================================================================================*/
-// Obtener el elemento header
+// Obtenemos el elemento header
 const header = document.querySelector("header");
 
-// Crear un array con las imágenes del slideshow
+// Creamos un array con las imágenes del slideshow
 const imagenes = [
-	"/img/SlideHeader/1.jpg",
+	"/img/SlideHeader/5.jpg",
 	"/img/SlideHeader/2.jpg",
 	"/img/SlideHeader/3.jpg",
 	"/img/SlideHeader/4.jpg",
 ];
 
-// Establecer la duración de cada imagen en milisegundos
+// Establecemos la duración de cada imagen en milisegundos
 const duracion = 2000;
 
-// Iniciar el índice de la imagen en cero
+// Iniciamos el índice de la imagen en cero
 let index = 0;
 
 // Función para cambiar la imagen del slideshow
 function cambiarImagen() {
-	// Obtener la URL de la imagen actual del array
+	// Obtenemos la URL de la imagen actual del array
 	const imagenURL = imagenes[index];
 
-	// Actualizar la imagen de fondo del header
+	// Actualizamos la imagen de fondo del header
 	header.style.backgroundImage = `url(${imagenURL})`;
 
-	// Incrementar el índice
+	// Incrementamo el índice
 	index = (index + 1) % imagenes.length;
 }
 
-// Iniciar el slideshow
+// Iniciamos el slideshow
 setInterval(cambiarImagen, duracion);
 
 /* ===========================================================================
@@ -137,34 +140,62 @@ const lightbox = document.createElement("div");
 lightbox.classList.add("lightbox");
 document.body.appendChild(lightbox);
 
-// Utilizamos la delegación de eventos para adjuntar el evento 'click' a un elemento superior
+// Creamos un array con todas las imágenes
+const imageArray = Array.from(images);
+
+// Creamos una variable para almacenar el índice de la imagen actualmente mostrada
+let currentIndex = 0;
+
+// Función para mostrar una imagen en el lightbox
+function verImagen(index) {
+	// Muestra el lightbox
+	lightbox.innerHTML = `
+    <img src="${imageArray[index].src}" alt="">
+    <div class="lightbox-botones">
+  <i class="fas fa-chevron-left lightbox-prev"></i>
+  <i class="fas fa-chevron-right lightbox-next"></i>
+</div>
+
+    <span class="lightbox-cerrar">&times;</span>
+  `;
+	lightbox.classList.add("lightbox-activo");
+
+	// Añade un evento 'click' al botón de la imagen anterior
+	const prevButton = lightbox.querySelector(".lightbox-prev");
+	prevButton.addEventListener("click", () => {
+		currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
+		verImagen(currentIndex);
+	});
+
+	// Añade un evento 'click' al botón de la siguiente imagen
+	const nextButton = lightbox.querySelector(".lightbox-next");
+	nextButton.addEventListener("click", () => {
+		currentIndex = (currentIndex + 1) % imageArray.length;
+		verImagen(currentIndex);
+	});
+}
+
+
 const contenedorLightbox = document.getElementById("imgs-wallpaper");
 
 contenedorLightbox.addEventListener("click", (e) => {
-	if (e.target.classList.contains("img-wallpapers")) {
-		// Comprueba si el elemento clickeado es una imagen con la clase 'img-wallpapers'
-
-		// Muestra el lightbox
-		lightbox.innerHTML = `
-			<img src="${e.target.src}" alt="">
-			<span class="lightbox-cerrar">&times;</span>
-		`;
-
-		lightbox.classList.add("lightbox-activo");
-
-		// Escala la imagen en un 150%
-		const img = lightbox.querySelector("img");
-		img.style.transform = "scale(2.5)";
-	}
+  if (e.target.classList.contains("img-wallpapers")) {
+    // Comprueba si el elemento clickeado es una imagen con la clase 'img-wallpapers'
+    
+    // Obtiene el índice de la imagen clickeada
+    currentIndex = imageArray.indexOf(e.target);
+    
+    // Muestra la imagen clickeada en el lightbox
+    verImagen(currentIndex);
+  }
 });
 
-// Oculta el lightbox cuando se hace clic fuera de él o en la cruz de cerrar
-
+// Oculta el lightbox cuando se hace clic fuera de él (dentro del div) o en la cruz de cerrar
 lightbox.addEventListener("click", (e) => {
-	if (e.target === lightbox || e.target.classList.contains("lightbox-cerrar")) {
-		lightbox.classList.remove("lightbox-activo");
-		document.body.style.overflow = "auto";
-	}
+  if (e.target === lightbox || e.target.classList.contains("lightbox-cerrar")) {
+    lightbox.classList.remove("lightbox-activo");
+    document.body.style.overflow = "auto";
+  }
 });
 
 /* ===========================================================================
