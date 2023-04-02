@@ -110,18 +110,21 @@ nav {
 	height: 150px;
 	list-style: none;
 	position: absolute;
-	padding-top: 29px;
+	/* padding-top: 29px; */
+  padding-top: 29px;
+  margin-left: -32px;
 	z-index: 1;
 	display: none;
+ 
 	/* background-color: #d90808; */
 }
 
 .elementoSubmenu {
-  
+   border: 1px solid #f8b700;
 	height: 50px;
 	line-height: 50px;
-	background-color: rgba(94, 89, 89, 0.5);
-  border: 1px solid #f8b700;
+	background-color: rgba(94, 89, 89, 0.8);
+  
 	/* padding-top: 30px; */
 }
 
@@ -623,7 +626,7 @@ textarea {
 	max-width: 50px;
 	transition: all 0.3s ease;
 	position: relative;
-	top: 0px;
+
 }
 .nav-scroll {
 	/* background-color: #eb0b0b; */
@@ -653,7 +656,93 @@ textarea {
   padding-top: 13px;
 }
 
+/* ===========================================================================
+                             LIGHTBOX WALLPAPERS                                    
+================================================================================*/
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  background: rgba(31, 19, 1, 0.749);
+  display: flex;
+  flex-direction: row; /* Cambia la dirección del flex a fila */
+  justify-content: space-between; /* Agrega espacio entre la imagen y los botones */
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 100;
+  border-radius: 15px;
+}
 
+.lightbox-activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 5rem;
+}
+
+.lightbox-cerrar:hover {
+  color: #d98508bf;
+}
+
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain; /* Para que la imagen se adapte al tamaño del contenedor */
+  display: block; /* Para que podamos usar los márgenes */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+ border-radius: 15px;
+}
+
+.lightbox-botones {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.lightbox-botones button {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+
+.lightbox-botones .lightbox-prev {
+  text-align: left;
+}
+.lightbox-botones .lightbox-next {
+  text-align: right;
+}
+
+.lightbox-botones i {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  line-height: 1;
+  margin: 0 20px;
+}
+
+.lightbox-botones i:hover {
+  transform: scale(1.5);
+   color: #d98508bf;
+}
 
 /* ===========================================================================
                              MODAL FORMULARIO                                       
