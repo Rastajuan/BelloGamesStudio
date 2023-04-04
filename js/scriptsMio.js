@@ -212,7 +212,7 @@ const enviarDesdeModal = document.getElementById("enviarDesdeModal"); // Botón 
 // Añadimos eventos a la escucha al formulario,al botón de cerrar y al hacer clic fuera del modal
 formulario.addEventListener("submit", abrirModal); // Evento para abrir el modal cuando se envía el formulario
 span.addEventListener("click", cerrarModal); //Evento para cerrar el modal cuando se hace clic en el botón de cerrar
-window.addEventListener("click", clickFueraDelModal); // Evento para cerrar el modal cuando se hace clic fuera del modal. Usamos window para que el evento se ejecute en cualquier parte de la ventana
+// window.addEventListener("click", clickFueraDelModal); // Evento para cerrar el modal cuando se hace clic fuera del modal. Usamos window para que el evento se ejecute en cualquier parte de la ventana
 
 // Función para abrir el modal
 function abrirModal(e) {
@@ -240,12 +240,12 @@ function cerrarModal() {
 	modal.style.display = "none"; // Oculta el modal
 }
 // Función para cerrar el modal si se hace clic fuera de él
-function clickFueraDelModal(event) {
+/* function clickFueraDelModal(event) {
 	if (event.target == modal) {
 		// Comprueba si el objetivo del evento es el modal
 		modal.style.display = "none"; // Oculta el modal
 	}
-}
+} */
 
 // Función para cerrar el modal y enviar el formulario
 function cerrarModalEnviar(){
@@ -260,8 +260,31 @@ function cerrarModalEnviar(){
 /* ===========================================================================
                                TOOLTIPS FORMULARIO
 ================================================================================ */
+// Se ha añadido un data tooltip a los elementos que queremos que tengan tooltip.
+// Seleccionamos todos los elementos con el atributo data-tooltip
+const tooltips = document.querySelectorAll("[data-tooltip]");
+
+// Creamos un div para mostrar el tooltip
+const tooltipDiv = document.createElement("div");
+tooltipDiv.classList.add("tooltip");
+
+// Recorremos todos los elementos y agrega eventos para mostrar y ocultar el tooltip
+tooltips.forEach((element) => {
+	// Agregamos un evento que se activa cuando el cursor pasa sobre el elemento
+	element.addEventListener("mouseover", () => {
+		// Establecemos el texto del tooltip como el valor del atributo data-tooltip del elemento
+		tooltipDiv.textContent = element.dataset.tooltip;
+		// Insertamos el tooltip en el DOM justo después del elemento
+		element.insertAdjacentElement("afterend", tooltipDiv);
+	});
+	// Agregamos un evento que se activa cuando el cursor sale del elemento
+	element.addEventListener("mouseout", () => {
+		// Eliminamos el tooltip del DOM
+		tooltipDiv.remove();
+	});
+});
 /* ===========================================================================
-                               CARACERES TEXTAREA
+                               CARACTERES TEXTAREA
 ================================================================================ */
 const textarea = document.getElementById("textarea");
 const caracteres = document.getElementById("caracteres");

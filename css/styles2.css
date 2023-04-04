@@ -833,3 +833,16 @@ textarea {
 	cursor: pointer;
 }
 
+.tooltip {
+	position: absolute;
+	z-index: 9999;
+	padding: 8px;
+	background-color: rgba(0, 0, 0, 0.9);
+	color: #d98508bf;
+	border-radius: 4px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	opacity: 0.8;
+	width: 60%;
+	/* bottom: 100%; */
+}
