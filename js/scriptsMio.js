@@ -22,7 +22,8 @@ function cambiarClases() {
 
   //Cuanado el scroll es superior a la distanciaTop, o sea, cuando el scroll baja
 	if (esSuperior) {
-		barraNavegacion.classList.add("nav-scroll");
+    barraNavegacion.classList.add("nav-scroll");
+    
     logo.classList.add("logo-scroll");
     subMenu.classList.add("submenu-scroll");
     enlacesMenu.forEach((enlace) => {
@@ -205,29 +206,32 @@ lightbox.addEventListener("click", (e) => {
 // Capturamos los elementos del DOM
 const formulario = document.getElementById("formularioContacto"); // Elemento formulario
 const modal = document.getElementById("modal"); // Elemento  modal
-const span = document.getElementsByClassName("cerrar")[0]; // Cruz para cerrar el modal
+const span = document.getElementById("cerrar"); // Cruz para cerrar el modal
+const enviarDesdeModal = document.getElementById("enviarDesdeModal"); // Botón "Enviar" del modal
 
-// Añadimos eventos al formulario y al botón de cerrar
-formulario.addEventListener("submit", abrirModal); // Añade un evento para abrir el modal cuando se envía el formulario
-span.addEventListener("click", cerrarModal); // Añade un evento para cerrar el modal cuando se hace clic en el botón de cerrar
-window.addEventListener("click", clickFueraDelModal); // Añade un evento para cerrar el modal cuando se hace clic fuera del modal. Usamos window para que el evento se ejecute en cualquier parte de la ventana
+// Añadimos eventos a la escucha al formulario,al botón de cerrar y al hacer clic fuera del modal
+formulario.addEventListener("submit", abrirModal); // Evento para abrir el modal cuando se envía el formulario
+span.addEventListener("click", cerrarModal); //Evento para cerrar el modal cuando se hace clic en el botón de cerrar
+window.addEventListener("click", clickFueraDelModal); // Evento para cerrar el modal cuando se hace clic fuera del modal. Usamos window para que el evento se ejecute en cualquier parte de la ventana
 
 // Función para abrir el modal
-function abrirModal(event) {
-	event.preventDefault(); // Evita que se envíe el formulario
-	const nombreModal = document.getElementById("nombreModal"); // Captura el elemento para mostrar el nombre
-	const correoModal = document.getElementById("correoModal"); // Captura el elemento para mostrar el correo
-	const seleccionModal = document.getElementById("seleccionModal"); // Captura el elemento para mostrar la selección
-	const textareaModal = document.getElementById("textareaModal"); // Captura el elemento para mostrar el textarea
-
-	nombreModal.textContent = formulario.nombre.value; // Agrega el valor del nombre al elemento correspondiente del modal
-	correoModal.textContent = formulario.correo.value; // Agrega el valor del correo al elemento correspondiente del modal
-	seleccionModal.textContent = formulario.seleccion.value; // Agrega el valor de la selección al elemento correspondiente del modal
-	textareaModal.textContent = formulario.miTextarea.value; // Agrega el valor del textarea al elemento correspondiente del modal
+function abrirModal(e) {
+  e.preventDefault(); // Evitamos que se envíe el formulario
+  
+  // Capturamos los elementos del DOM del modal
+	const nombreModal = document.getElementById("nombreModal"); 
+	const correoModal = document.getElementById("correoModal"); 
+	const seleccionModal = document.getElementById("seleccionModal"); 
+  const textareaModal = document.getElementById("textareaModal"); 
+  
+  // Asignamos los valores de los campos del formulario al modal
+	nombreModal.textContent = formulario.nombre.value; 
+	correoModal.textContent = formulario.correo.value; 
+	seleccionModal.textContent = formulario.seleccion.value; 
+	textareaModal.textContent = formulario.miTextarea.value; 
 
 	modal.style.display = "block"; // Muestra el modal
 	
-	const enviarDesdeModal = document.getElementById("enviarDesdeModal"); // Captura el botón "Enviar" del modal
 	enviarDesdeModal.addEventListener("click", cerrarModalEnviar); // Añade un evento para cerrar el modal cuando se hace clic en el botón "Enviar"
 }
 
@@ -235,14 +239,6 @@ function abrirModal(event) {
 function cerrarModal() {
 	modal.style.display = "none"; // Oculta el modal
 }
-
-function cerrarModalEnviar(){
-  modal.style.display = "none"; // Oculta el modal
-  // alert("Formulario enviado");
-  formulario.submit();
-  
-}
-
 // Función para cerrar el modal si se hace clic fuera de él
 function clickFueraDelModal(event) {
 	if (event.target == modal) {
@@ -251,6 +247,33 @@ function clickFueraDelModal(event) {
 	}
 }
 
+// Función para cerrar el modal y enviar el formulario
+function cerrarModalEnviar(){
+  modal.style.display = "none"; // Oculta el modal
+  // alert("Formulario enviado");
+  formulario.submit();
+  
+}
+
+
+
 /* ===========================================================================
                                TOOLTIPS FORMULARIO
-================================================================================*/
+================================================================================ */
+/* ===========================================================================
+                               CARACERES TEXTAREA
+================================================================================ */
+const textarea = document.getElementById("textarea");
+const caracteres = document.getElementById("caracteres");
+
+textarea.addEventListener("input", function () {
+	const longitud = this.value.length;
+	const maximo = 500;
+	caracteres.textContent = `Caracteres restantes: ${maximo-longitud}/${maximo}`;
+	if (longitud > (maximo-1)) {
+    caracteres.classList.add("rojo");
+    caracteres.innerText = "Has alcanzado el límite de caracteres";
+	} else {
+		caracteres.classList.remove("rojo");
+	}
+});
