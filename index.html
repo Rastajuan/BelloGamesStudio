@@ -12,8 +12,11 @@
 			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
 			rel="stylesheet"
 		/>
-    <!-- FONT AWESOME -->
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+		<!-- FONT AWESOME -->
+		<script
+			src="https://kit.fontawesome.com/2c36e9b7b1.js"
+			crossorigin="anonymous"
+		></script>
 		<!-- AOS CSS -->
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<!-- AOS JS -->
@@ -352,13 +355,17 @@
 					<!--Modal del formulario-->
 					<div id="modal" class="modal">
 						<div class="modal-contenido">
-							<span class="cerrar">&times;</span>
+							<span id="cerrar">&times;</span>
 							<h2>Datos del formulario</h2>
-							<p>Nombre: <span id="nombreModal"></span></p>
-							<p>Correo: <span id="correoModal"></span></p>
-							<p>Motivo de la consulta: <span id="seleccionModal"></span></p>
-							<p>Consulta: <span id="textareaModal"></span></p>
-							<button type="submit" id="enviarDesdeModal" name="enviar">Enviar</button>
+							<p class="campoModal">Nombre: <span id="nombreModal"></span></p>
+							<p class="campoModal">Correo: <span id="correoModal"></span></p>
+							<p class="campoModal">Motivo de la consulta: <span id="seleccionModal"></span></p>
+							<p class="campoModal">Consulta: <span id="textareaModal"></span></p>
+              <button type="submit" id="enviarDesdeModal" name="enviar">
+								Enviar
+							</button>
+              <p class="infoModal">Revise los campos y pulse [Enviar] para enviar el formulario o [X] para volver.</p>
+							
 						</div>
 					</div>
 					<!-- Formulario -->
@@ -403,21 +410,22 @@
 									<!-- Lo seleccionamos como inicial pero deshabilitamos su eleccion -->
 									Seleccione el motivo de la consulta
 								</option>
-								<option value="creacion">Creación de videojuegos</option>
-								<option value="asesoria">Asesoría informática</option>
-								<option value="problemas">Problemas de software</option>
-								<option value="otros">Otros</option>
+								<option value="Creación de videojuegos">Creación de videojuegos</option>
+								<option value="Asesoría informática">Asesoría informática</option>
+								<option value="Problemas de software">Problemas de software</option>
+								<option value="Otros">Otros</option>
 							</select>
 
 							<textarea
 								cols="40"
 								name="miTextarea"
 								rows="5"
-								placeholder="Escriba aquí su consulta"
+                maxlength="500"
+								placeholder="Escriba aquí su consulta (máx 500 caracteres)"
 								id="textarea"
 								data-tooltip="Escriba aquí su consulta"
 							></textarea>
-
+							<div id="caracteres">Caracteres restantes: 500/500</div>
 							<input id="btnEnviar" name="" type="submit" value="Enviar" />
 						</form>
 					</div>

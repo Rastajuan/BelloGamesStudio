@@ -26,7 +26,7 @@ body {
 }
 
 #container {
-	width: 100%; /* 1920px */
+	width: 1920px; /* 1920px */
 	min-height: 7000px;
 }
 
@@ -486,10 +486,15 @@ textarea {
 	font-size: 1.3rem;
 	color: #3676a7;
 	margin: 50px 0 15px 0;
+  
 }
-/* textarea::placeholder {
-	color: #3676a7;
-} */
+#caracteres{
+  margin-top: -20px;
+}
+.rojo{
+  color: red;
+  font-weight: bold;
+}
 
 #btnEnviar {
 	background-color: transparent;
@@ -644,10 +649,12 @@ textarea {
 	text-transform: uppercase;
 	line-height: 1.2rem;
 	transition: all 0.3s ease-in-out;
+
 }
 #menu .enlacesMenu a.enlacesMenu-scroll:hover {
 	color: #d98508;
 }
+
 
 #submenu.submenu-scroll {
 	padding-top: 13px;
@@ -743,6 +750,18 @@ textarea {
 /* ===========================================================================
                                 MODAL FORMULARIO
 ================================================================================*/
+.campoModal{
+  color: #f8b700;
+}
+.campoModal>span{
+  color:white;
+}
+.infoModal{
+  color: #aaaaaa;
+  /* margin-top: 5px; */
+  font-size: 0.8rem;
+  text-align: center;
+}
 .modal {
 	display: none;
 	position: fixed;
@@ -751,22 +770,29 @@ textarea {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
+
 	background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal-contenido {
 	-webkit-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	-moz-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
-	box-shadow: 1px 1px 19px 5px #d98508bf;
+	box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.749);
 	background-color: rgba(36, 20, 16, 0.6);
 	border-radius: 15px;
 	margin: 15% auto;
 	padding: 20px;
-	border: 1px solid yellow;
+	border: 1px solid #ffff00;
 	width: 80%;
 	max-width: 700px;
 	font-family: inherit;
+  	overflow: hidden;
+}
+
+.modal-contenido h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
 #enviarDesdeModal {
@@ -775,10 +801,11 @@ textarea {
 	background-color: transparent;
 	border: none;
 	font-size: 1.2rem;
-	margin-top: 20px;
 	padding: 10px;
 	width: auto;
-	color: #aaaaaa;
+	color: #ebdec2;
+  margin-top: 20px;
+  text-transform: uppercase;
 }
 
 #enviarDesdeModal:hover {
@@ -786,18 +813,20 @@ textarea {
 	border-radius: 15px;
 	color: black;
 	cursor: pointer;
+  
 }
 
-.cerrar {
-	color: #aaaaaa;
+#cerrar {
+	/* color: #aaaaaa; */
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
 }
 
-.cerrar:hover,
-.cerrar:focus {
+#cerrar:hover,
+#cerrar:focus {
 	color: #d98508bf;
 	text-decoration: none;
 	cursor: pointer;
 }
+
