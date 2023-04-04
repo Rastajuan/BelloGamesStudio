@@ -667,12 +667,12 @@ textarea {
 	height: 80%;
 	background: rgba(0, 0, 0, 0.749);
 	display: flex;
-	flex-direction: row; /* Cambia la dirección del flex a columna */
-	justify-content: space-between; /* Agrega espacio entre la imagen y los botones */
+	flex-direction: row; /* Dirección del flex a columna */
+	justify-content: space-between; /* Agregamos espacio entre la imagen y los botones */
 	align-items: center;
 	opacity: 0;
 	pointer-events: none;
-	transition: opacity 0.2s ease;
+	transition: opacity 0.8s ease;
 	z-index: 100;
 	border-radius: 15px;
 }
@@ -685,8 +685,8 @@ textarea {
 .lightbox-cerrar {
 	position: absolute;
 	top: 10px;
-	right: 10px;
-	padding: 10px;
+	right:20px;
+	/* padding: 10px; */
 	cursor: pointer;
 	font-size: 5rem;
 }
