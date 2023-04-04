@@ -140,6 +140,7 @@ function marcadorPestana(contenedorQueMostramos){
 //Ponemos en escucha los enlaces y ejecutamos la función marcadorPestana con el contenedor que le corresponde a cada enlace y le añadimos la clase seleccionado al enlace que se ha pulsado
 enlaceProgramacion.addEventListener("click", () => {
   marcadorPestana(programacion);
+  programacion.classList.add("animacionPestanas");
   enlaceProgramacion.classList.add("pestanaActiva");
   enlaceDiseno.classList.remove("pestanaActiva");
   enlaceAnimacion.classList.remove("pestanaActiva");
@@ -147,6 +148,7 @@ enlaceProgramacion.addEventListener("click", () => {
 
 enlaceDiseno.addEventListener("click", () => {
   marcadorPestana(diseno);
+  diseno.classList.add("animacionPestanas");
   enlaceDiseno.classList.add("pestanaActiva");
   enlaceProgramacion.classList.remove("pestanaActiva");
   enlaceAnimacion.classList.remove("pestanaActiva");
@@ -154,6 +156,7 @@ enlaceDiseno.addEventListener("click", () => {
 
 enlaceAnimacion.addEventListener("click", () => {
   marcadorPestana(animacion);
+  animacion.classList.add("animacionPestanas");
   enlaceAnimacion.classList.add("pestanaActiva");
   enlaceProgramacion.classList.remove("pestanaActiva");
   enlaceDiseno.classList.remove("pestanaActiva");
