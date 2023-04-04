@@ -82,53 +82,78 @@ function cambiarImagen() {
 setInterval(cambiarImagen, duracion);
 
 /* ===========================================================================
+                                ENLACES A LAS PESTAÑAS EQUIPO
+================================================================================*/
+
+// Capturamos los enlaces
+const enlaceProgramacioMenu = document.querySelector("#enlaceProgramacionMenu");
+const enlaceDisenoMenu = document.querySelector("#enlaceDisenoMenu");
+const enlaceAnimacionMenu = document.querySelector("#enlaceAnimacionMenu");
+
+enlaceProgramacioMenu.addEventListener("click", () => {
+  marcadorPestana(programacion);
+  enlaceProgramacioMenu.classList.add("pestanaActiva");
+  enlaceDisenoMenu.classList.remove("pestanaActiva");
+  enlaceAnimacionMenu.classList.remove("pestanaActiva");
+});
+
+enlaceDisenoMenu.addEventListener("click", () => {
+  marcadorPestana(diseno);
+  enlaceDisenoMenu.classList.add("pestanaActiva");
+  enlaceProgramacioMenu.classList.remove("pestanaActiva");
+  enlaceAnimacionMenu.classList.remove("pestanaActiva");
+});
+
+enlaceAnimacionMenu.addEventListener("click", () => {
+  marcadorPestana(animacion);
+  enlaceAnimacionMenu.classList.add("pestanaActiva");
+  enlaceProgramacioMenu.classList.remove("pestanaActiva");
+  enlaceDisenoMenu.classList.remove("pestanaActiva");
+});
+
+/* ===========================================================================
                                 PESTAÑAS EQUIPO
 ================================================================================*/
-// Capturamos los contenedores
-const programacion = document.querySelector("#containerProgramacion");
-const diseno = document.querySelector("#containerDiseno");
-const animacion = document.querySelector("#containerAnimacion");
 
 // Capturamos los enlaces
 const enlaceProgramacion = document.querySelector("#enlaceProgramacion");
 const enlaceDiseno = document.querySelector("#enlaceDiseno");
 const enlaceAnimacion = document.querySelector("#enlaceAnimacion");
 
-// Controlador del enlace Programacion
+// Función que muestra el contenedor que le pasamos por parámetro
+function marcadorPestana(contenedorQueMostramos){
+  const pestanas = document.querySelectorAll(".containerPestana");
+
+ for (let i = 0; i < pestanas.length; i++) {
+    const pestana = pestanas[i];
+    pestana.style.display = "none";
+  }
+  
+  contenedorQueMostramos.style.display = "block";
+}
+
+//Ponemos en escucha los enlaces y ejecutamos la función marcadorPestana con el contenedor que le corresponde a cada enlace y le añadimos la clase seleccionado al enlace que se ha pulsado
 enlaceProgramacion.addEventListener("click", () => {
-	enlaceProgramacion.classList.add("seleccionado");
-	programacion.classList.add("visible");
-	enlaceDiseno.classList.remove("seleccionado");
-	enlaceAnimacion.classList.remove("seleccionado");
-	diseno.classList.remove("visible");
-	diseno.classList.add("invisible");
-	animacion.classList.remove("visible");
-	animacion.classList.add("invisible");
+  marcadorPestana(programacion);
+  enlaceProgramacion.classList.add("pestanaActiva");
+  enlaceDiseno.classList.remove("pestanaActiva");
+  enlaceAnimacion.classList.remove("pestanaActiva");
 });
 
-// Controlador del enlace Diseno
 enlaceDiseno.addEventListener("click", () => {
-	enlaceDiseno.classList.add("seleccionado");
-	diseno.classList.add("visible");
-	enlaceProgramacion.classList.remove("seleccionado");
-	enlaceAnimacion.classList.remove("seleccionado");
-	programacion.classList.remove("visible");
-	programacion.classList.add("invisible");
-	animacion.classList.remove("visible");
-	animacion.classList.add("invisible");
+  marcadorPestana(diseno);
+  enlaceDiseno.classList.add("pestanaActiva");
+  enlaceProgramacion.classList.remove("pestanaActiva");
+  enlaceAnimacion.classList.remove("pestanaActiva");
 });
 
-// Controlador del enlace Animacion
 enlaceAnimacion.addEventListener("click", () => {
-	enlaceAnimacion.classList.add("seleccionado");
-	animacion.classList.add("visible");
-	enlaceProgramacion.classList.remove("seleccionado");
-	enlaceDiseno.classList.remove("seleccionado");
-	programacion.classList.remove("visible");
-	programacion.classList.add("invisible");
-	diseno.classList.remove("visible");
-	diseno.classList.add("invisible");
+  marcadorPestana(animacion);
+  enlaceAnimacion.classList.add("pestanaActiva");
+  enlaceProgramacion.classList.remove("pestanaActiva");
+  enlaceDiseno.classList.remove("pestanaActiva");
 });
+
 
 /* ===========================================================================
                                LIGHT BOX WALLPAPERS
