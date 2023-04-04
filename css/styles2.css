@@ -360,8 +360,18 @@ nav {
 	color: #3676a7;
 }
 
+@keyframes animacionPestana {
+ from{
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
+}
 
-
+.animacionPestanas {
+  animation: animacionPestana 0.5s ease;
+}
 
 #containerProgramacion,
 #containerDiseno,

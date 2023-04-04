@@ -120,12 +120,17 @@ const enlaceProgramacion = document.querySelector("#enlaceProgramacion");
 const enlaceDiseno = document.querySelector("#enlaceDiseno");
 const enlaceAnimacion = document.querySelector("#enlaceAnimacion");
 
+// Capturamos los contenedores
+const programacion = document.querySelector("#containerProgramacion");
+const diseno = document.querySelector("#containerDiseno");
+const animacion = document.querySelector("#containerAnimacion");
+
 // Función que muestra el contenedor que le pasamos por parámetro
 function marcadorPestana(contenedorQueMostramos){
-  const pestanas = document.querySelectorAll(".containerPestana");
+  const contenedorPestanas = document.querySelectorAll(".containerPestana");
 
- for (let i = 0; i < pestanas.length; i++) {
-    const pestana = pestanas[i];
+ for (let i = 0; i < contenedorPestanas.length; i++) {
+    const pestana = contenedorPestanas[i];
     pestana.style.display = "none";
   }
   
