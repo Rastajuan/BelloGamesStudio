@@ -82,7 +82,7 @@ function cambiarImagen() {
 setInterval(cambiarImagen, duracion);
 
 /* ===========================================================================
-                                ENLACES A LAS PESTAÑAS EQUIPO
+                ENLACES A LAS PESTAÑAS EQUIPO DESDE EL SUBMENU
 ================================================================================*/
 
 // Capturamos los enlaces
@@ -91,24 +91,28 @@ const enlaceDisenoMenu = document.querySelector("#enlaceDisenoMenu");
 const enlaceAnimacionMenu = document.querySelector("#enlaceAnimacionMenu");
 
 enlaceProgramacioMenu.addEventListener("click", () => {
+  // console.log("hola");
   marcadorPestana(programacion);
-  enlaceProgramacioMenu.classList.add("pestanaActiva");
-  enlaceDisenoMenu.classList.remove("pestanaActiva");
-  enlaceAnimacionMenu.classList.remove("pestanaActiva");
+	programacion.classList.add("animacionPestanas");
+	enlaceProgramacion.classList.add("pestanaActiva");
+	enlaceDiseno.classList.remove("pestanaActiva");
+	enlaceAnimacion.classList.remove("pestanaActiva");
 });
 
 enlaceDisenoMenu.addEventListener("click", () => {
-  marcadorPestana(diseno);
-  enlaceDisenoMenu.classList.add("pestanaActiva");
-  enlaceProgramacioMenu.classList.remove("pestanaActiva");
-  enlaceAnimacionMenu.classList.remove("pestanaActiva");
+   marcadorPestana(diseno);
+		diseno.classList.add("animacionPestanas");
+		enlaceDiseno.classList.add("pestanaActiva");
+		enlaceProgramacion.classList.remove("pestanaActiva");
+		enlaceAnimacion.classList.remove("pestanaActiva");
 });
 
 enlaceAnimacionMenu.addEventListener("click", () => {
-  marcadorPestana(animacion);
-  enlaceAnimacionMenu.classList.add("pestanaActiva");
-  enlaceProgramacioMenu.classList.remove("pestanaActiva");
-  enlaceDisenoMenu.classList.remove("pestanaActiva");
+ marcadorPestana(animacion);
+ animacion.classList.add("animacionPestanas");
+ enlaceAnimacion.classList.add("pestanaActiva");
+ enlaceProgramacion.classList.remove("pestanaActiva");
+ enlaceDiseno.classList.remove("pestanaActiva");
 });
 
 /* ===========================================================================
@@ -137,7 +141,7 @@ function marcadorPestana(contenedorQueMostramos){
   contenedorQueMostramos.style.display = "block";
 }
 
-//Ponemos en escucha los enlaces y ejecutamos la función marcadorPestana con el contenedor que le corresponde a cada enlace y le añadimos la clase seleccionado al enlace que se ha pulsado
+//Ponemos en escucha los enlaces y ejecutamos la función marcadorPestana con el contenedor que le corresponde a cada enlace y le añadimos la clase seleccionado al enlace que se ha pulsado y la clase animacionPestanas al contenedor que se muestra. también quitamos la clase seleccionado a los enlaces que no se han pulsado y la clase animacionPestanas al contenedor que no se muestra
 enlaceProgramacion.addEventListener("click", () => {
   marcadorPestana(programacion);
   programacion.classList.add("animacionPestanas");
