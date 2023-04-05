@@ -1,8 +1,3 @@
-
-/* ===========================================================================
-                               MENU DESPLEGABLE
-================================================================================*/
-
 /*===========================================================================
                                 SCROLL MENU
 ================================================================================*/
@@ -20,25 +15,24 @@ function cambiarClases() {
 	const esSuperior = scrollVertical > distanciaTop;
 	const esInferior = scrollVertical <= 0;
 
-  //Cuanado el scroll es superior a la distanciaTop, o sea, cuando el scroll baja
+	//Cuanado el scroll es superior a la distanciaTop, o sea, cuando el scroll baja
 	if (esSuperior) {
-    barraNavegacion.classList.add("nav-scroll");
-    
-    logo.classList.add("logo-scroll");
-    subMenu.classList.add("submenu-scroll");
-    enlacesMenu.forEach((enlace) => {
-      enlace.classList.add("enlacesMenu-scroll");
-    });
-    
-  }
-  //Cuando la posicion es la inicial
-  else if (esInferior) {
+		barraNavegacion.classList.add("nav-scroll");
+
+		logo.classList.add("logo-scroll");
+		subMenu.classList.add("submenu-scroll");
+		enlacesMenu.forEach((enlace) => {
+			enlace.classList.add("enlacesMenu-scroll");
+		});
+	}
+	//Cuando la posicion es la inicial
+	else if (esInferior) {
 		barraNavegacion.classList.remove("nav-scroll");
-    logo.classList.remove("logo-scroll");
-    subMenu.classList.remove("submenu-scroll");
-    enlacesMenu.forEach((enlace) => {
-      enlace.classList.remove("enlacesMenu-scroll");
-    });
+		logo.classList.remove("logo-scroll");
+		subMenu.classList.remove("submenu-scroll");
+		enlacesMenu.forEach((enlace) => {
+			enlace.classList.remove("enlacesMenu-scroll");
+		});
 		logo.classList.remove("logo-scroll");
 	}
 }
@@ -91,8 +85,8 @@ const enlaceDisenoMenu = document.querySelector("#enlaceDisenoMenu");
 const enlaceAnimacionMenu = document.querySelector("#enlaceAnimacionMenu");
 
 enlaceProgramacioMenu.addEventListener("click", () => {
-  // console.log("hola");
-  marcadorPestana(programacion);
+	// console.log("hola");
+	marcadorPestana(programacion);
 	programacion.classList.add("animacionPestanas");
 	enlaceProgramacion.classList.add("pestanaActiva");
 	enlaceDiseno.classList.remove("pestanaActiva");
@@ -100,19 +94,19 @@ enlaceProgramacioMenu.addEventListener("click", () => {
 });
 
 enlaceDisenoMenu.addEventListener("click", () => {
-   marcadorPestana(diseno);
-		diseno.classList.add("animacionPestanas");
-		enlaceDiseno.classList.add("pestanaActiva");
-		enlaceProgramacion.classList.remove("pestanaActiva");
-		enlaceAnimacion.classList.remove("pestanaActiva");
+	marcadorPestana(diseno);
+	diseno.classList.add("animacionPestanas");
+	enlaceDiseno.classList.add("pestanaActiva");
+	enlaceProgramacion.classList.remove("pestanaActiva");
+	enlaceAnimacion.classList.remove("pestanaActiva");
 });
 
 enlaceAnimacionMenu.addEventListener("click", () => {
- marcadorPestana(animacion);
- animacion.classList.add("animacionPestanas");
- enlaceAnimacion.classList.add("pestanaActiva");
- enlaceProgramacion.classList.remove("pestanaActiva");
- enlaceDiseno.classList.remove("pestanaActiva");
+	marcadorPestana(animacion);
+	animacion.classList.add("animacionPestanas");
+	enlaceAnimacion.classList.add("pestanaActiva");
+	enlaceProgramacion.classList.remove("pestanaActiva");
+	enlaceDiseno.classList.remove("pestanaActiva");
 });
 
 /* ===========================================================================
@@ -130,42 +124,41 @@ const diseno = document.querySelector("#containerDiseno");
 const animacion = document.querySelector("#containerAnimacion");
 
 // Función que muestra el contenedor que le pasamos por parámetro
-function marcadorPestana(contenedorQueMostramos){
-  const contenedorPestanas = document.querySelectorAll(".containerPestana");
+function marcadorPestana(contenedorQueMostramos) {
+	const contenedorPestanas = document.querySelectorAll(".containerPestana");
 
- for (let i = 0; i < contenedorPestanas.length; i++) {
-    const pestana = contenedorPestanas[i];
-    pestana.style.display = "none";
-  }
-  
-  contenedorQueMostramos.style.display = "block";
+	for (let i = 0; i < contenedorPestanas.length; i++) {
+		const pestana = contenedorPestanas[i];
+		pestana.style.display = "none";
+	}
+
+	contenedorQueMostramos.style.display = "block";
 }
 
 //Ponemos en escucha los enlaces y ejecutamos la función marcadorPestana con el contenedor que le corresponde a cada enlace y le añadimos la clase seleccionado al enlace que se ha pulsado y la clase animacionPestanas al contenedor que se muestra. también quitamos la clase seleccionado a los enlaces que no se han pulsado y la clase animacionPestanas al contenedor que no se muestra
 enlaceProgramacion.addEventListener("click", () => {
-  marcadorPestana(programacion);
-  programacion.classList.add("animacionPestanas");
-  enlaceProgramacion.classList.add("pestanaActiva");
-  enlaceDiseno.classList.remove("pestanaActiva");
-  enlaceAnimacion.classList.remove("pestanaActiva");
+	marcadorPestana(programacion);
+	programacion.classList.add("animacionPestanas");
+	enlaceProgramacion.classList.add("pestanaActiva");
+	enlaceDiseno.classList.remove("pestanaActiva");
+	enlaceAnimacion.classList.remove("pestanaActiva");
 });
 
 enlaceDiseno.addEventListener("click", () => {
-  marcadorPestana(diseno);
-  diseno.classList.add("animacionPestanas");
-  enlaceDiseno.classList.add("pestanaActiva");
-  enlaceProgramacion.classList.remove("pestanaActiva");
-  enlaceAnimacion.classList.remove("pestanaActiva");
+	marcadorPestana(diseno);
+	diseno.classList.add("animacionPestanas");
+	enlaceDiseno.classList.add("pestanaActiva");
+	enlaceProgramacion.classList.remove("pestanaActiva");
+	enlaceAnimacion.classList.remove("pestanaActiva");
 });
 
 enlaceAnimacion.addEventListener("click", () => {
-  marcadorPestana(animacion);
-  animacion.classList.add("animacionPestanas");
-  enlaceAnimacion.classList.add("pestanaActiva");
-  enlaceProgramacion.classList.remove("pestanaActiva");
-  enlaceDiseno.classList.remove("pestanaActiva");
+	marcadorPestana(animacion);
+	animacion.classList.add("animacionPestanas");
+	enlaceAnimacion.classList.add("pestanaActiva");
+	enlaceProgramacion.classList.remove("pestanaActiva");
+	enlaceDiseno.classList.remove("pestanaActiva");
 });
-
 
 /* ===========================================================================
                                LIGHT BOX WALLPAPERS
@@ -213,27 +206,26 @@ function verImagen(index) {
 	});
 }
 
-
 const contenedorLightbox = document.getElementById("imgs-wallpaper");
 
 contenedorLightbox.addEventListener("click", (e) => {
-  if (e.target.classList.contains("img-wallpapers")) {
-    // Comprueba si el elemento clickeado es una imagen con la clase 'img-wallpapers'
-    
-    // Obtiene el índice de la imagen clickeada
-    currentIndex = imageArray.indexOf(e.target);
-    
-    // Muestra la imagen clickeada en el lightbox
-    verImagen(currentIndex);
-  }
+	if (e.target.classList.contains("img-wallpapers")) {
+		// Comprueba si el elemento clickeado es una imagen con la clase 'img-wallpapers'
+
+		// Obtiene el índice de la imagen clickeada
+		currentIndex = imageArray.indexOf(e.target);
+
+		// Muestra la imagen clickeada en el lightbox
+		verImagen(currentIndex);
+	}
 });
 
 // Oculta el lightbox cuando se hace clic fuera de él (dentro del div) o en la cruz de cerrar
 lightbox.addEventListener("click", (e) => {
-  if (e.target === lightbox || e.target.classList.contains("lightbox-cerrar")) {
-    lightbox.classList.remove("lightbox-activo");
-    document.body.style.overflow = "auto";
-  }
+	if (e.target === lightbox || e.target.classList.contains("lightbox-cerrar")) {
+		lightbox.classList.remove("lightbox-activo");
+		document.body.style.overflow = "auto";
+	}
 });
 
 /* ===========================================================================
@@ -253,22 +245,22 @@ span.addEventListener("click", cerrarModal); //Evento para cerrar el modal cuand
 
 // Función para abrir el modal
 function abrirModal(e) {
-  e.preventDefault(); // Evitamos que se envíe el formulario
-  
-  // Capturamos los elementos del DOM del modal
-	const nombreModal = document.getElementById("nombreModal"); 
-	const correoModal = document.getElementById("correoModal"); 
-	const seleccionModal = document.getElementById("seleccionModal"); 
-  const textareaModal = document.getElementById("textareaModal"); 
-  
-  // Asignamos los valores de los campos del formulario al modal
-	nombreModal.textContent = formulario.nombre.value; 
-	correoModal.textContent = formulario.correo.value; 
-	seleccionModal.textContent = formulario.seleccion.value; 
-	textareaModal.textContent = formulario.miTextarea.value; 
+	e.preventDefault(); // Evitamos que se envíe el formulario
+
+	// Capturamos los elementos del DOM del modal
+	const nombreModal = document.getElementById("nombreModal");
+	const correoModal = document.getElementById("correoModal");
+	const seleccionModal = document.getElementById("seleccionModal");
+	const textareaModal = document.getElementById("textareaModal");
+
+	// Asignamos los valores de los campos del formulario al modal
+	nombreModal.textContent = formulario.nombre.value;
+	correoModal.textContent = formulario.correo.value;
+	seleccionModal.textContent = formulario.seleccion.value;
+	textareaModal.textContent = formulario.miTextarea.value;
 
 	modal.style.display = "block"; // Muestra el modal
-	
+
 	enviarDesdeModal.addEventListener("click", cerrarModalEnviar); // Añade un evento para cerrar el modal cuando se hace clic en el botón "Enviar"
 }
 
@@ -285,14 +277,11 @@ function cerrarModal() {
 } */
 
 // Función para cerrar el modal y enviar el formulario
-function cerrarModalEnviar(){
-  modal.style.display = "none"; // Oculta el modal
-  // alert("Formulario enviado");
-  formulario.submit();
-  
+function cerrarModalEnviar() {
+	modal.style.display = "none"; // Oculta el modal
+	// alert("Formulario enviado");
+	formulario.submit();
 }
-
-
 
 /* ===========================================================================
                                TOOLTIPS FORMULARIO
@@ -329,10 +318,12 @@ const caracteres = document.getElementById("caracteres");
 textarea.addEventListener("input", function () {
 	const longitud = this.value.length;
 	const maximo = 500;
-	caracteres.textContent = `Caracteres restantes: ${maximo-longitud}/${maximo}`;
-	if (longitud > (maximo-1)) {
-    caracteres.classList.add("rojo");
-    caracteres.innerText = "Has alcanzado el límite de caracteres";
+	caracteres.textContent = `Caracteres restantes: ${
+		maximo - longitud
+	}/${maximo}`;
+	if (longitud > maximo - 1) {
+		caracteres.classList.add("rojo");
+		caracteres.innerText = "Has alcanzado el límite de caracteres";
 	} else {
 		caracteres.classList.remove("rojo");
 	}
