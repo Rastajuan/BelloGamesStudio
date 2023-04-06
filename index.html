@@ -52,13 +52,20 @@
 
 							<ul id="submenu">
 								<li class="elementoSubmenu">
-									<a href="#equipo"  id="enlaceProgramacionMenu">Programaci&oacute;n</a>
+									<a href="#equipo" id="enlaceProgramacionMenu"
+										>Programaci&oacute;n</a
+									>
 								</li>
-								<li class="elementoSubmenu"  id="enlaceDisenoMenu"><a href="#equipo">Diseño</a></li>
-								<li class="elementoSubmenu" id="enlaceAnimacionMenu"><a href="#equipo">Animaci&oacute;n</a></li>
+								<li class="elementoSubmenu" id="enlaceDisenoMenu">
+									<a href="#equipo">Diseño</a>
+								</li>
+								<li class="elementoSubmenu" id="enlaceAnimacionMenu">
+									<a href="#equipo">Animaci&oacute;n</a>
+								</li>
 							</ul>
 						</li>
 						<li class="enlacesMenu"><a href="#contacto">Contacto</a></li>
+						
 					</ul>
 				</nav>
 
@@ -114,7 +121,7 @@
 						<p>Su navegador no soporta vídeos HTML5.</p>
 					</video>
 				</div>
-				<div id="juego">
+				<div id="juego" class="ultimoJuego">
 					<div class="texto-juego" data-aos="fade-right">
 						<h3>Legend of Zerda</h3>
 						<p>
@@ -133,13 +140,47 @@
 						<p>Su navegador no soporta vídeos HTML5.</p>
 					</video>
 				</div>
+        <!-- SECCION CON ACORDEON -->
+			<div class="acordeon">
+        <h3 class="cabecera-acordeon" data-aos="fade-down">mas juegos</h2>
+				<div class="acordeon-item">
+					<div class="acordeon-item-cabecera">Acción</div>
+					<div class="acordeon-item-body">
+						<ul>
+							<li><span class="span-acordeon">Redemption: The Last Stand"</span>  En este juego de acción en tercera persona, asumes el papel de un soldado de élite que debe enfrentarse a una invasión alienígena en un mundo post-apocalíptico. Con armas de alta tecnología y habilidades especiales, lucharás contra hordas de enemigos alienígenas para salvar a la humanidad.</li>
+							<li><span class="span-acordeon">"Nemesis Protocol"</span> - En este juego de acción en primera persona, te conviertes en un agente secreto que debe detener una conspiración mundial para desatar una plaga mortal. Viajarás a través de diferentes países, utilizando tu entrenamiento en combate y tu ingenio para infiltrarte en instalaciones secretas, desbloquear tecnologías avanzadas y desmantelar la amenaza antes de que sea demasiado tarde</li>
+							<li><span class="span-acordeon">"Chaos Code: Operation Blackout"</span> - En este juego de acción en línea, formas parte de un equipo de élite que debe enfrentarse a una organización terrorista que amenaza con sumir al mundo en el caos. Lucharás en equipo en una variedad de entornos urbanos, usando armas y equipamiento de alta tecnología para asegurar objetivos importantes y derrotar a los líderes del grupo terrorista en una carrera contra el tiempo.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="acordeon-item">
+					<div class="acordeon-item-cabecera">Aventura</div>
+					<div class="acordeon-item-body">
+						<ul>
+							<li><span class="span-acordeon">"The Lost City of Zephyr"</span> - En este juego de aventura en tercera persona, te embarcarás en una expedición a una ciudad antigua y misteriosa que ha permanecido oculta durante siglos. Explorarás los peligrosos territorios que rodean la ciudad, descubrirás secretos ocultos, resolverás acertijos y desenterrarás tesoros.</li>
+							<li><span class="span-acordeon">"The Guardians of the Lost Temple"</span> - En este juego de aventura en tercera persona, te unirás a un grupo de exploradores en su búsqueda de un antiguo templo y su tesoro. Viajarás a través de exóticos paisajes, evadirás trampas mortales y lucharás contra peligrosos enemigos mientras desentrañas los misterios del templo y descubres su riqueza.</li>
+							<li><span class="span-acordeon">"Chrono Chronicles"</span> - En este juego de aventura en tercera persona, viajarás a través del tiempo para resolver un misterio que amenaza con destruir la línea temporal. Utilizarás tu habilidad para viajar en el tiempo, resolver acertijos y luchar contra enemigos en diferentes épocas históricas para salvar el futuro.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="acordeon-item">
+					<div class="acordeon-item-cabecera">Deportes</div>
+					<div class="acordeon-item-body">
+						<ul>
+							<li><span class="span-acordeon">"Gravity Skate"</span> - En este juego de deportes de acción, te convertirás en un patinador de gravedad, desafiando la física mientras te deslizas por un mundo surrealista. Realizarás trucos y acrobacias a través de entornos desafiantes, evitando obstáculos y ganando puntos para subir en la tabla de clasificación global.</li>
+							<li><span class="span-acordeon">"Extreme Mountain Biking"</span> - En este juego de deportes extremos, te enfrentarás a las peligrosas montañas en tu bicicleta de montaña. Te enfrentarás a terrenos accidentados, saltarás por acantilados, y tendrás que demostrar tus habilidades y resistencia para llegar a la meta.</li>
+							<li><span class="span-acordeon">"Water World Cup"</span> - En este juego de deportes acuáticos, te convertirás en un campeón de la Copa del Mundo de deportes acuáticos. Participarás en diferentes disciplinas, como el surf, el kitesurf, y el wakeboard, compitiendo contra los mejores del mundo en escenarios paradisíacos y desafiando las olas más grandes del planeta.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 			</section>
 
 			<!-- WALLPAPERS -->
 			<section id="wallpapers">
 				<h2 class="titulo-seccion" data-aos="fade-down">wallpapers</h2>
 				<div class="sub-titulo-secciones">
-					<p>DESCARGA NUESTROS FONDOS DE ESCRITORIO</p>
+					<p data-aos="fade-down">DESCARGA NUESTROS FONDOS DE ESCRITORIO</p>
 				</div>
 				<div id="imgs-wallpaper">
 					<img
@@ -212,7 +253,7 @@
 					<a
 						href="#equipo"
 						id="enlaceProgramacion"
-						class="pestanaEquipo  pestanaActiva"
+						class="pestanaEquipo pestanaActiva"
 					>
 						PROGRAMACI&Oacute;N</a
 					>
@@ -224,58 +265,34 @@
 					>
 				</div>
 				<!-- Programacion -->
-				<div id="containerProgramacion" class="containerPestana" >
+				<div id="containerProgramacion" class="containerPestana">
 					<div class="empleado">
-						<img
-							src="img/workers/1.png"
-							class="fotoEmpleado"
-							
-						/>
+						<img src="img/workers/1.png" class="fotoEmpleado" />
 						<p>Wade Warren</p>
 					</div>
 					<div class="empleado">
-						<img
-							src="img/workers/2.png"
-							class="fotoEmpleado"
-							
-						/>
+						<img src="img/workers/2.png" class="fotoEmpleado" />
 						<p>Cameron Williamson</p>
 					</div>
 					<div class="empleado">
-						<img
-							src="img/workers/3.png"
-							class="fotoEmpleado"
-							
-						/>
+						<img src="img/workers/3.png" class="fotoEmpleado" />
 						<p>Albert Flores</p>
 					</div>
 					<div class="empleado">
-						<img
-							src="img/workers/4.png"
-							class="fotoEmpleado"
-							
-						/>
+						<img src="img/workers/4.png" class="fotoEmpleado" />
 						<p>Guy Hawkins</p>
 					</div>
 					<div class="empleado">
-						<img
-							src="img/workers/5.png"
-							class="fotoEmpleado"
-							
-						/>
+						<img src="img/workers/5.png" class="fotoEmpleado" />
 						<p>Kristin Watson</p>
 					</div>
 					<div class="empleado">
-						<img
-							src="img/workers/6.png"
-							class="fotoEmpleado"
-							
-						/>
+						<img src="img/workers/6.png" class="fotoEmpleado" />
 						<p>Leslie Alexander</p>
 					</div>
 				</div>
 				<!-- Diseño -->
-				<div id="containerDiseno"  class="containerPestana">
+				<div id="containerDiseno" class="containerPestana">
 					<div class="empleado">
 						<img src="img/workers/7.png" class="fotoEmpleado" />
 						<p>Darlene Robertson</p>
@@ -359,13 +376,20 @@
 							<h2>Datos del formulario</h2>
 							<p class="campoModal">Nombre: <span id="nombreModal"></span></p>
 							<p class="campoModal">Correo: <span id="correoModal"></span></p>
-							<p class="campoModal">Motivo de la consulta: <span id="seleccionModal"></span></p>
-							<p class="campoModal">Consulta: <span id="textareaModal"></span></p>
-              <button type="submit" id="enviarDesdeModal" name="enviar">
+							<p class="campoModal">
+								Motivo de la consulta: <span id="seleccionModal"></span>
+							</p>
+							<p class="campoModal">
+								Consulta: <span id="textareaModal"></span>
+							</p>
+							<button type="submit" id="enviarDesdeModal" name="enviar">
 								Enviar
 							</button>
-              <p class="infoModal">Revise los campos y pulse <span class="info">[ENVIAR]</span> para enviar el formulario o <span class="info">[X]</span> para volver.</p>
-							
+							<p class="infoModal">
+								Revise los campos y pulse
+								<span class="info">[ENVIAR]</span> para enviar el formulario o
+								<span class="info">[X]</span> para volver.
+							</p>
 						</div>
 					</div>
 					<!-- Formulario -->
@@ -375,7 +399,12 @@
 						data-aos-easing="linear"
 						data-aos-duration="500"
 					>
-						<form action="enviarCorreo.php" method="post" id="formularioContacto" target="_blank">
+						<form
+							action="enviarCorreo.php"
+							method="post"
+							id="formularioContacto"
+							target="_blank"
+						>
 							<h3 class="formEncabezado">Formulario de contacto</h3>
 							<!-- Añadiremos un elemento data-tooltip para poder seleccionar los elementos del formulario con javascript y añadirles un tooltip con la información de cada uno de ellos. -->
 							<input
@@ -409,9 +438,15 @@
 									<!-- Lo seleccionamos como inicial pero deshabilitamos su eleccion -->
 									Seleccione el motivo de la consulta
 								</option>
-								<option value="Creación de videojuegos">Creación de videojuegos</option>
-								<option value="Asesoría informática">Asesoría informática</option>
-								<option value="Problemas de software">Problemas de software</option>
+								<option value="Creación de videojuegos">
+									Creación de videojuegos
+								</option>
+								<option value="Asesoría informática">
+									Asesoría informática
+								</option>
+								<option value="Problemas de software">
+									Problemas de software
+								</option>
 								<option value="Otros">Otros</option>
 							</select>
 
@@ -419,7 +454,7 @@
 								cols="40"
 								name="miTextarea"
 								rows="5"
-                maxlength="500"
+								maxlength="500"
 								placeholder="Escriba aquí su consulta (máx 500 caracteres)"
 								id="textarea"
 								data-tooltip="Escriba aquí su consulta"
@@ -431,20 +466,7 @@
 				</div>
 			</section>
 
-			<!-- SECCION CON PARALLAX -->
-			<!-- 	<div
-				class="parallax-window"
-				data-parallax="scroll"
-				src="/img/wallpapers/7.jpg"
-			>
-				<div class="parallax-container">
-					<h1>Efecto parallax con texto</h1>
-					<p>
-						Este es un ejemplo de cómo usar Parallax.js para crear un efecto de
-						movimiento de texto.
-					</p>
-				</div>
-			</div> -->
+			
 
 			<!-- RRSS -->
 			<section id="rrss">
@@ -515,14 +537,14 @@
 				</div>
 			</footer>
 		</div>
-		
+
 		<!-- Parallax -->
 		<script src="https://cdn.jsdelivr.net/parallax.js/1.5.0/parallax.min.js"></script>
 		<!-- Inicializacion libreria AOS -->
 		<script>
 			AOS.init();
 		</script>
-    <!-- CUSTOM JS -->
+		<!-- CUSTOM JS -->
 		<!-- <script src="js/scripts.js"></script> -->
 		<script src="js/scriptsMio.js"></script>
 	</body>
