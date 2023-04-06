@@ -375,7 +375,7 @@
 						data-aos-easing="linear"
 						data-aos-duration="500"
 					>
-						<form action="procesar_formulario.php" method="post" id="formularioContacto">
+						<form action="enviarCorreo.php" method="post" id="formularioContacto" target="_blank">
 							<h3 class="formEncabezado">Formulario de contacto</h3>
 							<!-- Añadiremos un elemento data-tooltip para poder seleccionar los elementos del formulario con javascript y añadirles un tooltip con la información de cada uno de ellos. -->
 							<input
@@ -515,14 +515,15 @@
 				</div>
 			</footer>
 		</div>
-		<!-- CUSTOM JS -->
-		<!-- <script src="js/scripts.js"></script> -->
-		<script src="js/scriptsMio.js"></script>
+		
 		<!-- Parallax -->
 		<script src="https://cdn.jsdelivr.net/parallax.js/1.5.0/parallax.min.js"></script>
 		<!-- Inicializacion libreria AOS -->
 		<script>
 			AOS.init();
 		</script>
+    <!-- CUSTOM JS -->
+		<!-- <script src="js/scripts.js"></script> -->
+		<script src="js/scriptsMio.js"></script>
 	</body>
 </html>
