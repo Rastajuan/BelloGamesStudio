@@ -229,6 +229,17 @@ lightbox.addEventListener("click", (e) => {
 });
 
 /* ===========================================================================
+                                ACORDEON
+================================================================================*/
+const acordeonItems = document.querySelectorAll('.acordeon-item');
+
+acordeonItems.forEach(item => {
+  item.addEventListener('click', event => {
+    item.classList.toggle('activo');
+  });
+});
+
+/* ===========================================================================
                                 MODAL FORMULARIO
 ================================================================================*/
 
