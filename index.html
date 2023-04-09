@@ -1,557 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Bello Games Studio</title>
-		<!-- GOGGLE FONTS -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- FONT AWESOME -->
-		<script
-			src="https://kit.fontawesome.com/2c36e9b7b1.js"
-			crossorigin="anonymous"
-		></script>
-		<!-- AOS CSS -->
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-		<!-- AOS JS -->
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- PARALLAX-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">   
-    </script>
-<script src="/path/to/parallax.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bello Games Studio</title>
+  <!-- GOGGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-		<!-- CUSTOM CSS -->
-		<!-- <link rel="stylesheet" href="css/styles.css" /> -->
-		<link rel="stylesheet" href="css/styles2.css" />
-	</head>
+  <!-- PARALLAX-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+  </script>
+  <script src="/path/to/parallax.js"></script>
 
-	<body>
-		<div id="container">
-			<!-- HEADER -->
-			<header>
-				<nav id="barraNavegación">
-					<!-- LOGO -->
-					<a href="#"
-						><img
-							src="/img/logo.png"
-							alt="Logo Bello Games Studio"
-							id="logo"
-							data-aos="fade-down"
-							data-aos-easing="linear"
-							data-aos-duration="300"
-					/></a>
-					<!-- MENU -->
-					<ul id="menu">
-						<li class="enlacesMenu"><a href="#">Home</a></li>
-						<li class="enlacesMenu"><a href="#juegos">Juegos</a></li>
-						<li class="enlacesMenu"><a href="#wallpapers">Wallpapers</a></li>
-						<li class="enlacesMenu">
-							<a href="#equipo">Equipo</a>
+  <!-- CUSTOM CSS -->
+  <!-- <link rel="stylesheet" href="css/styles.css" /> -->
+  <link rel="stylesheet" href="css/styles2.css" />
+</head>
 
-							<ul id="submenu">
-								<li class="elementoSubmenu">
-									<a href="#equipo" id="enlaceProgramacionMenu"
-										>Programaci&oacute;n</a
-									>
-								</li>
-								<li class="elementoSubmenu" id="enlaceDisenoMenu">
-									<a href="#equipo">Diseño</a>
-								</li>
-								<li class="elementoSubmenu" id="enlaceAnimacionMenu">
-									<a href="#equipo">Animaci&oacute;n</a>
-								</li>
-							</ul>
-						</li>
-						<li class="enlacesMenu"><a href="#contacto">Contacto</a></li>
-						
-					</ul>
-				</nav>
+<body>
+  <div id="container">
+    <!-- HEADER -->
+    <header>
+      <nav id="barraNavegación">
+        <!-- LOGO -->
+        <a href="#"><img src="/img/logo.png" alt="Logo Bello Games Studio" id="logo" data-aos="fade-down"
+            data-aos-easing="linear" data-aos-duration="300" /></a>
+        <!-- MENU -->
+        <ul id="menu">
+          <li class="enlacesMenu"><a href="#">Home</a></li>
+          <li class="enlacesMenu"><a href="#juegos">Juegos</a></li>
+          <li class="enlacesMenu"><a href="#wallpapers">Wallpapers</a></li>
+          <li class="enlacesMenu">
+            <a href="#equipo">Equipo</a>
 
-				<!-- HERO TXT -->
+            <ul id="submenu">
+              <li class="elementoSubmenu">
+                <a href="#equipo" id="enlaceProgramacionMenu">Programaci&oacute;n</a>
+              </li>
+              <li class="elementoSubmenu" id="enlaceDisenoMenu">
+                <a href="#equipo">Diseño</a>
+              </li>
+              <li class="elementoSubmenu" id="enlaceAnimacionMenu">
+                <a href="#equipo">Animaci&oacute;n</a>
+              </li>
+            </ul>
+          </li>
+          <li class="enlacesMenu"><a href="#contacto">Contacto</a></li>
 
-				<!-- <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom"> -->
-				<h1 class="hero-text">BELLO GAMES STUDIO</h1>
-				<p class="sub-hero-text">
-					Somos creadores independientes de videojuegos especializados en el
-					desarrollo de Unity y Unreal Engine. Desde 2020, hemos estado poniendo
-					nuestras habilidades y buen humor al servicio de editores y estudios
-					de videojuegos para ofrecer experiencias &uacute;nicas y emocionantes
-					a los jugadores de todo el mundo.
-				</p>
-			</header>
-			<!-- ===JUEGOS===  -->
-			<section id="juegos">
-				<h2 class="titulo-seccion" data-aos="fade-down">Juegos</h2>
-				<div id="juego">
-					<div class="texto-juego" data-aos="fade-right">
-						<h3>Muper Sario 3</h3>
-						<p>
-							Un divertido juego de mesa familiar en formato videojuego. Acaba
-							con ese cuñado que no soportas o env&iacute;a a la tia Antonia al
-							inframundo con los personajes del famoso Muper Sario!!
-						</p>
-					</div>
-					<video
-						src="/img/videos/mario.mp4"
-						class="video-juego"
-						controls
-						data-aos="fade-left"
-					>
-						<p>Su navegador no soporta vídeos HTML5.</p>
-					</video>
-				</div>
+        </ul>
+      </nav>
 
-				<div id="juego">
-					<div class="texto-juego" data-aos="fade-right">
-						<h3>Kirky's land 2</h3>
-						<p>
-							Si no te importa tu f&iacute;sico y quieres jugar con un personaje
-							gordo, rosa y de goma...este es tu juego. Encarna al famoso Kirky
-							en una aventura en sus sueños y devora el universo conocido.
-						</p>
-					</div>
-					<video
-						src="/img/videos/kirby.mp4"
-						class="video-juego"
-						controls
-						data-aos="fade-left"
-					>
-						<p>Su navegador no soporta vídeos HTML5.</p>
-					</video>
-				</div>
-				<div id="juego" class="ultimoJuego">
-					<div class="texto-juego" data-aos="fade-right">
-						<h3>Legend of Zerda</h3>
-						<p>
-							Recorre un mundo infinito en el reino de Fyrule, rescata a tu
-							amada (si la encuentras) y sum&eacute;rgete en un mundo lleno de
-							enemigos mortales, como los terribles inspectores de Hacienda de
-							Fyrule...¡o los lectores de la factura de la luz!
-						</p>
-					</div>
-					<video
-						src="/img/videos/zerda.mp4"
-						class="video-juego"
-						controls
-						data-aos="fade-left"
-					>
-						<p>Su navegador no soporta vídeos HTML5.</p>
-					</video>
-				</div>
+      <!-- HERO TXT -->
 
-        <!-- SECCION CON ACORDEON -->
-			<div class="acordeon">
-        <h3 class="cabecera-acordeon" data-aos="fade-down">mas juegos</h2>
-				<div class="acordeon-item" data-aos="fade-down">
-					<div class="acordeon-item-cabecera">Acción</div>
-					<div class="acordeon-item-body">
-						<ul>
-							<li><span class="span-acordeon">"Redemption: The Last Stand":</span>  En este juego de acción en tercera persona, asumes el papel de un soldado de élite que debe enfrentarse a una invasión alienígena en un mundo post-apocalíptico. Con armas de alta tecnología y habilidades especiales, lucharás contra hordas de enemigos alienígenas para salvar a la humanidad.</li>
-							<li><span class="span-acordeon">"Nemesis Protocol"</span> - En este juego de acción en primera persona, te conviertes en un agente secreto que debe detener una conspiración mundial para desatar una plaga mortal. Viajarás a través de diferentes países, utilizando tu entrenamiento en combate y tu ingenio para infiltrarte en instalaciones secretas, desbloquear tecnologías avanzadas y desmantelar la amenaza antes de que sea demasiado tarde</li>
-							<li><span class="span-acordeon">"Chaos Code: Operation Blackout"</span> - En este juego de acción en línea, formas parte de un equipo de élite que debe enfrentarse a una organización terrorista que amenaza con sumir al mundo en el caos. Lucharás en equipo en una variedad de entornos urbanos, usando armas y equipamiento de alta tecnología para asegurar objetivos importantes y derrotar a los líderes del grupo terrorista en una carrera contra el tiempo.</li>
-						</ul>
-					</div>
-				</div>
-				<div class="acordeon-item" data-aos="fade-down">
-					<div class="acordeon-item-cabecera">Aventura</div>
-					<div class="acordeon-item-body">
-						<ul>
-							<li><span class="span-acordeon">"The Lost City of Zephyr"</span> - En este juego de aventura en tercera persona, te embarcarás en una expedición a una ciudad antigua y misteriosa que ha permanecido oculta durante siglos. Explorarás los peligrosos territorios que rodean la ciudad, descubrirás secretos ocultos, resolverás acertijos y desenterrarás tesoros.</li>
-							<li><span class="span-acordeon">"The Guardians of the Lost Temple"</span> - En este juego de aventura en tercera persona, te unirás a un grupo de exploradores en su búsqueda de un antiguo templo y su tesoro. Viajarás a través de exóticos paisajes, evadirás trampas mortales y lucharás contra peligrosos enemigos mientras desentrañas los misterios del templo y descubres su riqueza.</li>
-							<li><span class="span-acordeon">"Chrono Chronicles"</span> - En este juego de aventura en tercera persona, viajarás a través del tiempo para resolver un misterio que amenaza con destruir la línea temporal. Utilizarás tu habilidad para viajar en el tiempo, resolver acertijos y luchar contra enemigos en diferentes épocas históricas para salvar el futuro.</li>
-						</ul>
-					</div>
-				</div>
-				<div class="acordeon-item" data-aos="fade-down">
-					<div class="acordeon-item-cabecera">Deportes</div>
-					<div class="acordeon-item-body">
-						<ul>
-							<li><span class="span-acordeon">"Gravity Skate"</span> - En este juego de deportes de acción, te convertirás en un patinador de gravedad, desafiando la física mientras te deslizas por un mundo surrealista. Realizarás trucos y acrobacias a través de entornos desafiantes, evitando obstáculos y ganando puntos para subir en la tabla de clasificación global.</li>
-							<li><span class="span-acordeon">"Extreme Mountain Biking"</span> - En este juego de deportes extremos, te enfrentarás a las peligrosas montañas en tu bicicleta de montaña. Te enfrentarás a terrenos accidentados, saltarás por acantilados, y tendrás que demostrar tus habilidades y resistencia para llegar a la meta.</li>
-							<li><span class="span-acordeon">"Water World Cup"</span> - En este juego de deportes acuáticos, te convertirás en un campeón de la Copa del Mundo de deportes acuáticos. Participarás en diferentes disciplinas, como el surf, el kitesurf, y el wakeboard, compitiendo contra los mejores del mundo en escenarios paradisíacos y desafiando las olas más grandes del planeta.</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			</section>
+      <!-- <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom"> -->
+      <h1 class="hero-text">BELLO GAMES STUDIO</h1>
+      <p class="sub-hero-text">
+        Somos creadores independientes de videojuegos especializados en el
+        desarrollo de Unity y Unreal Engine. Desde 2020, hemos estado poniendo
+        nuestras habilidades y buen humor al servicio de editores y estudios
+        de videojuegos para ofrecer experiencias &uacute;nicas y emocionantes
+        a los jugadores de todo el mundo.
+      </p>
+    </header>
+    <!-- ===JUEGOS===  -->
+    <section id="juegos">
+      <h2 class="titulo-seccion" data-aos="fade-down">Juegos</h2>
+      <div id="juego">
+        <div class="texto-juego" data-aos="fade-right">
+          <h3>Muper Sario 3</h3>
+          <p>
+            Un divertido juego de mesa familiar en formato videojuego. Acaba
+            con ese cuñado que no soportas o env&iacute;a a la tia Antonia al
+            inframundo con los personajes del famoso Muper Sario!!
+          </p>
+        </div>
+        <video src="/img/videos/mario.mp4" class="video-juego" controls data-aos="fade-left">
+          <p>Su navegador no soporta v&iacute;deos HTML5.</p>
+        </video>
+      </div>
 
-			<!-- WALLPAPERS -->
-			<section id="wallpapers">
-				<h2 class="titulo-seccion" data-aos="fade-down">wallpapers</h2>
-				<div class="sub-titulo-secciones">
-					<p data-aos="fade-down">DESCARGA NUESTROS FONDOS DE ESCRITORIO</p>
-				</div>
-				<div id="imgs-wallpaper">
-					<img
-						src="img/wallpapers/1.jpg"
-						class="img-wallpapers"
-						data-aos="flip-right"
-					/>
-					<img
-						src="img/wallpapers/2.jpg"
-						class="img-wallpapers"
-						data-aos="flip-right"
-					/>
-					<img
-						src="img/wallpapers/3.jpg"
-						class="img-wallpapers"
-						data-aos="flip-right"
-					/>
-					<img
-						src="img/wallpapers/4.jpg"
-						class="img-wallpapers"
-						data-aos="flip-right"
-					/>
-					<img
-						src="img/wallpapers/5.jpg"
-						class="img-wallpapers"
-						data-aos="flip-right"
-					/>
-					<img
-						src="img/wallpapers/6.jpg"
-						class="img-wallpapers"
-						data-aos="flip-right"
-					/>
-					<img
-						src="img/wallpapers/7.jpg"
-						class="img-wallpapers"
-						data-aos="flip-right"
-					/>
-					<img
-						src="img/wallpapers/8.jpg"
-						class="img-wallpapers"
-						data-aos="flip-right"
-					/>
-					<img
-						src="img/wallpapers/9.jpg"
-						class="img-wallpapers"
-						data-aos="flip-right"
-					/>
-					<img
-						src="img/wallpapers/10.png"
-						class="img-wallpapers"
-						data-aos="flip-right"
-					/>
-					<img
-						src="img/wallpapers/11.jpg"
-						class="img-wallpapers"
-						data-aos="flip-right"
-					/>
-					<img
-						src="img/wallpapers/12.jpg"
-						class="img-wallpapers"
-						data-aos="flip-right"
-					/>
-				</div>
-			</section>
+      <div id="juego">
+        <div class="texto-juego" data-aos="fade-right">
+          <h3>Kirky's land 2</h3>
+          <p>
+            Si no te importa tu f&iacute;sico y quieres jugar con un personaje
+            gordo, rosa y de goma...este es tu juego. Encarna al famoso Kirky
+            en una aventura en sus sueños y devora el universo conocido.
+          </p>
+        </div>
+        <video src="/img/videos/kirby.mp4" class="video-juego" controls data-aos="fade-left">
+          <p>Su navegador no soporta v&iacute;deos HTML5.</p>
+        </video>
+      </div>
+      <div id="juego" class="ultimoJuego">
+        <div class="texto-juego" data-aos="fade-right">
+          <h3>Legend of Zerda</h3>
+          <p>
+            Recorre un mundo infinito en el reino de Fyrule, rescata a tu
+            amada (si la encuentras) y sum&eacute;rgete en un mundo lleno de
+            enemigos mortales, como los terribles inspectores de Hacienda de
+            Fyrule...¡o los lectores de la factura de la luz!
+          </p>
+        </div>
+        <video src="/img/videos/zerda.mp4" class="video-juego" controls data-aos="fade-left">
+          <p>Su navegador no soporta v&iacute;deos HTML5.</p>
+        </video>
+      </div>
 
-			<!-- EQUIPO -->
-			<section id="equipo">
-				<h2 class="titulo-seccion" data-aos="fade-down">Equipo</h2>
-				<div id="containerPestana" data-aos="fade-up">
-					<a
-						href="#equipo"
-						id="enlaceProgramacion"
-						class="pestanaEquipo pestanaActiva"
-					>
-						PROGRAMACI&Oacute;N</a
-					>
+      <!-- SECCION CON ACORDEON -->
+      <div class="acordeon">
+        <h3 class="cabecera-acordeon" data-aos="fade-down">descubre mas juegos de nuestra franquicia</h2>
+          <div class="acordeon-item" data-aos="fade-down">
+            <div class="acordeon-item-cabecera">Acci&oacute;n</div>
+            <div class="acordeon-item-body">
+              <ul>
+                <li><span class="span-acordeon">"Redemption: The Last Stand":</span> En este juego de acci&oacute;n en
+                  tercera persona, asumes el papel de un soldado de &eacute;lite que debe enfrentarse a una
+                  invasi&oacute;n alien&iacute;gena en un mundo post-apocal&iacute;ptico. Con armas de alta
+                  tecnolog&iacute;a y habilidades especiales, luchar&aacute;s contra hordas de enemigos
+                  alien&iacute;genas para salvar a la humanidad.</li>
+                <li><span class="span-acordeon">"Nemesis Protocol"</span> - En este juego de acci&oacute;n en primera
+                  persona, te conviertes en un agente secreto que debe detener una conspiraci&oacute;n mundial para
+                  desatar una plaga mortal. Viajar&aacute;s a trav&eacute;s de diferentes pa&iacute;ses, utilizando tu
+                  entrenamiento en combate y tu ingenio para infiltrarte en instalaciones secretas, desbloquear
+                  tecnolog&iacute;as avanzadas y desmantelar la amenaza antes de que sea demasiado tarde</li>
+                <li><span class="span-acordeon">"Chaos Code: Operation Blackout"</span> - En este juego de acci&oacute;n
+                  en l&iacute;nea, formas parte de un equipo de &eacute;lite que debe enfrentarse a una
+                  organizaci&oacute;n terrorista que amenaza con sumir al mundo en el caos. Luchar&aacute;s en equipo en
+                  una variedad de entornos urbanos, usando armas y equipamiento de alta tecnolog&iacute;a para asegurar
+                  objetivos importantes y derrotar a los l&iacute;deres del grupo terrorista en una carrera contra el
+                  tiempo.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acordeon-item" data-aos="fade-down">
+            <div class="acordeon-item-cabecera">Aventura</div>
+            <div class="acordeon-item-body">
+              <ul>
+                <li><span class="span-acordeon">"The Lost City of Zephyr"</span> - En este juego de aventura en tercera
+                  persona, te embarcar&aacute;s en una expedici&oacute;n a una ciudad antigua y misteriosa que ha
+                  permanecido oculta durante siglos. Explorar&aacute;s los peligrosos territorios que rodean la ciudad,
+                  descubrir&aacute;s secretos ocultos, resolver&aacute;s acertijos y desenterrar&aacute;s tesoros.</li>
+                <li><span class="span-acordeon">"The Guardians of the Lost Temple"</span> - En este juego de aventura en
+                  tercera persona, te unir&aacute;s a un grupo de exploradores en su b&uacute;squeda de un antiguo
+                  templo y su tesoro. Viajar&aacute;s a trav&eacute;s de ex&oacute;ticos paisajes, evadir&aacute;s
+                  trampas mortales y luchar&aacute;s contra peligrosos enemigos mientras desentrañas los misterios del
+                  templo y descubres su riqueza.</li>
+                <li><span class="span-acordeon">"Chrono Chronicles"</span> - En este juego de aventura en tercera
+                  persona, viajar&aacute;s a trav&eacute;s del tiempo para resolver un misterio que amenaza con destruir
+                  la l&iacute;nea temporal. Utilizar&aacute;s tu habilidad para viajar en el tiempo, resolver acertijos
+                  y luchar contra enemigos en diferentes &eacute;pocas hist&oacute;ricas para salvar el futuro.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acordeon-item" data-aos="fade-down">
+            <div class="acordeon-item-cabecera">Deportes</div>
+            <div class="acordeon-item-body">
+              <ul>
+                <li><span class="span-acordeon">"Gravity Skate"</span> - En este juego de deportes de acci&oacute;n, te
+                  convertir&aacute;s en un patinador de gravedad, desafiando la f&iacute;sica mientras te deslizas por
+                  un mundo surrealista. Realizar&aacute;s trucos y acrobacias a trav&eacute;s de entornos desafiantes,
+                  evitando obst&aacute;culos y ganando puntos para subir en la tabla de clasificaci&oacute;n global.
+                </li>
+                <li><span class="span-acordeon">"Extreme Mountain Biking"</span> - En este juego de deportes extremos,
+                  te enfrentar&aacute;s a las peligrosas montañas en tu bicicleta de montaña. Te enfrentar&aacute;s a
+                  terrenos accidentados, saltar&aacute;s por acantilados, y tendr&aacute;s que demostrar tus habilidades
+                  y resistencia para llegar a la meta.</li>
+                <li><span class="span-acordeon">"Water World Cup"</span> - En este juego de deportes acu&aacute;ticos,
+                  te convertir&aacute;s en un campe&oacute;n de la Copa del Mundo de deportes acu&aacute;ticos.
+                  Participar&aacute;s en diferentes disciplinas, como el surf, el kitesurf, y el wakeboard, compitiendo
+                  contra los mejores del mundo en escenarios paradis&iacute;acos y desafiando las olas m&aacute;s
+                  grandes del planeta.</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </section>
 
-					<a href="#equipo" id="enlaceDiseno" class="pestanaEquipo"> DISEÑO</a>
+    <!-- WALLPAPERS -->
+    <section id="wallpapers">
+      <h2 class="titulo-seccion" data-aos="fade-down">wallpapers</h2>
+      <div class="sub-titulo-secciones">
+        <p data-aos="fade-down">DESCARGA NUESTROS FONDOS DE ESCRITORIO</p>
+      </div>
+      <div id="imgs-wallpaper">
+        <img src="img/wallpapers/1.jpg" class="img-wallpapers" data-aos="flip-right" />
+        <img src="img/wallpapers/2.jpg" class="img-wallpapers" data-aos="flip-right" />
+        <img src="img/wallpapers/3.jpg" class="img-wallpapers" data-aos="flip-right" />
+        <img src="img/wallpapers/4.jpg" class="img-wallpapers" data-aos="flip-right" />
+        <img src="img/wallpapers/5.jpg" class="img-wallpapers" data-aos="flip-right" />
+        <img src="img/wallpapers/6.jpg" class="img-wallpapers" data-aos="flip-right" />
+        <img src="img/wallpapers/7.jpg" class="img-wallpapers" data-aos="flip-right" />
+        <img src="img/wallpapers/8.jpg" class="img-wallpapers" data-aos="flip-right" />
+        <img src="img/wallpapers/9.jpg" class="img-wallpapers" data-aos="flip-right" />
+        <img src="img/wallpapers/10.png" class="img-wallpapers" data-aos="flip-right" />
+        <img src="img/wallpapers/11.jpg" class="img-wallpapers" data-aos="flip-right" />
+        <img src="img/wallpapers/12.jpg" class="img-wallpapers" data-aos="flip-right" />
+      </div>
+    </section>
 
-					<a href="#equipo" id="enlaceAnimacion" class="pestanaEquipo">
-						ANIMACI&Oacute;N</a
-					>
-				</div>
-				<!-- Programacion -->
-				<div id="containerProgramacion" class="containerPestana">
-					<div class="empleado">
-						<img src="img/workers/1.png" class="fotoEmpleado" />
-						<p>Wade Warren</p>
-					</div>
-					<div class="empleado">
-						<img src="img/workers/2.png" class="fotoEmpleado" />
-						<p>Cameron Williamson</p>
-					</div>
-					<div class="empleado">
-						<img src="img/workers/3.png" class="fotoEmpleado" />
-						<p>Albert Flores</p>
-					</div>
-					<div class="empleado">
-						<img src="img/workers/4.png" class="fotoEmpleado" />
-						<p>Guy Hawkins</p>
-					</div>
-					<div class="empleado">
-						<img src="img/workers/5.png" class="fotoEmpleado" />
-						<p>Kristin Watson</p>
-					</div>
-					<div class="empleado">
-						<img src="img/workers/6.png" class="fotoEmpleado" />
-						<p>Leslie Alexander</p>
-					</div>
-				</div>
-				<!-- Diseño -->
-				<div id="containerDiseno" class="containerPestana">
-					<div class="empleado">
-						<img src="img/workers/7.png" class="fotoEmpleado" />
-						<p>Darlene Robertson</p>
-					</div>
-					<div class="empleado">
-						<img src="img/workers/8.png" class="fotoEmpleado" />
-						<p>Floyd Miles</p>
-					</div>
-					<div class="empleado">
-						<img src="img/workers/9.png" class="fotoEmpleado" />
-						<p>Annette Black</p>
-					</div>
-					<div class="empleado">
-						<img src="img/workers/10.png" class="fotoEmpleado" />
-						<p>Devon Lane</p>
-					</div>
-					<div class="empleado">
-						<img src="img/workers/11.png" class="fotoEmpleado" />
-						<p>Dianne Rusell</p>
-					</div>
-					<div class="empleado">
-						<img src="img/workers/12.png" class="fotoEmpleado" />
-						<p>Darrell Steward</p>
-					</div>
-				</div>
-				<!-- Animacion -->
-				<div id="containerAnimacion" class="containerPestana">
-					<div class="empleado">
-						<img src="img/workers/13.png" class="fotoEmpleado" />
-						<p>Theresa Webb</p>
-					</div>
-					<div class="empleado">
-						<img src="img/workers/14.png" class="fotoEmpleado" />
-						<p>Jerome Bell</p>
-					</div>
-					<div class="empleado">
-						<img src="img/workers/15.png" class="fotoEmpleado" />
-						<p>Kathryn Murphy</p>
-					</div>
-					<div class="empleado">
-						<img src="img/workers/16.png" class="fotoEmpleado" />
-						<p>Marvin McKinney</p>
-					</div>
-					<div class="empleado">
-						<img src="img/workers/17.png" class="fotoEmpleado" />
-						<p>Eleanor Pena</p>
-					</div>
-					<div class="empleado">
-						<img src="img/workers/1.png" class="fotoEmpleado" />
-						<p>Devon Lane</p>
-					</div>
-				</div>
-			</section>
+    <!-- EQUIPO -->
+    <section id="equipo">
+      <h2 class="titulo-seccion" data-aos="fade-down">Equipo</h2>
+      <div id="containerPestana" data-aos="fade-up">
+        <a href="#equipo" id="enlaceProgramacion" class="pestanaEquipo pestanaActiva">
+          PROGRAMACI&Oacute;N</a>
 
-			<!-- CONTACTO -->
+        <a href="#equipo" id="enlaceDiseno" class="pestanaEquipo"> DISEÑO</a>
 
-			<section id="contacto">
-				<h2 class="titulo-seccion" data-aos="fade-down">Contacto</h2>
-				<div id="containerContacto">
-					<!-- Mapa -->
-					<div
-						id="mapa"
-						data-aos="zoom-in-up"
-						data-aos-easing="linear"
-						data-aos-duration="500"
-					>
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d56947.55540520484!2d2.130232250278396!3d41.397170174770636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1677325255211!5m2!1ses!2ses"
-							width="646"
-							height="646"
-							style="border: 0"
-							allowfullscreen=""
-							loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade"
-						></iframe>
-					</div>
-					<!--Modal del formulario-->
-					<div id="modal" class="modal">
-						<div class="modal-contenido">
-							<span id="cerrar">&times;</span>
-							<h2>Datos del formulario</h2>
-							<p class="campoModal">Nombre: <span id="nombreModal"></span></p>
-							<p class="campoModal">Correo: <span id="correoModal"></span></p>
-							<p class="campoModal">
-								Motivo de la consulta: <span id="seleccionModal"></span>
-							</p>
-							<p class="campoModal">
-								Consulta: <span id="textareaModal"></span>
-							</p>
-							<button type="submit" id="enviarDesdeModal" name="enviar">
-								Enviar
-							</button>
-							<p class="infoModal">
-								Revise los campos y pulse
-								<span class="info">[ENVIAR]</span> para enviar el formulario o
-								<span class="info">[X]</span> para volver.
-							</p>
-						</div>
-					</div>
-					<!-- Formulario -->
-					<div
-						id="formulario"
-						data-aos="zoom-in-up"
-						data-aos-easing="linear"
-						data-aos-duration="500"
-					>
-						<form
-							action="enviarCorreo.php"
-							method="post"
-							id="formularioContacto"
-							target="_blank"
-						>
-							<h3 class="formEncabezado">Formulario de contacto</h3>
-							<!-- Añadiremos un elemento data-tooltip para poder seleccionar los elementos del formulario con javascript y añadirles un tooltip con la información de cada uno de ellos. -->
-							<input
-								id="nombre"
-								name="nombre"
-								placeholder="Introduzca su nombre y apellidos"
-								type="text"
-								data-tooltip="Introduzca su nombre y apellidos"
-							/>
-							<br />
+        <a href="#equipo" id="enlaceAnimacion" class="pestanaEquipo">
+          ANIMACI&Oacute;N</a>
+      </div>
+      <!-- Programacion -->
+      <div id="containerProgramacion" class="containerPestana">
+        <div class="empleado">
+          <img src="img/workers/1.png" class="fotoEmpleado" />
+          <p>Wade Warren</p>
+        </div>
+        <div class="empleado">
+          <img src="img/workers/2.png" class="fotoEmpleado" />
+          <p>Cameron Williamson</p>
+        </div>
+        <div class="empleado">
+          <img src="img/workers/3.png" class="fotoEmpleado" />
+          <p>Albert Flores</p>
+        </div>
+        <div class="empleado">
+          <img src="img/workers/4.png" class="fotoEmpleado" />
+          <p>Guy Hawkins</p>
+        </div>
+        <div class="empleado">
+          <img src="img/workers/5.png" class="fotoEmpleado" />
+          <p>Kristin Watson</p>
+        </div>
+        <div class="empleado">
+          <img src="img/workers/6.png" class="fotoEmpleado" />
+          <p>Leslie Alexander</p>
+        </div>
+      </div>
+      <!-- Diseño -->
+      <div id="containerDiseno" class="containerPestana">
+        <div class="empleado">
+          <img src="img/workers/7.png" class="fotoEmpleado" />
+          <p>Darlene Robertson</p>
+        </div>
+        <div class="empleado">
+          <img src="img/workers/8.png" class="fotoEmpleado" />
+          <p>Floyd Miles</p>
+        </div>
+        <div class="empleado">
+          <img src="img/workers/9.png" class="fotoEmpleado" />
+          <p>Annette Black</p>
+        </div>
+        <div class="empleado">
+          <img src="img/workers/10.png" class="fotoEmpleado" />
+          <p>Devon Lane</p>
+        </div>
+        <div class="empleado">
+          <img src="img/workers/11.png" class="fotoEmpleado" />
+          <p>Dianne Rusell</p>
+        </div>
+        <div class="empleado">
+          <img src="img/workers/12.png" class="fotoEmpleado" />
+          <p>Darrell Steward</p>
+        </div>
+      </div>
+      <!-- Animacion -->
+      <div id="containerAnimacion" class="containerPestana">
+        <div class="empleado">
+          <img src="img/workers/13.png" class="fotoEmpleado" />
+          <p>Theresa Webb</p>
+        </div>
+        <div class="empleado">
+          <img src="img/workers/14.png" class="fotoEmpleado" />
+          <p>Jerome Bell</p>
+        </div>
+        <div class="empleado">
+          <img src="img/workers/15.png" class="fotoEmpleado" />
+          <p>Kathryn Murphy</p>
+        </div>
+        <div class="empleado">
+          <img src="img/workers/16.png" class="fotoEmpleado" />
+          <p>Marvin McKinney</p>
+        </div>
+        <div class="empleado">
+          <img src="img/workers/17.png" class="fotoEmpleado" />
+          <p>Eleanor Pena</p>
+        </div>
+        <div class="empleado">
+          <img src="img/workers/1.png" class="fotoEmpleado" />
+          <p>Devon Lane</p>
+        </div>
+      </div>
+    </section>
 
-							<input
-								id="correo"
-								name="correo"
-								placeholder="Introduzca su correo"
-								type="email"
-								data-tooltip="Introduzca su correo"
-							/>
-							<div style="color: red; display: none" id="correoError">
-								Introduzca la contraseña
-							</div>
-							<br />
+    <!-- CONTACTO -->
 
-							<br />
-							<select
-								id="mensaje"
-								name="seleccion"
-								data-tooltip="Seleccione el motivo de la consulta"
-							>
-								<option value="" selected disabled>
-									<!-- Lo seleccionamos como inicial pero deshabilitamos su eleccion -->
-									Seleccione el motivo de la consulta
-								</option>
-								<option value="Creación de videojuegos">
-									Creación de videojuegos
-								</option>
-								<option value="Asesoría informática">
-									Asesoría informática
-								</option>
-								<option value="Problemas de software">
-									Problemas de software
-								</option>
-								<option value="Otros">Otros</option>
-							</select>
+    <section id="contacto">
+      <h2 class="titulo-seccion" data-aos="fade-down">Contacto</h2>
+      <div id="containerContacto">
 
-							<textarea
-								cols="40"
-								name="miTextarea"
-								rows="5"
-								maxlength="500"
-								placeholder="Escriba aquí su consulta (máx 500 caracteres)"
-								id="textarea"
-								data-tooltip="Escriba aquí su consulta"
-							></textarea>
-							<div id="caracteres">Caracteres restantes: 500/500</div>
-							<input id="btnEnviar" name="" type="submit" value="Enviar" />
-						</form>
-					</div>
-				</div>
-			</section>
+        <!-- Mapa -->
+        <div id="mapa" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="500">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d56947.55540520484!2d2.130232250278396!3d41.397170174770636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1677325255211!5m2!1ses!2ses"
+            width="646" height="646" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!--Modal del formulario-->
+        <div id="modal" class="modal">
+          <div class="modal-contenido">
+            <span id="cerrar">&times;</span>
+            <h2>Datos del formulario</h2>
+            <p class="campoModal">Nombre: <span id="nombreModal"></span></p>
+            <p class="campoModal">Correo: <span id="correoModal"></span></p>
+            <p class="campoModal">
+              Motivo de la consulta: <span id="seleccionModal"></span>
+            </p>
+            <p class="campoModal">
+              Consulta: <span id="textareaModal"></span>
+            </p>
+            <button type="submit" id="enviarDesdeModal" name="enviar">
+              Enviar
+            </button>
+            <p class="infoModal">
+              Revise los campos y pulse
+              <span class="info">[ENVIAR]</span> para enviar el formulario o
+              <span class="info">[X]</span> para volver.
+            </p>
+          </div>
+        </div>
+        <!-- Formulario -->
+        <div id="formulario" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="500">
+          <form action="enviarCorreo.php" method="post" id="formularioContacto" target="_blank">
+            <h3 class="formEncabezado">Formulario de contacto</h3>
+            <!-- Añadiremos un elemento data-tooltip para poder seleccionar los elementos del formulario con javascript y añadirles un tooltip con la información de cada uno de ellos. -->
+            <input id="nombre" name="nombre" placeholder="Introduzca su nombre y apellidos" type="text"
+              data-tooltip="Introduzca su nombre y apellidos" />
+            <br />
 
-			
+            <input id="correo" name="correo" placeholder="Introduzca su correo" type="email"
+              data-tooltip="Introduzca su correo" />
+            <div style="color: red; display: none" id="correoError">
+              Introduzca la contraseña
+            </div>
+            <br />
 
-			<!-- RRSS -->
-			<section id="rrss">
-				<div id="containerRRSS ">
-					<h3 class="sub-titulo-secciones sub-rrss">
-						SIGUENOS EN NUESTRAS REDES SOCIALES
-					</h3>
+            <br />
+            <select id="mensaje" name="seleccion" data-tooltip="Seleccione el motivo de la consulta">
+              <option value="" selected disabled>
+                <!-- Lo seleccionamos como inicial pero deshabilitamos su eleccion -->
+                Seleccione el motivo de la consulta
+              </option>
+              <option value="Creación de videojuegos">
+                Creaci&oacute;n de videojuegos
+              </option>
+              <option value="Asesoría informática">
+                Asesor&iacute;a inform&aacute;tica
+              </option>
+              <option value="Problemas de software">
+                Problemas de software
+              </option>
+              <option value="Otros">Otros</option>
+            </select>
 
-					<div class="rrss">
-						<a
-							href="https://github.com/Rastajuan"
-							title="GitHub"
-							target="_blank"
-							><img src="/img/rrss/github.png" data-aos="flip-down"
-						/></a>
-						<a
-							href="https://www.linkedin.com/in/juan-bello-fernandez/"
-							title="LinkedIn"
-							target="_blank"
-							><img src="/img/rrss/linkedin.png" data-aos="flip-down"
-						/></a>
-						<a
-							href="https://twitter.com/juanbello_"
-							title="Tweeter"
-							target="_blank"
-						>
-							<img src="/img/rrss/tweeter.png" data-aos="flip-down"
-						/></a>
-						<a
-							href="https://www.instagram.com/"
-							title="Instagram"
-							target="_blank"
-							><img src="/img/rrss/instagram.png" data-aos="flip-down"
-						/></a>
-						<a href="https://www.facebook.com/" title="Facebook" target="_blank"
-							><img src="/img/rrss/facebook.png" data-aos="flip-down"
-						/></a>
-					</div>
-				</div>
-			</section>
+            <textarea cols="40" name="miTextarea" rows="5" maxlength="500"
+              placeholder="Escriba aquí su consulta (máx 500 caracteres)" id="textarea"
+              data-tooltip="Escriba aquí su consulta"></textarea>
+            <div id="caracteres">Caracteres restantes: 500/500</div>
+            <input id="btnEnviar" name="" type="submit" value="Enviar" />
+          </form>
+        </div>
+      </div>
+    </section>
 
-			<!-- FOOTER -->
-			<footer id="piePagina">
-				<!-- Logo -->
-				<img src="img/logo.png" class="logoFooter" />
-				<!-- Copyleft -->
-				<div id="copyletf">
-					<p>
-						2023 Juan Bello. Trabajo para la asignatura de Diseño de Interfaces
-						Web. 2º DAW
-					</p>
-					<br /><br />
-					<a
-						rel="license"
-						href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
-						><img
-							alt="Llicència de Creative Commons"
-							style="border-width: 0"
-							src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a
-					><br /><br />Aquesta obra està subjecta a una llicència de
-					<a
-						class="creative"
-						rel="license"
-						href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
-						>Reconeixement-NoComercial-CompartirIgual 4.0 Internacional de
-						Creative Commons</a
-					>
-				</div>
-			</footer>
-		</div>
 
-		<!-- Parallax -->
-		<script src="https://cdn.jsdelivr.net/parallax.js/1.5.0/parallax.min.js"></script>
-		<!-- Inicializacion libreria AOS -->
-		<script>
-			AOS.init();
-		</script>
-		<!-- CUSTOM JS -->
-		<!-- <script src="js/scripts.js"></script> -->
-		<script src="js/scriptsMio.js"></script>
-	</body>
+
+    <!-- RRSS -->
+    <section id="rrss">
+      <div id="containerRRSS ">
+        <h3 class="sub-titulo-secciones sub-rrss ">
+          S&Iacute;GUENOS EN NUESTRAS REDES SOCIALES
+        </h3>
+
+        <div class="rrss">
+          <a href="https://github.com/Rastajuan" title="GitHub" target="_blank"><img src="/img/rrss/github.png"
+              data-aos="flip-down" /></a>
+          <a href="https://www.linkedin.com/in/juan-bello-fernandez/" title="LinkedIn" target="_blank"><img
+              src="/img/rrss/linkedin.png" data-aos="flip-down" /></a>
+          <a href="https://twitter.com/juanbello_" title="Tweeter" target="_blank">
+            <img src="/img/rrss/tweeter.png" data-aos="flip-down" /></a>
+          <a href="https://www.instagram.com/" title="Instagram" target="_blank"><img src="/img/rrss/instagram.png"
+              data-aos="flip-down" /></a>
+          <a href="https://www.facebook.com/" title="Facebook" target="_blank"><img src="/img/rrss/facebook.png"
+              data-aos="flip-down" /></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="piePagina">
+      <!-- Logo -->
+      <img src="img/logo.png" class="logoFooter" />
+      <!-- Copyleft -->
+      <div id="copyletf">
+        <p>
+          2023 Juan Bello. Trabajo para la asignatura de Diseño de Interfaces
+          Web. 2º DAW
+        </p>
+        <br /><br />
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
+            alt="Llicència de Creative Commons" style="border-width: 0"
+            src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br />Aquesta obra està subjecta a
+        una llicència de
+        <a class="creative" rel="license"
+          href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Reconeixement-NoComercial-CompartirIgual 4.0
+          Internacional de
+          Creative Commons</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Parallax -->
+  <script src="https://cdn.jsdelivr.net/parallax.js/1.5.0/parallax.min.js"></script>
+  <!-- Inicializacion libreria AOS -->
+  <script>
+    AOS.init();
+  </script>
+  <!-- CUSTOM JS -->
+  <!-- <script src="js/scripts.js"></script> -->
+  <script src="js/scriptsMio.js"></script>
+</body>
+
 </html>

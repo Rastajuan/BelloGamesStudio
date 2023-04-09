@@ -330,7 +330,7 @@ nav {
 	overflow: hidden;
 	width: 100%;
 	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-bottom: 40px;
 	padding-top: 30px;
 }
 
@@ -634,8 +634,9 @@ nav {
 #contacto {
 	background: linear-gradient(#123749, #3676a7); /* 123749 3676a7 */
 	border: 2px solid #f8b700;
-	height: 1070px;
+	height: 1500px;
 	width: 100%;
+  position: relative;
 }
 
 #containerContacto {
@@ -728,6 +729,9 @@ textarea {
 	opacity: 0.3;
 }
 
+/* ===========================================================================
+                               PARALLAX
+================================================================================*/
 
 /* ===========================================================================
                                 MODAL FORMULARIO
@@ -929,8 +933,3 @@ textarea {
 .creative:visited {
 	color: #f8b700;
 }
-
-
-
-
-
