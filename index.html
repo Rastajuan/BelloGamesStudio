@@ -25,11 +25,13 @@
   <script src="/path/to/parallax.js"></script> -->
 
   <!-- CUSTOM CSS -->
-  <!-- <link rel="stylesheet" href="css/styles.css" /> -->
-  <link rel="stylesheet" href="css/styles2.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+ 
 </head>
 
 <body>
+  <div id="preloader"></div>
+
   <div id="container">
     <!-- HEADER -->
     <header>
@@ -347,6 +349,7 @@
           <form action="enviarCorreo.php" method="post" id="formularioContacto" target="_blank">
             <h3 class="formEncabezado">Formulario de contacto</h3>
             <!-- Añadiremos un elemento data-tooltip para poder seleccionar los elementos del formulario con javascript y añadirles un tooltip con la información de cada uno de ellos. -->
+            <input type="hidden" name="asunto" value="Formulario de contacto" />
             <input id="nombre" name="nombre" placeholder="Introduzca su nombre y apellidos" type="text"
               data-tooltip="Introduzca su nombre y apellidos" />
             <br />
@@ -381,6 +384,7 @@
               data-tooltip="Escriba aquí su consulta"></textarea>
             <div id="caracteres">Caracteres restantes: 500/500</div>
             <input id="btnEnviar" name="" type="submit" value="Enviar" />
+            <input id="btnReset" name="" type="reset" value="Borrar campos" />
           </form>
         </div>
       </div>
@@ -430,15 +434,13 @@
     </footer>
   </div>
 
-  <!-- Parallax -->
-  <script src="https://cdn.jsdelivr.net/parallax.js/1.5.0/parallax.min.js"></script>
   <!-- Inicializacion libreria AOS -->
   <script>
     AOS.init();
   </script>
   <!-- CUSTOM JS -->
-  <!-- <script src="js/scripts.js"></script> -->
-  <script src="js/scriptsMio.js"></script>
+  <script src="js/scripts.js"></script>
+  
 </body>
 
 </html>
