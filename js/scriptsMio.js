@@ -343,11 +343,3 @@ textarea.addEventListener("input", function () {
 /* ===========================================================================
                                 PARALLAX  
 ================================================================================ */
-  var parallax = document.querySelector(".parallax");
-	var contenido = document.querySelector(".container-parallax");
-
-	window.addEventListener("scroll", function () {
-		var offset = window.pageYOffset;
-		parallax.style.backgroundPositionY = offset * 0.7 + "px";
-		contenido.style.top = offset + "px";
-	});
