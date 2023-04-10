@@ -51,8 +51,9 @@ nav {
 	z-index: 1;
 }
 #logo {
-	background-color: #e2b026;
+	/* background-color: #e2b026; */
 	border-radius: 50%;
+  border: 1px solid #f8b700; ;
 	color: #241410;
 	font-size: 2rem;
 	height: 240px;
@@ -218,10 +219,11 @@ nav {
                                EFECTO SCROLL EN MENU
 ================================================================================*/
 .logo-scroll {
-	max-height: 50px;
-	max-width: 50px;
+	max-height: 40px;
+	max-width: 40px;
 	transition: all 0.3s ease;
 	position: relative;
+  /* margin: -5px; */
 }
 .nav-scroll {
 	/* background-color: #eb0b0b; */

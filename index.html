@@ -347,6 +347,7 @@
           <form action="enviarCorreo.php" method="post" id="formularioContacto" target="_blank">
             <h3 class="formEncabezado">Formulario de contacto</h3>
             <!-- Añadiremos un elemento data-tooltip para poder seleccionar los elementos del formulario con javascript y añadirles un tooltip con la información de cada uno de ellos. -->
+            <input type="hidden" name="asunto" value="Formulario de contacto" />
             <input id="nombre" name="nombre" placeholder="Introduzca su nombre y apellidos" type="text"
               data-tooltip="Introduzca su nombre y apellidos" />
             <br />
@@ -430,8 +431,6 @@
     </footer>
   </div>
 
-  <!-- Parallax -->
-  <script src="https://cdn.jsdelivr.net/parallax.js/1.5.0/parallax.min.js"></script>
   <!-- Inicializacion libreria AOS -->
   <script>
     AOS.init();
