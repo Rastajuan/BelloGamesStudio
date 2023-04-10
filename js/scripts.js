@@ -1,145 +1,215 @@
 /* ===========================================================================
-                               MENU DESPLEGABLE
+                               PRELOADER                                           
 ================================================================================*/
+window.onload =	function () {
+		const preloader = document.getElementById("preloader");
+		preloader.style.display = "none"; // ocultamos el preloader una vez que se cargue la página
+	};
 
 /*===========================================================================
                                 SCROLL MENU
 ================================================================================*/
-//Asignamos a una variable la posición del scroll
-// Selecciona el elemento del menú una sola vez al principio y guárdalo en una variable
-const menuElement = document.getElementById("container-fijo");
+const barraNavegacion = document.getElementById("barraNavegación");
+const logo = document.getElementById("logo");
+const tamanioLogo = "240px";
+const distanciaTop = barraNavegacion.offsetTop;
+const enlacesMenu = document.querySelectorAll("#menu li.enlacesMenu a");
+const subMenu = document.querySelector(".enlacesMenu > #submenu");
+const elementoSubmenu = document.querySelectorAll(
+	"#submenu li.elementoSubmenu a"
+);
 
-// Guarda la posición de desplazamiento anterior al principio
-let prevScrollpos = document.documentElement.scrollTop;
+/* Función que cambia las clases de los elementos de la barra de navegacion */
+function cambiarClases() {
+	const scrollVertical = window.scrollY;
+	const esSuperior = scrollVertical > distanciaTop;
+	const esInferior = scrollVertical <= 0;
 
-// Agrega un evento de desplazamiento que llama a la función esconderMostrarMenu
-window.addEventListener("scroll", esconderMostrarMenu, { passive: true });
+	//Cuanado el scroll es superior a la distanciaTop, o sea, cuando el scroll baja
+	if (esSuperior) {
+		barraNavegacion.classList.add("nav-scroll");
 
-// Función para esconder o mostrar el menú
-function esconderMostrarMenu() {
-	// Obtén la posición de desplazamiento actual
-	let actualScrollPos = document.documentElement.scrollTop;
-
-	// Compara la posición de desplazamiento anterior y actual para determinar si el usuario está desplazándose hacia arriba o hacia abajo
-	if (prevScrollpos > actualScrollPos) {
-		// Si el usuario está desplazándose hacia arriba, muestra el menú
-		menuElement.style.display = "block";
-	} else {
-		// Si el usuario está desplazándose hacia abajo, oculta el menú
-		menuElement.style.display = "none";
+		logo.classList.add("logo-scroll");
+		subMenu.classList.add("submenu-scroll");
+		enlacesMenu.forEach((enlace) => {
+			enlace.classList.add("enlacesMenu-scroll");
+		});
 	}
-
-	// Actualiza la posición de desplazamiento anterior a la posición de desplazamiento actual para la próxima vez que se llame a la función
-	prevScrollpos = actualScrollPos;
+	//Cuando la posicion es la inicial
+	else if (esInferior) {
+		barraNavegacion.classList.remove("nav-scroll");
+		logo.classList.remove("logo-scroll");
+		subMenu.classList.remove("submenu-scroll");
+		enlacesMenu.forEach((enlace) => {
+			enlace.classList.remove("enlacesMenu-scroll");
+		});
+		logo.classList.remove("logo-scroll");
+	}
 }
 
-/* window.addEventListener("load", function () {
-	const container = document.getElementById("container-fijo");
-	const logo = document.getElementById("logo");
-	const menu = document.getElementById("menu");
-
-	function onScroll() {
-		const scrollPosition = window.pageYOffset;
-
-		if (scrollPosition > 0 && !container.classList.contains("fixed")) {
-      container.classList.add("fixed");
-      logo.classList.add("fixed");
-      menu.classList.add("fixed");
-			logo.style.maxHeight = "50px";
-			menu.style.marginTop = "15px";
-		} else if (scrollPosition === 0 && container.classList.contains("fixed")) {
-			container.classList.remove("fixed");
-			logo.style.maxHeight = null;
-			menu.style.marginTop = null;
-		}
-	}
-
-	window.addEventListener("scroll", onScroll);
-});
- */
+// Ponemos en escucha el evento scroll y ejecutamos la función cambiarClases
+window.addEventListener("scroll", cambiarClases);
 
 /* ===========================================================================
-                                SLIDE HEADER
+                                SLIDESHOW HEADER
 ================================================================================*/
-// Obtener el elemento header
-const header = document.querySelector("header");
+/* Iniciaremos el slide despues de 3 segundos para que se ejecute despues de realizarse la animación del hero text. Para ello, colocamos el código que deseamos ejecutar después de 3 segundos dentro de una función y pasamos esa función como el primer argumento de setTimeout, y 3000 milisegundos como segundo argumento (el retardo) . */
+setTimeout(function () {
+	const header = document.querySelector("header");
 
-// Crear un array con las imágenes del slideshow
+	// Creamos un array con las imágenes del slideshow
+	const imagenes = [
+		"/img/SlideHeader/5.jpg",
+		"/img/SlideHeader/2.jpg",
+		"/img/SlideHeader/3.jpg",
+		"/img/SlideHeader/4.jpg",
+	];
+
+	// Precargamos las imágenes
+	imagenes.forEach((imagenURL) => {
+		const img = new Image();
+		img.src = imagenURL;
+	});
+
+	// Establecemos la duración de cada imagen en milisegundos
+	const duracion = 2000;
+
+	// Iniciamos el índice de la imagen en cero
+	let index = 0;
+
+	// Función para cambiar la imagen del slideshow
+	function cambiarImagen() {
+		// Obtenemos la URL de la imagen actual del array
+		const imagenURL = imagenes[index];
+
+		// Actualizamos la imagen de fondo del header
+		header.style.backgroundImage = `url(${imagenURL})`;
+
+		// Incrementamos el índice
+		index = (index + 1) % imagenes.length;
+	}
+
+	// Iniciamos el slideshow
+	setInterval(cambiarImagen, duracion);
+}, 3000);
+
+
+//Codigo sin precargar las imagenes
+// Obtenemos el elemento header
+/* const header = document.querySelector("header");
+
+// Creamos un array con las imágenes del slideshow
 const imagenes = [
-	"/img/SlideHeader/1.jpg",
+	"/img/SlideHeader/5.jpg",
 	"/img/SlideHeader/2.jpg",
 	"/img/SlideHeader/3.jpg",
 	"/img/SlideHeader/4.jpg",
 ];
 
-// Establecer la duración de cada imagen en milisegundos
-const duracion = 3000;
+// Establecemos la duración de cada imagen en milisegundos
+const duracion = 2000;
 
-// Iniciar el índice de la imagen en cero
+// Iniciamos el índice de la imagen en cero
 let index = 0;
 
 // Función para cambiar la imagen del slideshow
 function cambiarImagen() {
-	// Obtener la URL de la imagen actual del array
+	// Obtenemos la URL de la imagen actual del array
 	const imagenURL = imagenes[index];
 
-	// Actualizar la imagen de fondo del header
+	// Actualizamos la imagen de fondo del header
 	header.style.backgroundImage = `url(${imagenURL})`;
 
-	// Incrementar el índice
+	// Incrementamo el índice
 	index = (index + 1) % imagenes.length;
 }
 
-// Iniciar el slideshow
-setInterval(cambiarImagen, duracion);
+// Iniciamos el slideshow
+setInterval(cambiarImagen, duracion); */
+
+/* ===========================================================================
+                ENLACES A LAS PESTAÑAS EQUIPO DESDE EL SUBMENU
+================================================================================*/
+
+// Capturamos los enlaces
+const enlaceProgramacioMenu = document.querySelector("#enlaceProgramacionMenu");
+const enlaceDisenoMenu = document.querySelector("#enlaceDisenoMenu");
+const enlaceAnimacionMenu = document.querySelector("#enlaceAnimacionMenu");
+
+enlaceProgramacioMenu.addEventListener("click", () => {
+	// console.log("hola");
+	marcadorPestana(programacion);
+	programacion.classList.add("animacionPestanas");
+	enlaceProgramacion.classList.add("pestanaActiva");
+	enlaceDiseno.classList.remove("pestanaActiva");
+	enlaceAnimacion.classList.remove("pestanaActiva");
+});
+
+enlaceDisenoMenu.addEventListener("click", () => {
+	marcadorPestana(diseno);
+	diseno.classList.add("animacionPestanas");
+	enlaceDiseno.classList.add("pestanaActiva");
+	enlaceProgramacion.classList.remove("pestanaActiva");
+	enlaceAnimacion.classList.remove("pestanaActiva");
+});
+
+enlaceAnimacionMenu.addEventListener("click", () => {
+	marcadorPestana(animacion);
+	animacion.classList.add("animacionPestanas");
+	enlaceAnimacion.classList.add("pestanaActiva");
+	enlaceProgramacion.classList.remove("pestanaActiva");
+	enlaceDiseno.classList.remove("pestanaActiva");
+});
 
 /* ===========================================================================
                                 PESTAÑAS EQUIPO
 ================================================================================*/
-// Capturamos los contenedores
-const programacion = document.querySelector("#containerProgramacion");
-const diseno = document.querySelector("#containerDiseno");
-const animacion = document.querySelector("#containerAnimacion");
 
 // Capturamos los enlaces
 const enlaceProgramacion = document.querySelector("#enlaceProgramacion");
 const enlaceDiseno = document.querySelector("#enlaceDiseno");
 const enlaceAnimacion = document.querySelector("#enlaceAnimacion");
 
-// Controlador del enlace Programacion
+// Capturamos los contenedores
+const programacion = document.querySelector("#containerProgramacion");
+const diseno = document.querySelector("#containerDiseno");
+const animacion = document.querySelector("#containerAnimacion");
+
+// Función que muestra el contenedor que le pasamos por parámetro
+function marcadorPestana(contenedorQueMostramos) {
+	const contenedorPestanas = document.querySelectorAll(".containerPestana");
+
+	for (let i = 0; i < contenedorPestanas.length; i++) {
+		const pestana = contenedorPestanas[i];
+		pestana.style.display = "none";
+	}
+
+	contenedorQueMostramos.style.display = "block";
+}
+
+//Ponemos en escucha los enlaces y ejecutamos la función marcadorPestana con el contenedor que le corresponde a cada enlace y le añadimos la clase seleccionado al enlace que se ha pulsado y la clase animacionPestanas al contenedor que se muestra. también quitamos la clase seleccionado a los enlaces que no se han pulsado y la clase animacionPestanas al contenedor que no se muestra
 enlaceProgramacion.addEventListener("click", () => {
-	enlaceProgramacion.classList.add("seleccionado");
-	programacion.classList.add("visible");
-	enlaceDiseno.classList.remove("seleccionado");
-	enlaceAnimacion.classList.remove("seleccionado");
-	diseno.classList.remove("visible");
-	diseno.classList.add("invisible");
-	animacion.classList.remove("visible");
-	animacion.classList.add("invisible");
+	marcadorPestana(programacion);
+	programacion.classList.add("animacionPestanas");
+	enlaceProgramacion.classList.add("pestanaActiva");
+	enlaceDiseno.classList.remove("pestanaActiva");
+	enlaceAnimacion.classList.remove("pestanaActiva");
 });
 
-// Controlador del enlace Diseno
 enlaceDiseno.addEventListener("click", () => {
-	enlaceDiseno.classList.add("seleccionado");
-	diseno.classList.add("visible");
-	enlaceProgramacion.classList.remove("seleccionado");
-	enlaceAnimacion.classList.remove("seleccionado");
-	programacion.classList.remove("visible");
-	programacion.classList.add("invisible");
-	animacion.classList.remove("visible");
-	animacion.classList.add("invisible");
+	marcadorPestana(diseno);
+	diseno.classList.add("animacionPestanas");
+	enlaceDiseno.classList.add("pestanaActiva");
+	enlaceProgramacion.classList.remove("pestanaActiva");
+	enlaceAnimacion.classList.remove("pestanaActiva");
 });
 
-// Controlador del enlace Animacion
 enlaceAnimacion.addEventListener("click", () => {
-	enlaceAnimacion.classList.add("seleccionado");
-	animacion.classList.add("visible");
-	enlaceProgramacion.classList.remove("seleccionado");
-	enlaceDiseno.classList.remove("seleccionado");
-	programacion.classList.remove("visible");
-	programacion.classList.add("invisible");
-	diseno.classList.remove("visible");
-	diseno.classList.add("invisible");
+	marcadorPestana(animacion);
+	animacion.classList.add("animacionPestanas");
+	enlaceAnimacion.classList.add("pestanaActiva");
+	enlaceProgramacion.classList.remove("pestanaActiva");
+	enlaceDiseno.classList.remove("pestanaActiva");
 });
 
 /* ===========================================================================
@@ -153,29 +223,56 @@ const lightbox = document.createElement("div");
 lightbox.classList.add("lightbox");
 document.body.appendChild(lightbox);
 
-// Utilizamos la delegación de eventos para adjuntar el evento 'click' a un elemento superior
+// Creamos un array con todas las imágenes
+const imageArray = Array.from(images);
+
+// Creamos una variable para almacenar el índice de la imagen actualmente mostrada
+let currentIndex = 0;
+
+// Función para mostrar una imagen en el lightbox
+function verImagen(index) {
+	// Muestra el lightbox
+	lightbox.innerHTML = `
+    <img src="${imageArray[index].src}" alt="">
+    <div class="lightbox-botones">
+  <i class="fas fa-chevron-left lightbox-prev"></i>
+  <i class="fas fa-chevron-right lightbox-next"></i>
+</div>
+
+    <span class="lightbox-cerrar">&times;</span>
+  `;
+	lightbox.classList.add("lightbox-activo");
+
+	// Añade un evento 'click' al botón de la imagen anterior
+	const prevButton = lightbox.querySelector(".lightbox-prev");
+	prevButton.addEventListener("click", () => {
+		currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
+		verImagen(currentIndex);
+	});
+
+	// Añade un evento 'click' al botón de la siguiente imagen
+	const nextButton = lightbox.querySelector(".lightbox-next");
+	nextButton.addEventListener("click", () => {
+		currentIndex = (currentIndex + 1) % imageArray.length;
+		verImagen(currentIndex);
+	});
+}
+
 const contenedorLightbox = document.getElementById("imgs-wallpaper");
 
 contenedorLightbox.addEventListener("click", (e) => {
 	if (e.target.classList.contains("img-wallpapers")) {
 		// Comprueba si el elemento clickeado es una imagen con la clase 'img-wallpapers'
 
-		// Muestra el lightbox
-		lightbox.innerHTML = `
-			<img src="${e.target.src}" alt="">
-			<span class="lightbox-cerrar">&times;</span>
-		`;
+		// Obtiene el índice de la imagen clickeada
+		currentIndex = imageArray.indexOf(e.target);
 
-		lightbox.classList.add("lightbox-activo");
-
-		// Escala la imagen en un 150%
-		const img = lightbox.querySelector("img");
-		img.style.transform = "scale(2.5)";
+		// Muestra la imagen clickeada en el lightbox
+		verImagen(currentIndex);
 	}
 });
 
-// Oculta el lightbox cuando se hace clic fuera de él o en la cruz de cerrar
-
+// Oculta el lightbox cuando se hace clic fuera de él (dentro del div) o en la cruz de cerrar
 lightbox.addEventListener("click", (e) => {
 	if (e.target === lightbox || e.target.classList.contains("lightbox-cerrar")) {
 		lightbox.classList.remove("lightbox-activo");
@@ -184,71 +281,117 @@ lightbox.addEventListener("click", (e) => {
 });
 
 /* ===========================================================================
+                                ACORDEON
+================================================================================*/
+const acordeonItems = document.querySelectorAll(".acordeon-item");
+
+acordeonItems.forEach((item) => {
+	item.addEventListener("click", (event) => {
+		item.classList.toggle("activo");
+	});
+});
+
+/* ===========================================================================
                                 MODAL FORMULARIO
 ================================================================================*/
 
 // Capturamos los elementos del DOM
-const formulario = document.getElementById("formularioContacto"); // Captura el elemento del formulario
-const modal = document.getElementById("modal"); // Captura el elemento del modal
-const span = document.getElementsByClassName("cerrar")[0]; // Captura el botón para cerrar el modal
+const formulario = document.getElementById("formularioContacto"); // Elemento formulario
+const modal = document.getElementById("modal"); // Elemento  modal
+const span = document.getElementById("cerrar"); // Cruz para cerrar el modal
+const enviarDesdeModal = document.getElementById("enviarDesdeModal"); // Botón "Enviar" del modal
 
-// Añadimos eventos al formulario y al botón de cerrar
-formulario.addEventListener("submit", abrirModal); // Añade un evento para abrir el modal cuando se envía el formulario
-span.addEventListener("click", cerrarModal); // Añade un evento para cerrar el modal cuando se hace clic en el botón de cerrar
-window.addEventListener("click", clickFueraDelModal); // Añade un evento para cerrar el modal cuando se hace clic fuera del modal. Usamos window para que el evento se ejecute en cualquier parte de la ventana
+// Añadimos eventos a la escucha al formulario,al botón de cerrar y al hacer clic fuera del modal
+formulario.addEventListener("submit", abrirModal); // Evento para abrir el modal cuando se envía el formulario
+span.addEventListener("click", cerrarModal); //Evento para cerrar el modal cuando se hace clic en el botón de cerrar
+// window.addEventListener("click", clickFueraDelModal); // Evento para cerrar el modal cuando se hace clic fuera del modal. Usamos window para que el evento se ejecute en cualquier parte de la ventana
 
 // Función para abrir el modal
-function abrirModal(event) {
-	event.preventDefault(); // Evita que se envíe el formulario
-	const nombreModal = document.getElementById("nombreModal"); // Captura el elemento para mostrar el nombre
-	const correoModal = document.getElementById("correoModal"); // Captura el elemento para mostrar el correo
-	const seleccionModal = document.getElementById("seleccionModal"); // Captura el elemento para mostrar la selección
-	const textareaModal = document.getElementById("textareaModal"); // Captura el elemento para mostrar el textarea
+function abrirModal(e) {
+	e.preventDefault(); // Evitamos que se envíe el formulario
 
-	nombreModal.textContent = formulario.nombre.value; // Agrega el valor del nombre al elemento correspondiente del modal
-	correoModal.textContent = formulario.correo.value; // Agrega el valor del correo al elemento correspondiente del modal
-	seleccionModal.textContent = formulario.seleccion.value; // Agrega el valor de la selección al elemento correspondiente del modal
-	textareaModal.textContent = formulario.miTextarea.value; // Agrega el valor del textarea al elemento correspondiente del modal
+	// Capturamos los elementos del DOM del modal
+	const nombreModal = document.getElementById("nombreModal");
+	const correoModal = document.getElementById("correoModal");
+	const seleccionModal = document.getElementById("seleccionModal");
+	const textareaModal = document.getElementById("textareaModal");
+
+	// Asignamos los valores de los campos del formulario al modal
+	nombreModal.textContent = formulario.nombre.value;
+	correoModal.textContent = formulario.correo.value;
+	seleccionModal.textContent = formulario.seleccion.value;
+	textareaModal.textContent = formulario.miTextarea.value;
 
 	modal.style.display = "block"; // Muestra el modal
+
+	enviarDesdeModal.addEventListener("click", cerrarModalEnviar); // Añade un evento para cerrar el modal cuando se hace clic en el botón "Enviar"
 }
 
 // Función para cerrar el modal
 function cerrarModal() {
 	modal.style.display = "none"; // Oculta el modal
 }
-
 // Función para cerrar el modal si se hace clic fuera de él
-function clickFueraDelModal(event) {
+/* function clickFueraDelModal(event) {
 	if (event.target == modal) {
 		// Comprueba si el objetivo del evento es el modal
 		modal.style.display = "none"; // Oculta el modal
 	}
+} */
+
+// Función para cerrar el modal y enviar el formulario
+function cerrarModalEnviar() {
+	modal.style.display = "none"; // Oculta el modal
+	// alert("Formulario enviado");
+	formulario.submit();
 }
 
 /* ===========================================================================
                                TOOLTIPS FORMULARIO
-================================================================================*/
+================================================================================ */
 // Se ha añadido un data tooltip a los elementos que queremos que tengan tooltip.
-// Selecciona todos los elementos con el atributo data-tooltip
+// Seleccionamos todos los elementos con el atributo data-tooltip
 const tooltips = document.querySelectorAll("[data-tooltip]");
 
-// Crea un div para mostrar el tooltip
+// Creamos un div para mostrar el tooltip
 const tooltipDiv = document.createElement("div");
 tooltipDiv.classList.add("tooltip");
 
-// Recorre todos los elementos y agrega eventos para mostrar y ocultar el tooltip
+// Recorremos todos los elementos y agrega eventos para mostrar y ocultar el tooltip
 tooltips.forEach((element) => {
-	// Agrega un evento que se activa cuando el cursor pasa sobre el elemento
+	// Agregamos un evento que se activa cuando el cursor pasa sobre el elemento
 	element.addEventListener("mouseover", () => {
-		// Establece el texto del tooltip como el valor del atributo data-tooltip del elemento
+		// Establecemos el texto del tooltip como el valor del atributo data-tooltip del elemento
 		tooltipDiv.textContent = element.dataset.tooltip;
-		// Inserta el tooltip en el DOM justo después del elemento
+		// Insertamos el tooltip en el DOM justo después del elemento
 		element.insertAdjacentElement("afterend", tooltipDiv);
 	});
-	// Agrega un evento que se activa cuando el cursor sale del elemento
+	// Agregamos un evento que se activa cuando el cursor sale del elemento
 	element.addEventListener("mouseout", () => {
-		// Elimina el tooltip del DOM
+		// Eliminamos el tooltip del DOM
 		tooltipDiv.remove();
 	});
 });
+/* ===========================================================================
+                               CARACTERES TEXTAREA
+================================================================================ */
+const textarea = document.getElementById("textarea");
+const caracteres = document.getElementById("caracteres");
+
+textarea.addEventListener("input", function () {
+	const longitud = this.value.length;
+	const maximo = 500;
+	caracteres.textContent = `Caracteres restantes: ${
+		maximo - longitud
+	}/${maximo}`;
+	if (longitud > maximo - 1) {
+		caracteres.classList.add("rojo");
+		caracteres.innerText = "Has alcanzado el límite de caracteres";
+	} else {
+		caracteres.classList.remove("rojo");
+	}
+});
+
+/* ===========================================================================
+                                PARALLAX  
+================================================================================ */

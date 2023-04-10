@@ -25,11 +25,13 @@
   <script src="/path/to/parallax.js"></script> -->
 
   <!-- CUSTOM CSS -->
-  <!-- <link rel="stylesheet" href="css/styles.css" /> -->
-  <link rel="stylesheet" href="css/styles2.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+ 
 </head>
 
 <body>
+  <div id="preloader"></div>
+
   <div id="container">
     <!-- HEADER -->
     <header>
@@ -382,6 +384,7 @@
               data-tooltip="Escriba aquí su consulta"></textarea>
             <div id="caracteres">Caracteres restantes: 500/500</div>
             <input id="btnEnviar" name="" type="submit" value="Enviar" />
+            <input id="btnReset" name="" type="reset" value="Borrar campos" />
           </form>
         </div>
       </div>
@@ -436,8 +439,8 @@
     AOS.init();
   </script>
   <!-- CUSTOM JS -->
-  <!-- <script src="js/scripts.js"></script> -->
-  <script src="js/scriptsMio.js"></script>
+  <script src="js/scripts.js"></script>
+  
 </body>
 
 </html>

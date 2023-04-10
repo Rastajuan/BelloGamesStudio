@@ -26,59 +26,42 @@ body {
 }
 
 #container {
-	width: 100%; /* 1920px */
+	width: 1920px; /* 1920px */
 	min-height: 7000px;
 }
 
 /* ===========================================================================
-                            MODAL DE BIENVENIDA                                           
+                               PRELOADER                                           
 ================================================================================*/
-.modal-bienvenida {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.9);
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* color de fondo del preloader */
+  z-index: 9999; /* asegura que el preloader esté por encima de todo */
 }
 
-.modal-bienvenida-contenido {
-	-webkit-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
-	-moz-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
-	box-shadow: 1px 1px 19px 5px #d98508bf;
-	background-color: rgba(
-		36,
-		20,
-		16,
-		0.6
-	); /* Cambiar a un color de fondo con transparencia media */
-	border-radius: 15px;
-	margin: 15% auto;
-	padding: 20px;
-	border: 1px solid yellow; /* Agregar un borde amarillo de 2px */
-	width: 80%;
-	max-width: 1000px;
-	font-family: inherit;
-	font-size: 2rem;
-	text-transform: uppercase;
-	text-align: center;
+#preloader::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  border-radius: 50%;
+  border: 5px solid #5cb85c; 
+  border-top-color: transparent;
+  animation: girar 1s ease-in-out infinite; /* animación de rotación */
 }
 
-.modal-bienvenida-cerrar {
-	color: #aaaaaa;
-	float: right;
-	font-size: 28px;
-	font-weight: bold;
-}
-
-.modal-bienvenida-cerrar:hover,
-.modal-bienvenida-cerrar:focus {
-	color: #d98508bf;
-	text-decoration: none;
-	cursor: pointer;
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ===========================================================================
@@ -93,37 +76,32 @@ header {
 	background-size: cover; /* Esta propiedad ajustará la imagen para cubrir todo el fondo*/
 }
 
-.fijado {
-	position: fixed;
-	top: 0;
-	left: 0;
+nav {
+	/* background-color: #eb0b0b; */
 	width: 100%;
-	z-index: 100;
-}
-
-#barraNavegación {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	height: 100px;
+	top: 65px;
+	position: fixed;
 	z-index: 1;
 }
-
 #logo {
-	background-color: #e2b026;
+	/* background-color: #e2b026; */
 	border-radius: 50%;
+  border: 1px solid #f8b700; ;
 	color: #241410;
 	font-size: 2rem;
 	height: 240px;
-	position: relative;
+	position: fixed;
 	text-align: center;
 	line-height: 240px;
 	top: 5px;
 	left: 90px;
 	width: 240px;
 	float: left;
-	z-index: 9999; /* Aumenta el valor de z-index */
+	z-index: 9999;
 }
 
+/* MENU */
 #menu {
 	/* background-color: #1b1010; */
 	display: flex;
@@ -131,25 +109,22 @@ header {
 	align-items: center;
 	background-image: url("../img/bgTituloSecciones.png");
 	border: 1px solid #f8b700;
-	position: relative;
-	top: 65px;
+	/* position: fixed; */
 	width: 100%;
-	height: 100px;
+	height: 100%;
 	border: 1px solid #f8b700;
 	text-align: center;
 	padding-left: 250px;
+	z-index: 500;
 	/* overflow: hidden; */
 }
 
-.enlaceEquipo {
-	position: relative;
-	top: 77px;
-}
 .enlacesMenu {
 	display: inline-block; /* Para que los elementos se muestren en linea */
 	margin: 0 50px;
 	text-align: left;
 }
+
 .enlacesMenu > a {
 	color: #f8b700;
 	font: bold 2.5rem "Roboto", sans-serif;
@@ -161,20 +136,28 @@ header {
 
 .enlacesMenu > a:hover {
 	color: #d98508;
-	/* transform: scale(1.3); */
+	/* transform: scale(3.2); */
 }
 
+/* SUBMENU */
 #submenu {
-	width: 300px;
-	height: 300px;
+	width: auto;
+	height: 150px;
 	list-style: none;
-	position: relative;
-  top: 10px;
+	position: absolute;
+	/* padding-top: 29px; */
+	padding-top: 29px;
+	margin-left: -32px;
 	z-index: 1;
-  background-color: #d90808;
+	display: none;
+	/* background-color: #d90808; */
 }
+
 .elementoSubmenu {
-	width: 100%;
+	border: 1px solid #f8b700;
+	height: 50px;
+	line-height: 50px;
+	background-color: rgba(94, 89, 89, 0.8);
 	/* padding-top: 30px; */
 }
 
@@ -187,9 +170,18 @@ header {
 	transition: all 0.3s ease-in-out;
 	font-size: 1.8rem;
 }
+
 .elementoSubmenu > a:hover {
-	color: #d90808;
+	color: #d98508;
+	/* transform: scale(3.2); */
 }
+
+/* Desplegamos el submenu que tenemos con display:none */
+.enlacesMenu:hover #submenu {
+	display: block;
+}
+
+/* HERO */
 .hero-text {
 	position: relative;
 	top: 200px;
@@ -200,6 +192,7 @@ header {
 	animation-name: opacidad-desplazamiento;
 	animation-duration: 2s;
 }
+
 .sub-hero-text {
 	position: relative;
 	top: 200px;
@@ -212,11 +205,12 @@ header {
 	animation-name: cambio-tamanio, opacidad;
 	animation-duration: 1s, 1s;
 	animation-delay: 2s;
-	
+	animation-fill-mode: forwards; /* Para que la animación se quede en el último frame */
 }
 
-/* Animaciones header */
-/*Animacion hero-text*/
+/* ANIMACIONES HEADER */
+
+/*ANIMACION HEROTXT*/
 @keyframes opacidad-desplazamiento {
 	0% {
 		opacity: 0;
@@ -232,7 +226,7 @@ header {
 	}
 }
 
-/*Animacion sub-hero-text*/
+/*ANIMACION SUB-HEROTXT*/
 @keyframes opacidad {
 	0% {
 		opacity: 0;
@@ -256,9 +250,42 @@ header {
 }
 
 /* ===========================================================================
-                              SCROLL MENU
+                               EFECTO SCROLL EN MENU
 ================================================================================*/
+.logo-scroll {
+	max-height: 40px;
+	max-width: 40px;
+	transition: all 0.3s ease;
+	position: relative;
+  /* margin: -5px; */
+}
+.nav-scroll {
+	/* background-color: #eb0b0b; */
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	transition: all 0.3s ease;
+}
 
+#menu .enlacesMenu a.enlacesMenu-scroll {
+	color: #f8b700;
+	font: bold 1.2rem "Roboto", sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	line-height: 1.2rem;
+	transition: all 0.3s ease-in-out;
+}
+#menu .enlacesMenu a.enlacesMenu-scroll:hover {
+	color: #d98508;
+}
+
+#submenu.submenu-scroll {
+	padding-top: 13px;
+}
 /* ===========================================================================
                                SECCIONES GENERAL
 ================================================================================*/
@@ -287,7 +314,121 @@ header {
 	margin-top: 30px;
 }
 
+/* ===========================================================================
+                               JUEGOS
+================================================================================*/
+#juegos {
+	background: linear-gradient(#241410, #3d2424); /* 241410 3D2424 */
+	border: 2px solid #f8b700;
+	height: auto; /*Para poder mostrar el acordeon sin que se desborde*/
+	width: 100%;
+}
+#juego {
+	width: 100%;
+}
+.texto-juego {
+	/* background: #530cd6; */
+	margin: 180px 0 0 210px;
+	width: 650px;
+	float: left;
+}
+.texto-juego > h3 {
+	color: #f8b700;
+	font-family: "Roboto", sans-serif;
+	font-size: 2.3rem;
+	text-transform: uppercase;
+}
+.texto-juego > p {
+	color: #ebdec2;
+	font-family: "Roboto", sans-serif;
+	font-size: 1.5rem;
+	margin-top: 40px;
+	text-align: justify;
+}
+.video-juego {
+	-webkit-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
+	-moz-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
+	box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
+	margin: 75px 200px 0 0;
+	width: 30%;
+	border: 1px solid #f8b700;
+	border-radius: 15px;
+	float: right;
+	cursor: pointer;
+}
 
+/* ===========================================================================
+                               ACORDEON
+================================================================================*/
+.acordeon {
+	display: block;
+	height: auto; 
+	overflow: hidden;
+	width: 100%;
+	margin-top: 50px;
+	margin-bottom: 40px;
+	padding-top: 30px;
+}
+
+.acordeon-item {
+	border: 1px solid #f8b700;
+	border-radius: 15px;
+	width: 1500px;
+	margin: 0 auto;
+}
+
+.acordeon-item-cabecera {
+	display: block;
+	font-weight: bold;
+	padding: 10px;
+	/* background-color: #a00909; */
+	cursor: pointer;
+	text-align: center;
+	font-size: 2rem;
+}
+.acordeon-item-cabecera:hover {
+	background-color: rgba(248, 183, 0, 0.5);
+	border-radius: 15px 15px 0 0;
+}
+
+.acordeon-item-body {
+	display: none;
+	padding: 10px;
+}
+.acordeon-item-body li {
+	list-style: none;
+	color: #ebdec2;
+	font-family: "Roboto", sans-serif;
+	font-size: 1.5rem;
+	margin-top: 20px;
+	text-align: justify;
+	padding: 0 20px 0 20px;
+}
+.acordeon-item.activo .acordeon-item-cabecera {
+	background-color: rgba(248, 183, 0, 0.5);
+	border-radius: 15px 15px 0 0;
+}
+
+.acordeon-item.activo .acordeon-item-body {
+	display: block;
+	-webkit-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
+	-moz-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
+	box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
+}
+
+.cabecera-acordeon {
+	color: #f8b700;
+	font-family: "Roboto", sans-serif;
+	font-size: 2.3rem;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 50px 0 20px 0;
+}
+
+.span-acordeon {
+	color: #d98508;
+  text-transform: uppercase;
+}
 
 /* ===========================================================================
                                WALLPAPERS
@@ -328,22 +469,27 @@ header {
 }
 
 /* ===========================================================================
-                               LIGHT BOX WALLPAPERS
+                             LIGHTBOX WALLPAPERS                                    
 ================================================================================*/
 .lightbox {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #d98508bf;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 80%;
+	height: 80%;
+	background: rgba(0, 0, 0, 0.749);
 	display: flex;
-	justify-content: center;
+	flex-direction: row; /* Dirección del flex a columna */
+	justify-content: space-between; /* Agregamos espacio entre la imagen y los botones */
 	align-items: center;
 	opacity: 0;
 	pointer-events: none;
-	transition: opacity 0.2s ease;
+	transition: opacity 0.8s ease;
 	z-index: 100;
+	border-radius: 15px;
 }
 
 .lightbox-activo {
@@ -353,17 +499,60 @@ header {
 
 .lightbox-cerrar {
 	position: absolute;
-	top: 0;
-	right: 0;
-	padding: 10px 150px 10px 10px;
+	top: 10px;
+	right: 20px;
+	/* padding: 10px; */
 	cursor: pointer;
 	font-size: 5rem;
+}
+
+.lightbox-cerrar:hover {
+	color: #d98508bf;
 }
 
 .lightbox img {
 	max-width: 90%;
 	max-height: 90%;
 	object-fit: contain; /* Para que la imagen se adapte al tamaño del contenedor */
+	display: block; /* Para que podamos usar los márgenes */
+	margin: 0 auto; /* Centra la imagen horizontalmente */
+	border-radius: 15px;
+	border: 1px solid #d98508bf;
+}
+
+.lightbox-botones {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0 20px;
+}
+
+.lightbox-botones button {
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+.lightbox-botones .lightbox-prev {
+	text-align: left;
+}
+.lightbox-botones .lightbox-next {
+	text-align: right;
+}
+
+.lightbox-botones i {
+	font-size: 2rem;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+	line-height: 1;
+	margin: 0 20px;
+}
+
+.lightbox-botones i:hover {
+	transform: scale(1.5);
+	color: #d98508bf;
 }
 
 /* ===========================================================================
@@ -398,8 +587,23 @@ header {
 	text-decoration: none;
 }
 
-.seleccionado {
+.pestanaActiva {
 	color: #3676a7;
+}
+
+@keyframes animacionPestana {
+	from {
+		transform: scale(0) rotate(0deg);
+	}
+	to {
+		transform: scale(1) rotate(360deg);
+
+		transition: transform 0.3s ease-in-out;
+	}
+}
+
+.animacionPestanas {
+	animation: animacionPestana 0.5s ease;
 }
 
 #containerProgramacion,
@@ -451,13 +655,15 @@ header {
 	height: 350px;
 }
 
-.invisible {
+/* .invisible {
 	display: none;
+	transition: all 0.5s ease;
 }
 
 .visible {
 	display: block;
-}
+	transition: all 0.5s ease;
+} */
 
 /* ===========================================================================
                                CONTACTO
@@ -465,8 +671,9 @@ header {
 #contacto {
 	background: linear-gradient(#123749, #3676a7); /* 123749 3676a7 */
 	border: 2px solid #f8b700;
-	height: 1070px;
+	height: 1000px;
 	width: 100%;
+	position: relative;
 }
 
 #containerContacto {
@@ -527,9 +734,13 @@ textarea {
 	color: #3676a7;
 	margin: 50px 0 15px 0;
 }
-/* textarea::placeholder {
-	color: #3676a7;
-} */
+#caracteres {
+	margin-top: -20px;
+}
+.rojo {
+	color: red;
+	font-weight: bold;
+}
 
 #btnEnviar {
 	background-color: transparent;
@@ -547,6 +758,26 @@ textarea {
 	color: #d98508;
 	cursor: pointer;
 }
+
+#btnReset {
+  background-color: transparent;
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: 20px;
+/* margin-right: 5px; */
+  width: 170px;
+  text-align: left;
+  float: right;
+}
+
+#btnReset:hover {
+  background-color: transparent;
+  color: #f83505;
+  cursor: pointer;
+}
+
 ::placeholder {
 	color: #3676a7;
 	font-family: "Open Sans", sans-serif;
@@ -556,8 +787,26 @@ textarea {
 }
 
 /* ===========================================================================
+                               PARALLAX
+================================================================================*/
+/*===========================================================================
                                 MODAL FORMULARIO
 ================================================================================*/
+.campoModal {
+	color: #f8b700;
+}
+.campoModal > span {
+	color: white;
+}
+.infoModal {
+	color: #aaaaaa;
+	/* margin-top: 5px; */
+	font-size: 0.8rem;
+	text-align: center;
+}
+.info {
+	color: #ebdec2;
+}
 .modal {
 	display: none;
 	position: fixed;
@@ -566,65 +815,69 @@ textarea {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
+
 	background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal-contenido {
 	-webkit-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	-moz-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
-	box-shadow: 1px 1px 19px 5px #d98508bf;
-	background-color: rgba(
-		36,
-		20,
-		16,
-		0.6
-	); /* Cambiar a un color de fondo con transparencia media */
+	box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.749);
+	background-color: rgba(36, 20, 16, 0.6);
 	border-radius: 15px;
 	margin: 15% auto;
 	padding: 20px;
-	border: 1px solid yellow; /* Agregar un borde amarillo de 2px */
+	border: 1px solid #ffff00;
 	width: 80%;
 	max-width: 700px;
 	font-family: inherit;
+	overflow: hidden;
 }
 
-button[type="submit"] {
+.modal-contenido h2 {
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 15px;
+}
+
+#enviarDesdeModal {
 	display: block;
 	margin: 0 auto;
-}
-
-button[name="enviar"] {
-	border-radius: 15px;
+	background-color: transparent;
 	border: none;
+	font-size: 1.2rem;
+	padding: 10px;
+	width: auto;
+	color: #ebdec2;
 	margin-top: 20px;
-	width: 150px;
+	text-transform: uppercase;
 }
 
-button[name="enviar"]:hover,
-button[name="enviar"]:focus {
+#enviarDesdeModal:hover {
 	background-color: #d98508bf;
+	border-radius: 15px;
 	color: black;
 	cursor: pointer;
 }
 
-.cerrar {
-	color: #aaaaaa;
+#cerrar {
+	/* color: #aaaaaa; */
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
 }
 
-.cerrar:hover,
-.cerrar:focus {
+#cerrar:hover,
+#cerrar:focus {
 	color: #d98508bf;
 	text-decoration: none;
 	cursor: pointer;
 }
 
 /* ===========================================================================
-                               TOOLTIPS FORMULARIO
+                                TOOLTIP FORMULARIO
 ================================================================================*/
+
 .tooltip {
 	position: absolute;
 	z-index: 9999;
@@ -639,17 +892,6 @@ button[name="enviar"]:focus {
 	/* bottom: 100%; */
 }
 
-/* ===========================================================================
-                             PARALLAX
-================================================================================*/
-/*  .parallax-container {
-      height: 15000px;
-      background-color: #f8f8f8;
-      color: #333;
-      text-align: center;
-      padding-top: 100px;
-      font-size: 48px;
-    } */
 /* ===========================================================================
                                RRSS
 ================================================================================*/
@@ -684,7 +926,7 @@ button[name="enviar"]:focus {
 	-webkit-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	-moz-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
-	border: 1px solid #f8b700;
+	border: 1px solid #d98508bf;
 	width: 75px;
 	height: 75px;
 	margin-left: 65px;
@@ -697,7 +939,7 @@ button[name="enviar"]:focus {
 	-webkit-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	-moz-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
-	border: 1px solid #f8b700;
+	border: 1px solid #d98508bf;
 	width: 75px;
 	height: 75px;
 	margin-left: 65px;
