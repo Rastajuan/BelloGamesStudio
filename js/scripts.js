@@ -59,10 +59,10 @@ setTimeout(function () {
 
 	// Creamos un array con las imágenes del slideshow
 	const imagenes = [
-		"/img/SlideHeader/5.jpg",
-		"/img/SlideHeader/2.jpg",
-		"/img/SlideHeader/3.jpg",
-		"/img/SlideHeader/4.jpg",
+		"/img/SlideHeader/5.webp",
+		"/img/SlideHeader/2.webp",
+		"/img/SlideHeader/3.webp",
+		"/img/SlideHeader/4.webp",
 	];
 
 	// Precargamos las imágenes
@@ -100,10 +100,10 @@ setTimeout(function () {
 
 // Creamos un array con las imágenes del slideshow
 const imagenes = [
-	"/img/SlideHeader/5.jpg",
-	"/img/SlideHeader/2.jpg",
-	"/img/SlideHeader/3.jpg",
-	"/img/SlideHeader/4.jpg",
+	"/img/SlideHeader/5.webp",
+	"/img/SlideHeader/2.webp",
+	"/img/SlideHeader/3.webp",
+	"/img/SlideHeader/4.webp",
 ];
 
 // Establecemos la duración de cada imagen en milisegundos
@@ -256,6 +256,9 @@ function verImagen(index) {
 		currentIndex = (currentIndex + 1) % imageArray.length;
 		verImagen(currentIndex);
 	});
+
+	// Deshabilitamos el scroll en la página
+	document.body.style.overflow = "hidden";
 }
 
 const contenedorLightbox = document.getElementById("imgs-wallpaper");
