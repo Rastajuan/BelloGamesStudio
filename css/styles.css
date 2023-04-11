@@ -638,7 +638,7 @@ nav {
 	); /* Al ser 3 columnas, le asignamos un 33.33% menos los margenes derecho e izquierdo que hemos añadido (45px por lado) */
 }
 .fotoEmpleado {
-	background-color: #0c19d6;
+	background-color: #c2d60c;
 	-webkit-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	-moz-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
