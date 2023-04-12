@@ -235,10 +235,9 @@ function verImagen(index) {
 	lightbox.innerHTML = `
     <img src="${imageArray[index].src}" alt="">
     <div class="lightbox-botones">
-  <i class="fas fa-chevron-left lightbox-prev"></i>
-  <i class="fas fa-chevron-right lightbox-next"></i>
-</div>
-
+      <i class="fas fa-chevron-left lightbox-prev"></i>
+      <i class="fas fa-chevron-right lightbox-next"></i>
+    </div>
     <span class="lightbox-cerrar">&times;</span>
   `;
 	lightbox.classList.add("lightbox-activo");

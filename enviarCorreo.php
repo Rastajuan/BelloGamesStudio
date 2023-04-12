@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mensaje = $_POST["seleccion"];
     $consulta = $_POST["miTextarea"];
 
-    $para = "jbellof@hotmail.com"; 
+    $para = "jbellof@gmail.com"; 
     $asunto = "Consulta del formulario de contacto";
     $mensaje_completo = "Nombre: ".$nombre."\nCorreo: ".$correo."\nMensaje: ".$mensaje."\nConsulta: ".$consulta;
 
