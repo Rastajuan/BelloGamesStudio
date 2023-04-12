@@ -9,6 +9,7 @@ window.onload =	function () {
 /*===========================================================================
                                 SCROLL MENU
 ================================================================================*/
+// Obtenemos los elementos del DOM
 const barraNavegacion = document.getElementById("barraNavegación");
 const logo = document.getElementById("logo");
 const tamanioLogo = "240px";
@@ -128,40 +129,6 @@ function cambiarImagen() {
 setInterval(cambiarImagen, duracion); */
 
 /* ===========================================================================
-                ENLACES A LAS PESTAÑAS EQUIPO DESDE EL SUBMENU
-================================================================================*/
-
-// Capturamos los enlaces
-const enlaceProgramacioMenu = document.querySelector("#enlaceProgramacionMenu");
-const enlaceDisenoMenu = document.querySelector("#enlaceDisenoMenu");
-const enlaceAnimacionMenu = document.querySelector("#enlaceAnimacionMenu");
-
-enlaceProgramacioMenu.addEventListener("click", () => {
-	// console.log("hola");
-	marcadorPestana(programacion);
-	programacion.classList.add("animacionPestanas");
-	enlaceProgramacion.classList.add("pestanaActiva");
-	enlaceDiseno.classList.remove("pestanaActiva");
-	enlaceAnimacion.classList.remove("pestanaActiva");
-});
-
-enlaceDisenoMenu.addEventListener("click", () => {
-	marcadorPestana(diseno);
-	diseno.classList.add("animacionPestanas");
-	enlaceDiseno.classList.add("pestanaActiva");
-	enlaceProgramacion.classList.remove("pestanaActiva");
-	enlaceAnimacion.classList.remove("pestanaActiva");
-});
-
-enlaceAnimacionMenu.addEventListener("click", () => {
-	marcadorPestana(animacion);
-	animacion.classList.add("animacionPestanas");
-	enlaceAnimacion.classList.add("pestanaActiva");
-	enlaceProgramacion.classList.remove("pestanaActiva");
-	enlaceDiseno.classList.remove("pestanaActiva");
-});
-
-/* ===========================================================================
                                 PESTAÑAS EQUIPO
 ================================================================================*/
 
@@ -213,12 +180,46 @@ enlaceAnimacion.addEventListener("click", () => {
 });
 
 /* ===========================================================================
+                ENLACES A LAS PESTAÑAS EQUIPO DESDE EL SUBMENU
+================================================================================*/
+
+// Capturamos los enlaces
+const enlaceProgramacioMenu = document.querySelector("#enlaceProgramacionMenu");
+const enlaceDisenoMenu = document.querySelector("#enlaceDisenoMenu");
+const enlaceAnimacionMenu = document.querySelector("#enlaceAnimacionMenu");
+
+enlaceProgramacioMenu.addEventListener("click", () => {
+	// console.log("hola");
+	marcadorPestana(programacion);
+	programacion.classList.add("animacionPestanas");
+	enlaceProgramacion.classList.add("pestanaActiva");
+	enlaceDiseno.classList.remove("pestanaActiva");
+	enlaceAnimacion.classList.remove("pestanaActiva");
+});
+
+enlaceDisenoMenu.addEventListener("click", () => {
+	marcadorPestana(diseno);
+	diseno.classList.add("animacionPestanas");
+	enlaceDiseno.classList.add("pestanaActiva");
+	enlaceProgramacion.classList.remove("pestanaActiva");
+	enlaceAnimacion.classList.remove("pestanaActiva");
+});
+
+enlaceAnimacionMenu.addEventListener("click", () => {
+	marcadorPestana(animacion);
+	animacion.classList.add("animacionPestanas");
+	enlaceAnimacion.classList.add("pestanaActiva");
+	enlaceProgramacion.classList.remove("pestanaActiva");
+	enlaceDiseno.classList.remove("pestanaActiva");
+});
+
+/* ===========================================================================
                                LIGHT BOX WALLPAPERS
 ================================================================================*/
 // Seleccionamos todas las imágenes en el lightbox por clase
 const images = document.querySelectorAll(".img-wallpapers");
 
-// Creamos el lightbox como un elemento global en el documento
+// Creamos el lightbox como un elemento global en el documento, no está en el HTML
 const lightbox = document.createElement("div");
 lightbox.classList.add("lightbox");
 document.body.appendChild(lightbox);
@@ -231,7 +232,7 @@ let currentIndex = 0;
 
 // Función para mostrar una imagen en el lightbox
 function verImagen(index) {
-	// Muestra el lightbox
+	// Mostramos el lightbox
 	lightbox.innerHTML = `
     <img src="${imageArray[index].src}" alt="">
     <div class="lightbox-botones">
@@ -256,7 +257,7 @@ function verImagen(index) {
 		verImagen(currentIndex);
 	});
 
-	// Deshabilitamos el scroll en la página
+	// Deshabilitamos el scroll en la página cuando el lightbox está activo 
 	document.body.style.overflow = "hidden";
 }
 
@@ -278,7 +279,7 @@ contenedorLightbox.addEventListener("click", (e) => {
 lightbox.addEventListener("click", (e) => {
 	if (e.target === lightbox || e.target.classList.contains("lightbox-cerrar")) {
 		lightbox.classList.remove("lightbox-activo");
-		document.body.style.overflow = "auto";
+		document.body.style.overflow = "auto"; // Habilitamos nuevamente el scroll en la página
 	}
 });
 
