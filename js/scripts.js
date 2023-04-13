@@ -9,6 +9,7 @@ window.onload =	function () {
 /*===========================================================================
                                 SCROLL MENU
 ================================================================================*/
+// Obtenemos los elementos del DOM
 const barraNavegacion = document.getElementById("barraNavegación");
 const logo = document.getElementById("logo");
 const tamanioLogo = "240px";
@@ -59,10 +60,10 @@ setTimeout(function () {
 
 	// Creamos un array con las imágenes del slideshow
 	const imagenes = [
-		"/img/SlideHeader/5.jpg",
-		"/img/SlideHeader/2.jpg",
-		"/img/SlideHeader/3.jpg",
-		"/img/SlideHeader/4.jpg",
+		"/img/SlideHeader/5.webp",
+		"/img/SlideHeader/2.webp",
+		"/img/SlideHeader/3.webp",
+		"/img/SlideHeader/4.webp",
 	];
 
 	// Precargamos las imágenes
@@ -100,10 +101,10 @@ setTimeout(function () {
 
 // Creamos un array con las imágenes del slideshow
 const imagenes = [
-	"/img/SlideHeader/5.jpg",
-	"/img/SlideHeader/2.jpg",
-	"/img/SlideHeader/3.jpg",
-	"/img/SlideHeader/4.jpg",
+	"/img/SlideHeader/5.webp",
+	"/img/SlideHeader/2.webp",
+	"/img/SlideHeader/3.webp",
+	"/img/SlideHeader/4.webp",
 ];
 
 // Establecemos la duración de cada imagen en milisegundos
@@ -126,40 +127,6 @@ function cambiarImagen() {
 
 // Iniciamos el slideshow
 setInterval(cambiarImagen, duracion); */
-
-/* ===========================================================================
-                ENLACES A LAS PESTAÑAS EQUIPO DESDE EL SUBMENU
-================================================================================*/
-
-// Capturamos los enlaces
-const enlaceProgramacioMenu = document.querySelector("#enlaceProgramacionMenu");
-const enlaceDisenoMenu = document.querySelector("#enlaceDisenoMenu");
-const enlaceAnimacionMenu = document.querySelector("#enlaceAnimacionMenu");
-
-enlaceProgramacioMenu.addEventListener("click", () => {
-	// console.log("hola");
-	marcadorPestana(programacion);
-	programacion.classList.add("animacionPestanas");
-	enlaceProgramacion.classList.add("pestanaActiva");
-	enlaceDiseno.classList.remove("pestanaActiva");
-	enlaceAnimacion.classList.remove("pestanaActiva");
-});
-
-enlaceDisenoMenu.addEventListener("click", () => {
-	marcadorPestana(diseno);
-	diseno.classList.add("animacionPestanas");
-	enlaceDiseno.classList.add("pestanaActiva");
-	enlaceProgramacion.classList.remove("pestanaActiva");
-	enlaceAnimacion.classList.remove("pestanaActiva");
-});
-
-enlaceAnimacionMenu.addEventListener("click", () => {
-	marcadorPestana(animacion);
-	animacion.classList.add("animacionPestanas");
-	enlaceAnimacion.classList.add("pestanaActiva");
-	enlaceProgramacion.classList.remove("pestanaActiva");
-	enlaceDiseno.classList.remove("pestanaActiva");
-});
 
 /* ===========================================================================
                                 PESTAÑAS EQUIPO
@@ -213,12 +180,46 @@ enlaceAnimacion.addEventListener("click", () => {
 });
 
 /* ===========================================================================
+                ENLACES A LAS PESTAÑAS EQUIPO DESDE EL SUBMENU
+================================================================================*/
+
+// Capturamos los enlaces
+const enlaceProgramacioMenu = document.querySelector("#enlaceProgramacionMenu");
+const enlaceDisenoMenu = document.querySelector("#enlaceDisenoMenu");
+const enlaceAnimacionMenu = document.querySelector("#enlaceAnimacionMenu");
+
+enlaceProgramacioMenu.addEventListener("click", () => {
+	// console.log("hola");
+	marcadorPestana(programacion);
+	programacion.classList.add("animacionPestanas");
+	enlaceProgramacion.classList.add("pestanaActiva");
+	enlaceDiseno.classList.remove("pestanaActiva");
+	enlaceAnimacion.classList.remove("pestanaActiva");
+});
+
+enlaceDisenoMenu.addEventListener("click", () => {
+	marcadorPestana(diseno);
+	diseno.classList.add("animacionPestanas");
+	enlaceDiseno.classList.add("pestanaActiva");
+	enlaceProgramacion.classList.remove("pestanaActiva");
+	enlaceAnimacion.classList.remove("pestanaActiva");
+});
+
+enlaceAnimacionMenu.addEventListener("click", () => {
+	marcadorPestana(animacion);
+	animacion.classList.add("animacionPestanas");
+	enlaceAnimacion.classList.add("pestanaActiva");
+	enlaceProgramacion.classList.remove("pestanaActiva");
+	enlaceDiseno.classList.remove("pestanaActiva");
+});
+
+/* ===========================================================================
                                LIGHT BOX WALLPAPERS
 ================================================================================*/
 // Seleccionamos todas las imágenes en el lightbox por clase
 const images = document.querySelectorAll(".img-wallpapers");
 
-// Creamos el lightbox como un elemento global en el documento
+// Creamos el lightbox como un elemento global en el documento, no está en el HTML
 const lightbox = document.createElement("div");
 lightbox.classList.add("lightbox");
 document.body.appendChild(lightbox);
@@ -231,14 +232,13 @@ let currentIndex = 0;
 
 // Función para mostrar una imagen en el lightbox
 function verImagen(index) {
-	// Muestra el lightbox
+	// Mostramos el lightbox
 	lightbox.innerHTML = `
     <img src="${imageArray[index].src}" alt="">
     <div class="lightbox-botones">
-  <i class="fas fa-chevron-left lightbox-prev"></i>
-  <i class="fas fa-chevron-right lightbox-next"></i>
-</div>
-
+      <i class="fas fa-chevron-left lightbox-prev"></i>
+      <i class="fas fa-chevron-right lightbox-next"></i>
+    </div>
     <span class="lightbox-cerrar">&times;</span>
   `;
 	lightbox.classList.add("lightbox-activo");
@@ -256,6 +256,9 @@ function verImagen(index) {
 		currentIndex = (currentIndex + 1) % imageArray.length;
 		verImagen(currentIndex);
 	});
+
+	// Deshabilitamos el scroll en la página cuando el lightbox está activo 
+	document.body.style.overflow = "hidden";
 }
 
 const contenedorLightbox = document.getElementById("imgs-wallpaper");
@@ -276,7 +279,7 @@ contenedorLightbox.addEventListener("click", (e) => {
 lightbox.addEventListener("click", (e) => {
 	if (e.target === lightbox || e.target.classList.contains("lightbox-cerrar")) {
 		lightbox.classList.remove("lightbox-activo");
-		document.body.style.overflow = "auto";
+		document.body.style.overflow = "auto"; // Habilitamos nuevamente el scroll en la página
 	}
 });
 
@@ -325,11 +328,14 @@ function abrirModal(e) {
 	modal.style.display = "block"; // Muestra el modal
 
 	enviarDesdeModal.addEventListener("click", cerrarModalEnviar); // Añade un evento para cerrar el modal cuando se hace clic en el botón "Enviar"
+	// Deshabilitamos el scroll en la página cuando el modal está activo
+	document.body.style.overflow = "hidden";
 }
 
 // Función para cerrar el modal
 function cerrarModal() {
-	modal.style.display = "none"; // Oculta el modal
+  modal.style.display = "none"; // Oculta el modal
+  document.body.style.overflow = "auto"; // Habilitamos nuevamente el scroll en la página
 }
 // Función para cerrar el modal si se hace clic fuera de él
 /* function clickFueraDelModal(event) {
@@ -341,7 +347,8 @@ function cerrarModal() {
 
 // Función para cerrar el modal y enviar el formulario
 function cerrarModalEnviar() {
-	modal.style.display = "none"; // Oculta el modal
+  modal.style.display = "none"; // Oculta el modal
+  document.body.style.overflow = "auto"; // Habilitamos nuevamente el scroll en la página
 	// alert("Formulario enviado");
 	formulario.submit();
 }

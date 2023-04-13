@@ -34,45 +34,44 @@ body {
                                PRELOADER                                           
 ================================================================================*/
 #preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #241410;
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #241410;
+	z-index: 9999;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .loader {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border: 3px solid rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
-  border-top-color: #3498db;
-  animation: spin 1s ease-in-out infinite;
-  margin-bottom: 10px;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border: 3px solid rgba(0, 0, 0, 0.3);
+	border-radius: 50%;
+	border-top-color: #3498db;
+	animation: spin 1s ease-in-out infinite;
+	margin-bottom: 10px;
 }
 
 .span-preloader {
-  font-size: 4rem;
-  font-weight: bold;
-  color: #f8b700;
+	font-size: 4rem;
+	font-weight: bold;
+	color: #f8b700;
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
-
 
 /* ===========================================================================
                                HEADER                                           
@@ -97,7 +96,7 @@ nav {
 #logo {
 	/* background-color: #e2b026; */
 	border-radius: 50%;
-  border: 1px solid #f8b700; ;
+	border: 1px solid #f8b700;
 	color: #241410;
 	font-size: 2rem;
 	height: 240px;
@@ -144,7 +143,9 @@ nav {
 	transition: all 0.3s ease-in-out;
 }
 
-.enlacesMenu > a:hover {
+.enlacesMenu > a:hover,
+.enlacesMenu > a:active,
+.enlacesMenu > a:focus {
 	color: #d98508;
 	/* transform: scale(3.2); */
 }
@@ -181,13 +182,17 @@ nav {
 	font-size: 1.8rem;
 }
 
-.elementoSubmenu > a:hover {
+.elementoSubmenu > a:hover,
+.elementoSubmenu > a:active,
+.elementoSubmenu > a:focus {
 	color: #d98508;
 	/* transform: scale(3.2); */
 }
 
 /* Desplegamos el submenu que tenemos con display:none */
-.enlacesMenu:hover #submenu {
+.enlacesMenu:hover #submenu,
+.enlacesMenu:active #submenu,
+.enlacesMenu:focus #submenu {
 	display: block;
 }
 
@@ -267,7 +272,7 @@ nav {
 	max-width: 40px;
 	transition: all 0.3s ease;
 	position: relative;
-  /* margin: -5px; */
+	/* margin: -5px; */
 }
 .nav-scroll {
 	/* background-color: #eb0b0b; */
@@ -289,12 +294,14 @@ nav {
 	line-height: 1.2rem;
 	transition: all 0.3s ease-in-out;
 }
-#menu .enlacesMenu a.enlacesMenu-scroll:hover {
+#menu .enlacesMenu a.enlacesMenu-scroll:hover,
+#menu .enlacesMenu a.enlacesMenu-scroll:active,
+#menu .enlacesMenu a.enlacesMenu-scroll:focus {
 	color: #d98508;
 }
 
 #submenu.submenu-scroll {
-	padding-top: .82rem;
+	padding-top: 0.82rem;
 }
 /* ===========================================================================
                                SECCIONES GENERAL
@@ -372,7 +379,7 @@ nav {
 ================================================================================*/
 .acordeon {
 	display: block;
-	height: auto; 
+	height: auto;
 	overflow: hidden;
 	width: 100%;
 	margin-top: 50px;
@@ -396,7 +403,9 @@ nav {
 	text-align: center;
 	font-size: 2rem;
 }
-.acordeon-item-cabecera:hover {
+.acordeon-item-cabecera:hover,
+.acordeon-item-cabecera:active,
+.acordeon-item-cabecera:focus {
 	background-color: rgba(248, 183, 0, 0.5);
 	border-radius: 15px 15px 0 0;
 }
@@ -437,7 +446,7 @@ nav {
 
 .span-acordeon {
 	color: #d98508;
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 /* ===========================================================================
@@ -473,7 +482,9 @@ nav {
 	transition: transform 0.2s ease;
 }
 
-.img-wallpapers:hover {
+.img-wallpapers:hover,
+.img-wallpapers:focus,
+.img-wallpapers:active {
 	transform: scale(1.2);
 	cursor: pointer;
 }
@@ -510,14 +521,17 @@ nav {
 .lightbox-cerrar {
 	position: absolute;
 	top: 10px;
-	right: 20px;
+	right: 30px;
 	/* padding: 10px; */
 	cursor: pointer;
-	font-size: 5rem;
+	font-size: 7rem;
 }
 
-.lightbox-cerrar:hover {
+.lightbox-cerrar:hover,
+.lightbox-cerrar:active,
+.lightbox-cerrar:focus {
 	color: #d98508bf;
+	transform: scale(1.5);
 }
 
 .lightbox img {
@@ -553,15 +567,17 @@ nav {
 }
 
 .lightbox-botones i {
-	font-size: 2rem;
+	font-size: 4rem;
 	cursor: pointer;
 	transition: transform 0.2s ease;
 	line-height: 1;
 	margin: 0 20px;
 }
 
-.lightbox-botones i:hover {
-	transform: scale(1.5);
+.lightbox-botones i:hover,
+.lightbox-botones i:active,
+.lightbox-botones i:focus {
+	transform: scale(1.3);
 	color: #d98508bf;
 }
 
@@ -638,7 +654,7 @@ nav {
 	); /* Al ser 3 columnas, le asignamos un 33.33% menos los margenes derecho e izquierdo que hemos añadido (45px por lado) */
 }
 .fotoEmpleado {
-	background-color: #0c19d6;
+	background-color: #c2d60c;
 	-webkit-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	-moz-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
@@ -681,7 +697,7 @@ nav {
 #contacto {
 	background: linear-gradient(#123749, #3676a7); /* 123749 3676a7 */
 	border: 2px solid #f8b700;
-	height: 1000px;
+	height: 1800px;
 	width: 100%;
 	position: relative;
 }
@@ -763,29 +779,33 @@ textarea {
 	text-align: left;
 }
 
-#btnEnviar:hover, #btnEnviar:focus {
+#btnEnviar:hover,
+#btnEnviar:active,
+#btnEnviar:focus {
 	background-color: transparent;
 	color: #d98508;
 	cursor: pointer;
 }
 
 #btnReset {
-  background-color: transparent;
-  border-radius: 15px;
-  border: none;
-  color: #fff;
-  font-size: 1.5rem;
-  margin-top: 20px;
-/* margin-right: 5px; */
-  width: 170px;
-  text-align: left;
-  float: right;
+	background-color: transparent;
+	border-radius: 15px;
+	border: none;
+	color: #fff;
+	font-size: 1.5rem;
+	margin-top: 20px;
+	/* margin-right: 5px; */
+	width: 170px;
+	text-align: left;
+	float: right;
 }
 
-#btnReset:hover, #btnReset:focus {
-  background-color: transparent;
-  color: #f83505;
-  cursor: pointer;
+#btnReset:hover,
+#btnReset:active,
+#btnReset:focus {
+	background-color: transparent;
+	color: #f83505;
+	cursor: pointer;
 }
 
 ::placeholder {
@@ -799,6 +819,44 @@ textarea {
 /* ===========================================================================
                                PARALLAX
 ================================================================================*/
+#parallax {
+	background: url(../img/Parallax/fondo.jpg) no-repeat center center fixed;
+	background-size: cover;
+	border: 1px solid #f8b700;
+	height: 800px;
+	width: 1500px;
+	position: relative;
+	margin: -50px auto 35px auto;
+	border-radius: 15px;
+  overflow: hidden;
+}
+
+#parallax h1 {
+	color: #f8b700;
+	font-size: 3rem;
+	font-family: "Roboto", sans-serif;
+	text-align: center;
+	margin: 150px auto 0 200px;
+	width: 100%;
+	text-transform: uppercase;
+	-webkit-text-stroke: 2px #000000; /* ancho y color del borde del texto*/
+}
+
+#parallax p {
+  color:#000000;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-size-adjust: 100%;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+  margin: 100px auto 0 500px;
+  /* height: 150px; */
+  width: 60%;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #f8b700; /* ancho y color del borde del texto*/
+  /* border:2px solid red; */
+  /* background-color: rgba(217, 133, 8, 0.75); */
+}
 /*===========================================================================
                                 MODAL FORMULARIO
 ================================================================================*/
@@ -864,6 +922,7 @@ textarea {
 }
 
 #enviarDesdeModal:hover,
+#enviarDesdeModal:active,
 #enviarDesdeModal:focus {
 	background-color: #d98508bf;
 	border-radius: 15px;
@@ -879,6 +938,7 @@ textarea {
 }
 
 #cerrar:hover,
+#cerrar:active,
 #cerrar:focus {
 	color: #d98508bf;
 	text-decoration: none;
@@ -912,7 +972,7 @@ textarea {
 	height: 150px;
 	width: 100%;
 	border: 2px solid #f8b700;
-	line-height: 80px;
+	line-height: 85px;
 }
 
 .sub-rrss {
@@ -946,7 +1006,9 @@ textarea {
 	transition: all 0.3s ease-in-out;
 }
 
-.rrss img:hover {
+.rrss img:hover,
+.rrss img:active,
+.rrss img:focus {
 	-webkit-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	-moz-box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
 	box-shadow: 1px 1px 19px 5px rgba(217, 133, 8, 0.75);
@@ -992,7 +1054,9 @@ textarea {
 	color: #f8b700 !important; /*Con important evitamos que sea anulado por ningún otro estilo*/
 }
 
-.creative:hover {
+.creative:hover,
+.creative:active,
+.creative:focus {
 	color: #f8b700;
 	text-decoration: underline;
 }
