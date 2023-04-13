@@ -328,11 +328,14 @@ function abrirModal(e) {
 	modal.style.display = "block"; // Muestra el modal
 
 	enviarDesdeModal.addEventListener("click", cerrarModalEnviar); // Añade un evento para cerrar el modal cuando se hace clic en el botón "Enviar"
+	// Deshabilitamos el scroll en la página cuando el modal está activo
+	document.body.style.overflow = "hidden";
 }
 
 // Función para cerrar el modal
 function cerrarModal() {
-	modal.style.display = "none"; // Oculta el modal
+  modal.style.display = "none"; // Oculta el modal
+  document.body.style.overflow = "auto"; // Habilitamos nuevamente el scroll en la página
 }
 // Función para cerrar el modal si se hace clic fuera de él
 /* function clickFueraDelModal(event) {
@@ -344,7 +347,8 @@ function cerrarModal() {
 
 // Función para cerrar el modal y enviar el formulario
 function cerrarModalEnviar() {
-	modal.style.display = "none"; // Oculta el modal
+  modal.style.display = "none"; // Oculta el modal
+  document.body.style.overflow = "auto"; // Habilitamos nuevamente el scroll en la página
 	// alert("Formulario enviado");
 	formulario.submit();
 }
