@@ -2,9 +2,12 @@
                                PRELOADER                                           
 ================================================================================*/
 window.onload =	function () {
-		const preloader = document.getElementById("preloader");
-		preloader.style.display = "none"; // ocultamos el preloader una vez que se cargue la página
-	};
+	const preloader = document.getElementById("preloader");
+	preloader.style.display = "none"; // ocultamos el preloader una vez que se cargue la página
+
+	// Ponemos en escucha el evento scroll en toda la ventana (por eso usamos window en vez de document).Esta función se ejecutará cada vez que se produzca un evento scroll en la ventana y es la que se encargará de cambiar las clases de los elementos de la barra de navegación.
+	window.addEventListener("scroll", cambiarClases);
+};
 
 /*===========================================================================
                                 SCROLL MENU
@@ -13,7 +16,7 @@ window.onload =	function () {
 const barraNavegacion = document.getElementById("barraNavegación");
 const logo = document.getElementById("logo");
 const tamanioLogo = "240px";
-const distanciaTop = barraNavegacion.offsetTop;
+const distanciaTop = barraNavegacion.offsetTop; //La propiedad "offsetTop" devuelve la distancia, en píxeles, desde la parte superior del elemento hasta la parte superior del elemento padre más cercano
 const enlacesMenu = document.querySelectorAll("#menu li.enlacesMenu a");
 const subMenu = document.querySelector(".enlacesMenu > #submenu");
 const elementoSubmenu = document.querySelectorAll(
@@ -47,9 +50,6 @@ function cambiarClases() {
 		logo.classList.remove("logo-scroll");
 	}
 }
-
-// Ponemos en escucha el evento scroll y ejecutamos la función cambiarClases
-window.addEventListener("scroll", cambiarClases);
 
 /* ===========================================================================
                                 SLIDESHOW HEADER
